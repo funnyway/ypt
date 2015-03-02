@@ -1,0 +1,1995 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>求职简历发布-58同城</title>
+<script src="js/jquery-1.8.3.js " type="text/javascript"></script>
+<script src="js/pubupjs_v0.js"></script>
+<script>var ttoday = "2015-01-14";</script>
+   	<script>var gxhScriptArray = "dlEdu";</script>
+<script>
+var postUp1=null;
+function getPicValueForUpdate1() {
+    var data = [];
+    if($('#picCert').val().length > 10) {
+        var pic = $('#picCert').val().split('|');
+        $(pic).each(function(i, n) {
+            data.push({'url': '#' + n});
+        });
+    }
+    return data;
+}
+
+function getPicValueForPostCert() {
+    var pic = [];
+    var str = "";
+    var data = postUp1.UpImageShowBar.getImgs();
+    if(data != null && data.length > 0) {
+        $(data).each(function(i, n){
+            var _url = n.url;
+            _url = _url.replace('#', '').replace('/tiny/', '/big/');
+            pic.push(_url);
+            str += _url + "|";
+        });
+    }
+    if (str.length >0) { str = str.substring(0, str.length - 1); }
+    $('#picCert').val(str);
+    return { "pic" : pic };
+}
+function reshowUnImgBar(){
+    postUp1 = new FEPubUpImg("postUp1");
+    postUp1.UpImageShowBar.initBar({
+        //   labels:["选择类型","二手手机"],
+           hazDetail:false,
+           container:"uploadImgcontainer1",
+           //最大图片上传数
+           imgMax:1,
+           images:getPicValueForUpdate1()
+    });
+}
+
+function resizeWin(){
+	if($(window).width() < 1300){
+		$('#completeContainer').hide();
+	}else{
+		$('#completeContainer').show();
+	}
+}
+
+$(document).ready(function(){
+    reshowUnImgBar();
+    resizeWin();
+});
+$(window).resize(function(){
+	resizeWin();
+});
+    
+</script>
+<style>
+dt .tcwrap li {font-size:12px; height: 18px; line-height:18px; margin: 10px 5px 0 0; overflow: hidden; padding: 0; width: 120px;}
+.tabnav { height:30px; }
+.upload_Tip{display:block; margin-bottom:15px;}
+#uploadImgcontainer1singleCon{
+    z-index:1000;
+}
+.fileUploadInput {
+    position:absolute;
+    top:-2px;
+    right:-2px;
+    font-size:36px;
+    z-index:1000;
+filter:alpha(opacity:0);
+    opacity: 0;
+}
+.w_upload {
+    position:relative;
+    width:94px;
+    top:-1px;
+}
+.item_box {
+    display:block;
+    width:80px;
+    height:60px;
+    padding:6px;
+    border:#d3d3d3 1px solid;
+    background-color:#f6f6f6;
+}
+.item_box img {
+    display:block;
+    width:80px;
+    height:60px;
+}
+.wait_con {
+    display:block;
+    width:80px;
+    height:60px;
+    padding:6px;
+    border:#d3d3d3 1px solid;
+    background-color:#f6f6f6;
+}
+.wait_con img {
+    display:block;
+    width:80px;
+    height:60px;
+}
+.top {
+	height: 122px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(images/jl01.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+.top a:link {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+}
+.top a:visited {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+}
+.top a:hover {
+	font-size: 12px;
+	color: #0000FF;
+	text-decoration: blink;
+}
+.toptxt {
+	text-align: justify;
+	font-size: 12px;
+	color: #333333;
+}
+
+.topbg {
+	background-image: url(images/index_r1_c4.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 122px;
+	width: 100%;
+	font-size: 12px;
+}
+.topewm {
+	float: right;
+	height: 80px;
+	width: 60px;
+	padding-top: 30px;
+	text-align: center;
+}
+.bottom {
+	background-color: #f5f5f5;
+	padding-left: 50px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #464646;
+	font-size: 14px;
+	line-height: 32px;
+	margin-top: 15px;
+}
+.topimg {
+	position: absolute;
+	top: 56px;
+	left: 1010px;
+}
+
+.wcd {
+	position: relative;
+	top: 100px;
+}
+</style>
+
+<link href="__PUBLIC__/css/jianli-post_v0(1).css" rel="stylesheet" type="text/css">
+</head>
+<body class="postSecPage">
+<div class="logHeader">
+    <div class="topbg">
+  <div class="top">
+    <div class="toptxt">济南[<a href="#">切换城市</a>] 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="#">注册</a> | <a href="#">登录</a> | <a href="#">返回首页</a></div>
+  </div>
+</div>
+</div>
+
+<div class="postContent">
+	<div id="completeContainer" class="wcd">
+		<div id="completeIcon" class="perIcon perIcon55"></div>
+		<input type="hidden" id="completeVal" value="55">
+		<input type="hidden" id="isMidHigh" value="1">
+		<input type="hidden" id="isLow" value="0">
+		<div class="perTips" id="completeTips">
+			<i class="topArrow"></i>
+			<p class="perBasicTips">			</p>
+			<p class="perDetailTips">			</p>
+		</div>
+	</div>
+	
+	<div class="typeListInfo">
+	            <input type="hidden" id="hidresume" value="81074612396293"/>
+                <input type="hidden" id="langCount" value=""/>
+                <input type="hidden" id="proCount" value=""/>
+                <input type="hidden" id="skillCount" value="0"/>
+                <input type="hidden" id="certCount" value=""/>
+                <input type="hidden" id="phoCount" value="0"/>
+                <input type="hidden" id="jscode" value=""/>
+                <input type="hidden" value="1" id="lowerResumeFlag">
+		<div class="basicInfo ">
+			        <h3>
+            <span>基本信息</span>
+            <a href="javascript:BaseInfo.modyinfo();" class="changeBtn">修改</a>        </h3>
+        <div class="basicConShow showDiv" id="baseshow" style="display:">
+            <dl class="">
+                <dt>
+                    <span>牛玉茹</span>
+                    <span class="sexAge">[美工]</span>                </dt>
+                <dd>
+                    <span class="title">求职意向：</span>
+                    <span class="jobType">网页设计/制作</span>
+                    <span class="divide">|</span>
+                    <span >3000-5000元/月</span>
+                    <span class="divide">|</span>
+                    <span >济南历下区</span>                </dd>
+                <dd>
+                    <span class="title">个人情况：</span>
+                    <span>女</span>
+                    <span class="divide">|</span>
+                    <span>20岁</span>
+                                                            <span class="divide">|</span>
+                    <span >现居住济南历下区</span>
+                                                            <span class="divide">|</span>
+                    <span >籍贯山东济南</span>
+                                                            <span class="divide">|</span>
+                    <span >大专</span>
+                    
+                                                            <span class="divide">|</span>
+                    <span >
+                                                                                    6-10年工作经验                  </span>              </dd>
+                <dd>
+                    <span class="title">联系方式：</span>
+                    <span>
+                                            15168813080                    </span>
+                                            <i class="phoneIcon"></i>              </dd>
+                <dd>
+                                        <span class="title db">自我介绍：</span>
+                    <span class="w710">自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍</span>              </dd>
+            </dl>
+        </div>            <div id="basemodify" class="basicChange infoContent" style="display:none">
+	<dl class="jobTitle">
+        <dt>
+            标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题
+            <b>*</b>        </dt>
+        <dd>
+            <input type="text" id="InpUserJob" name="InpUserJob" class="w236" value="美工">
+            <div style="display:none;" class="setBox" id="divUserJob">
+                  <div class="danhang2"></div>
+            </div>
+            <span class="inputConTips necTips" id="titleTips">
+                <i class="necIcon tipsIcon"></i>
+                <span class="plr8">
+                    好的标题更容易被企业搜索到，更多机会面试！
+                    <a class="tdul" href="javascript:void(0);">看看别人怎么写~</a>
+                    <span class="othersInfo">
+                        <i class="topArrow"></i>
+                        <span>1. 求销售经理工作 4年经验</span>
+                        <span>2. 求商务司机工作 C1驾照</span>
+                        <span>3. 普工和快递员 肯吃苦</span>                    </span>                </span>            </span>
+            <span id="InpUserJobInfo"></span>        </dd>
+	</dl>
+    <dl class="jobType ">
+         <dt>
+             职位类别
+             <b>*</b>         </dt>
+         <dd class="" style=""><!--class="zIndex999"-->
+             <ul id="selectedJob" class="selType " k="cateid_2221+dsid_13129" k2="" style="display:">
+             </ul>
+             <div class="selTypeDiv" id="txtJobCate">
+                 <i class="keyIcon"></i>
+                 <input type="text" class="w236 f-c7" id="inpJobCate" value="您可以选择或输入">
+                 <div id="divJobCate" class="setBox" style="display:none">
+                     <h3>
+                        <p>
+                            <span>请优先选择最想做的职位（最多选<span class="red">5</span>个）</span>                        </p>
+                        <a href="javascript:void(0);" class="close"></a>                    </h3>
+                     <table class="jobcatebox">
+                     </table>
+                 </div>                  
+                 <div style="display:none;" class="setBox matchRes" id="divJobCatein"><!-- 热词 -->
+                    <ul class="hotJobList">
+                    </ul>
+                </div>
+             </div>
+             <span id="txtJobCateInfo"></span>         </dd>
+     </dl>
+    <dl class="expSalary ">
+        <dt>
+            期望薪资
+            <b>*</b>        </dt>
+        <dd class="">
+            <i class="selIcon"></i>
+                            <input type="text" class="w131 hasSetBox" value="3000-5000元" k="4" id="selUserPosSala" readonly="readonly"> 
+                        <div style="display:none;" class="setBox jsBox" id="divUserPosSala">
+                <ul class="salarySel">
+                    <li k="1">1000元以下</li>
+                    <li k="2">1000-2000元</li>
+                    <li k="3">2000-3000元</li>
+                    <li k="4">3000-5000元</li>
+                    <li k="5">5000-8000元</li>
+                    <li k="6">8000-12000元</li>
+                    <li k="7">12000-20000元</li>
+                    <li k="8">20000-25000元</li>
+                    <li k="9">25000元以上</li>
+                    <li k="0">面议</li>
+                </ul>
+            </div>
+            <span id="selUserPosSalaInfo"></span>        </dd>
+    </dl>
+    <dl class="nameSex ">
+        <dt>
+            姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名
+            <b>*</b>        </dt>
+        <dd class="">
+            <input type="text" id="txtUserName" size="10" maxlength="4" class="w115" value="牛玉茹"> 
+            			<span class="selSex">
+				<i class="radioIcon" name="sexType" value="0"></i>
+				<span class="plr8">男</span>			</span>
+			<span class="selSex">
+				<i class="radioIconSel" name="sexType" value="1"></i>
+				<span class="plr8">女</span>			</span>
+		            <span id="txtUserNameInfo"></span>        </dd>
+    </dl>
+    <dl class="birTime">
+        <dt>
+            出生日期
+            <b>*</b>        </dt>
+        <dd class="timeSel " id="inpBirth">
+            <div class="yearSel linkage" id="spInfoYear">
+                <input type="text" id="inpBirthYear" class="w76 hasSetBox linkage" value="1995" readonly="readonly" k="1995"> 
+                <span class="plr5">年</span>
+                <div style="display: none;" class="setBox" id="">
+                    <i class="prevIcon prevHover"></i>
+                    <i class="nextIcon nextHover"></i>
+                    <ul class="bYear" index="1">
+                    </ul>
+                </div>
+            </div>
+            <div class="monthSel" id="spInfoMonth">
+                <input type="text" class="w43 hasSetBox"  id="inpBirthMonth" value="01" readonly="readonly" k="01"> 
+                <span class="plr5">月</span>
+                <div style="display: none;" class="setBox" id="">
+                    <ul class="">
+                     <li>
+                         <a href="javascript:void(0);">1</a>                     </li>
+                     <li>
+                         <a href="javascript:void(0);">2</a>                     </li>
+                     <li>
+                         <a href="javascript:void(0);">3</a>                     </li>
+                     <li>
+                         <a href="javascript:void(0);">4</a>                     </li>
+                     <li>
+                         <a href="javascript:void(0);">5</a>                     </li>
+                     <li>
+                         <a href="javascript:void(0);">6</a>                     </li>
+                     <li>
+                         <a href="javascript:void(0);">7</a>                     </li>
+                     <li>
+                         <a href="javascript:void(0);">8</a>                     </li>
+                     <li>
+                         <a href="javascript:void(0);">9</a>                     </li>
+                     <li>
+                         <a href="javascript:void(0);">10</a>                     </li>
+                     <li>
+                         <a href="javascript:void(0);">11</a>                     </li>
+                     <li>
+                         <a href="javascript:void(0);">12</a>                     </li>
+                    </ul>
+                </div>
+                <span id="inpBirthInfo"></span>            </div>
+        </dd>
+    </dl>
+    <dl class="address resAdd">
+        <dt>
+            现居住地
+            <b>*</b>        </dt>
+        <dd class="" id="ddnowcity" k="267">
+            <div class="addCitySel linkage"  kc="265" >
+                <i class="keyIcon"></i>
+                <!-- <input type="hidden" id="hidnowlive"  cid='265' cname='济南' aid='267' aname='历下区' nid='' nname='' value='0' /> -->
+                <input type="text" id="txtlivecity" class="w121 hasSetBox" value="济南" readonly="readonly"> 
+                <div id="" class="setBox" style="display:none ;">                </div>
+            </div>
+            <div class="addAreaSel linkage" ka="267" id="nowAreaCon">
+                <i class="selIcon"></i>
+                                <input type="text" id="txtlivearea" class="w121 hasSetBox" value="历下区" readonly="readonly"> 
+                                <div id="" class="setBox" style="display: none;">                </div>
+            </div>
+            <div class="addBuneSel linkage">
+                <i class="selIcon"></i>
+                                    <input type="text" id="txtlivename" class="w121 f-c7 hasSetBox" value="请选择商圈" readonly="readonly"> 
+                                <div id="" class="setBox" style="display: none;">                </div>
+            </div>
+            <span id="nowAreaConInfo"></span>        </dd>
+    </dl>
+    <dl class="address ">
+        <dt>
+            想在哪工作
+            <b>*</b>        </dt>
+        <dd id="ddtargetcity" k="267">
+            <span id="detailArea" hidden="true" k=""></span>
+            <div class="addCitySel linkage" kc="265">
+                <!-- <input type="hidden" id="hidjoblive"  cid='265' cname='济南' aid='267' aname='历下区' nid='' nname='' value='0' /> -->
+                <i class="keyIcon"></i>
+                                <input type="text" id="txtjobcity"  class="w121 hasSetBox" value="济南" readonly="readonly"> 
+                                <div id="" class="setBox" style="display:none ;">                </div>
+            </div>
+            <div class="addAreaSel linkage" ka="267">
+                <i class="selIcon"></i>
+                                <input type="text" id="txtjobarea" class="w121 hasSetBox" value="历下区"  readonly="readonly"> 
+                                <div id="" class="setBox" style="display: none;">                </div>
+            </div>
+            <div class="addBuneSel">
+                <i class="selIcon"></i>
+                                    <input type="text" id="txtjobname" class="w121 f-c7 hasSetBox" value="请选择商圈"  readonly="readonly"> 
+                                <div id="" class="setBox" style="display: none;">                </div>
+            </div>
+            <span id="ddtargetcityInfo"></span>        </dd>
+    </dl>
+    <dl class="">
+        <dt>
+            手机号码
+            <b>*</b>        </dt>
+        <dd>
+                        <input type="hidden" value="1" id="isAuthed"></input>
+            <div id="txtMobileAuthDiv" class="detailNO" style="display:">
+                <span class="phoneNO" id="legalMobile">15168813080</span>
+                <span class="f-green">已认证</span>
+                <i class="phoneIcon"></i>
+                <a class="tdul" href="javascript:BaseInfo.chgAuthMobile();">更换号码</a>            </div>
+            <div id="txtMobileModifyDiv" class="phoneType" style="display:none">
+               <input type="text" id="txtMobileModify" value="" class="w165" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="11"> 
+                <a class="confirmPhone postBtn" href="javascript:BaseInfo.getMobileAuth();">获取验证码</a>
+                <span class="inputConTips necTips" >
+                    <i class="necIcon tipsIcon"></i>
+                    <span class="pl8">
+                        企业会通过号码联系您，认证能提高可信度哦！                    </span>                </span>            </div>
+	   		 <div id="authmobileTd" class="phoneType" style="display:none">
+			     <span class="choose clickwindow" style="z-index: 40">
+			         <input type="text" class="w165" id="txtMobile" value="" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="11">
+			     </span>
+		         <span id="txtMobileInfo" style="z-index: 12"></span>
+		         <p class="codeInfo" style="display:none">验证码已下发到您的手机，请查收！</p>
+		         <p class="codeInfo pad8" style="display:none">
+		             如果您180秒内未收到验证码
+		             <span class="getMessBtn">
+		                 <a href="javascript:void(0)" id="resendMsg">(180秒后)重新获取短信</a>		             </span>		         </p>
+	        </div>
+		      <span id="txtMobileCodeInfo"></span>          </dd>
+    </dl>
+    <dl id="ahthInputEmptyTr" style="display:none">
+	    <dt class="noNec">
+	        验证码	    </dt>
+	    <dd id="authCodeTd">
+	        <input type="text" value="" id="txtMobileCode" class="w76" maxlength="6">
+	        <span id="txtMobileCodeInfo"></span>	    </dd>
+ 	</dl>
+    <dl class="selfIntro">
+         <dt class="noNec">
+             自我介绍         </dt>
+         <dd>
+             <div class="textDiv">
+                                  <textarea id="txtOtherBright" class="textCon" index="0" >自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍自我介绍</textarea><span style="z-index:30" id="txtOtherBrightInfo"></span>
+                                  <p class="inputTips">
+                     已输入<span class="f-orange totalNum">0</span>字                 </p>
+             </div>
+             <div class="textTips">
+				<div class="exampl">
+					<div class="pr">
+						<a class="tdul" href="javascript:void(0);">范例一</a>
+						<div class="othersInfo">
+							<i class="topArrow"></i>
+							<div class="exList">
+								<span class="exTitle">
+									社会简历
+									<span class="fn">（例：销售）</span>								</span>
+								<p>
+									1.本人性格开朗，为人正直。有6年的销售经验，年销售额过百万，曾获“销售之星”荣誉。<br>2.普工话标准，谈判能力强。适应出差。<br>3.对市场、渠道和经销商管理有丰富的经验。								</p>
+								<span class="exTitle">
+									技术岗位
+									<span class="fn">（例：司机）</span>								</span>
+								<p class="ti2e">
+									本人A2本，有5年金杯驾驶经验、2年出租经验。熟悉本地路况，自带小面。诚信为本，爱护车辆，希望求得一份商务司机或货车司机的职位。								</p>
+							</div>
+						</div>
+					</div>
+					<div class="pr">
+						<a class="tdul" href="javascript:void(0);">范例二</a>
+						<div class="othersInfo">
+							<i class="topArrow"></i>
+							<div class="exList">
+								<span class="exTitle">
+									学生简历								</span>
+								<p class="ti2e">
+									曾担任外联部部长一职，负责学校12个大小型活动的赞助商招揽，并成功筹集活动资金10万元。具备较强的组织领导能力和沟通能力。并于假期参加过销售岗位实习，积累了一定经验。希望找到一份市场策划的工作，实现自己的职位理想！								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+         </dd>
+     </dl>
+    <dl class="selArea">
+        <dt class="noNec">
+            籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯        </dt>
+        <dd class="">
+            <div class="proSel linkage">
+                <i class="selIcon"></i>
+                <!-- <input id="hidnativeid" type="hidden" value="265"/> -->
+                                     <input type="text" id="txtnativeprovince" class="w121 hasSetBox" value="山东" readonly="readonly"> 
+                                <div id="divnativeprovince" class="setBox jsBox proBox" style="display: none;">                </div>
+            </div>
+            <div class="citySel linkage">
+                <i class="selIcon"></i>
+                                     <input type="text" id="txtnativecity" class="w121 hasSetBox" value="济南" readonly="readonly" k="265"> 
+                                <div id="divnativecity" class="setBox jsBox cityBox" style="display: none;">                </div>
+            </div>
+            <span id="hidnativeidInfo"></span>        </dd>
+    </dl>
+    <dl class="education" id="dlEdu">
+         <dt>
+             最高学历
+             <b>*</b>         </dt>
+         <dd class="">
+             <i class="selIcon"></i>
+                            <input type="text" id="selEducation"class="w131 hasSetBox" k="4" value="大专"  readonly="readonly"> 
+                         <div style="display: none;" class="setBox jsBox" id="">
+                 <ul class="eduList">
+                     <li k="1">高中以下</li>
+                     <li k="2">高中</li>
+                     <li k="3">中专/技校</li>
+                     <li k="4">大专</li>
+                     <li k="5">本科</li>
+                     <li k="6">硕士</li>
+                     <li k="7">博士</li>
+                     <li k="8">MBA/EMBA</li>
+                 </ul>
+             </div>
+             <span id="selEducationInfo"></span>         </dd>
+     </dl>
+    <dl class="experience" id="dlExp">
+         <dt>
+             工作年限
+             <b>*</b>         </dt>
+         <dd class="">
+             <i class="selIcon"></i>
+                            <input type="text" id="selWorked" class="w131 hasSetBox" k="3" value="6-10年" readonly="readonly"> 
+                         
+             <div style="display: none;" class="setBox jsBox" id="">
+                 <ul class="eduList">
+                    <li k="0">无经验</li>
+					<li k="5">应届生</li>
+					<li k="6">1年以下</li>
+					<li k="1">1-2年</li>
+					<li k="2">3-5年</li>
+					<li k="3">6-10年</li>
+					<li k="4">10年以上</li>
+                 </ul>
+             </div>
+             <span id="selWorkedInfo"></span>         </dd>
+     </dl>
+    <dl class="email" id="dlEmail">
+    	<dt class="noNec">
+		邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱	</dt>
+     <dd class="">
+                      <input type="text" class="w222 f-c7" id="txtEmail" value="企业会通过邮箱发送面试邀请"> 
+                  <span id="txtEmailInfo" class=""></span>      </dd>
+    </dl>
+    <dl class="pHeiht"  style="display:none"  id="dlHeight">
+         <dt class="">
+			身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高
+			<b>*</b>		</dt>
+         <dd class="">
+             <input type="text" class="w76 tc" value="" id="txtHeight"> 
+             <span class="pl8">cm</span>
+             <span id="txtHeightInfo"></span>         </dd>
+    </dl>
+    <dl class="drLic"  style="display:none"  id="dlLic">
+         <dt class="">
+			驾&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;照
+			<b>*</b>		</dt>
+        <dd class="">
+			<div class="drLicCon">
+				<i class="keyIcon"></i>
+				<input type="text" class="w185 hasSetBox" value="" readonly="readonly"> 
+				<span class="pl8"><a href="javascript:void(0);" class="addOperBtn">添加</a></span>
+				<div style="display: none;" class="setBox jsBox">
+					<ul class="drLicList">
+						<li>
+							<a href="javascript:void(0);">A1驾照</a>						</li>
+						<li>
+							<a href="javascript:void(0);">A2驾照</a>						</li>
+						<li>
+							<a href="javascript:void(0);">A3驾照</a>						</li>
+						<li>
+							<a href="javascript:void(0);">B1驾照</a>						</li>
+						<li>
+							<a href="javascript:void(0);">B2驾照</a>						</li>
+						<li>
+							<a href="javascript:void(0);">C1驾照</a>						</li>
+						<li>
+							<a href="javascript:void(0);">C2驾照</a>						</li>
+						<li>
+							<a href="javascript:void(0);">C3驾照</a>						</li>
+						<li>
+							<a href="javascript:void(0);">客运资格证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">货运资格证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">机动车驾驶员资格证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">危险物品运输证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">特种车操作证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">吊车操作证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">叉车操作证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">铲车操作证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">挖掘机操作证</a>						</li>
+					</ul>
+				</div>
+			</div>
+			<span id="dlLicInfo"></span>		</dd>
+    </dl>
+    <dl class="cerLic"  style="display:none"  id="dlCer">
+		<dt class="noNec">
+			证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;书		</dt>
+		<dd class="">
+			<div class="cerLicCon">
+				<i class="keyIcon"></i>
+				<input type="text" class="w185 hasSetBox" value="" readonly="readonly"> 
+				<span class="pl8"><a href="javascript:void(0);" class="addOperBtn">添加</a></span>
+				<div style="display: none;" class="setBox jsBox">
+					<ul class="cerLicList">
+						<li>
+							<a href="javascript:void(0);">制冷工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">水暖工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">防水工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">管道工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">锅炉工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">司炉工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">直燃机操作员上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">电工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">水电工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">空调工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">焊工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">装配钳工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">机修钳工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">木工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">绿化工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">车工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">铣工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">磨工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">镗工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">冷作钣金工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">涂装工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">涂装工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">砌筑工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">电梯工上岗证</a>						</li>
+						<li>
+							<a href="javascript:void(0);">家电维修工上岗证</a>						</li>
+					</ul>
+				</div>
+			</div>
+		</dd>
+	</dl>
+    <dl class="fimLang selArea"  style="display:none"  id="dlLang">
+        <dt class="">
+			熟悉语言
+			<b>*</b>		</dt>
+        <dd class="">
+			<div class="fLCon">
+				<i class="check"></i>
+				<span class="pl5">普通话</span>			</div>
+			<div class="fLSel">
+				<span class="pr5">或</span>
+				<div class="lProSel">
+					<i class="selIcon"></i>
+										<input type="text" class="w121 f-c7 hasSetBox" value="省/直辖市" readonly="readonly" id="txtGxLangP">
+										<div class="setBox jsBox proBox" style="display:none;">					</div>
+				</div>
+				<div class="lCitySel">
+					<i class="selIcon"></i>
+										<input type="text" class="w121 f-c7 hasSetBox" value="城市" readonly="readonly" id="txtGxLang">
+										<div class="setBox jsBox cityBox" style="display:none;">					</div>
+				</div>
+				<span>话</span>			</div>
+			<span id="dlLangInfo"></span>		</dd>
+    </dl>
+	<div class="subBtnCon">
+		<input class="saveBasicInfo postBtn" onClick="BaseInfo.subForm();" id="btninfo" value="保存" type="submit" />
+	</div>
+</div>		</div>
+		    <div class="experInfo" id="containerexperience">
+    <h3>
+        <b class="tipx">*</b>
+        <span id="ex">工作经验</span>
+        <span class="tips">（投递必填）</span>
+        <a href="javascript:Exp.showAddWin();" class="addBtn" >添加</a>
+        <a href="javascript:void(0)" class="hideBtn">隐藏</a>
+        <span class="hideTips"><i class="botArrow"></i>该信息仅自己可见</span>    </h3>
+    <div id="expDiv" class="experConShow showDiv" style="display:">            </div>
+    <div id="tabModyExpe" class="experChange infoContent">
+        <dl class="" style="z-index:900">
+            <dt>
+                公司名称
+                <b>*</b>            </dt>
+            <dd style="z-index:900">
+                <div class="comName hasSel">
+                    <input id="txtCompName" type="text" class="w302" value=""> 
+                    <div id="divCompName" class="setBox" style="display:none;">
+                       <div class="danhang2"></div>
+                    </div>
+                </div>
+                <span id="txtCompNameInfo"></span>
+                <input id="hidUpExpeId" value="0" type="hidden">
+            </dd>
+        </dl>
+        <dl class="" style="z-index:890">
+            <dt>
+                职位名称
+                <b>*</b>            </dt>
+            <dd class="jobName">
+                <div class="nameInfo hasSel">
+                    <input id="txtPositionName" type="text" class="w185" value=""> 
+                </div>
+                <div class="salInfo">
+                    <i class="selIcon"></i>
+                    <input type="text" id="selPosSala" k="-1" class="w115 f-c7 hasSetBox" value="请选择薪资" readonly="readonly">
+                    <span class="pl5">元/月</span>
+                    <div style="display: none;" class="setBox jsBox" id="">
+                        <ul class="salList">
+                            <li k="1">1000以下</li>
+                            <li k="2">1000-2000</li>
+                            <li k="3">2000-3000</li>
+                            <li k="4">3000-5000</li>
+                            <li k="5">5000-8000</li>
+                            <li k="6">8000-12000</li>
+                            <li k="7">12000-20000</li>
+                            <li k="8">20000-25000</li>
+                            <li k="9">25000以上</li>
+                            <li k="0">面议</li>
+                        </ul>
+                    </div>
+                </div>
+                <span id="txtPositionNameInfo"></span>
+                <span id="selPosSalaInfo"></span>            </dd>
+        </dl>
+        <dl class="" style="z-index:880">
+            <dt>
+                在职时间
+                <b>*</b>            </dt>
+            <dd class="timeSel" id="inpPos">
+                <div class="yearSel linkage">
+                    <input id="inpPosStartYear" type="text" class="w76 hasSetBox" value="" readonly="readonly"> 
+                    <span class="plr5">年</span>
+                    <div style="display:none ;" class="setBox" id="">
+                        <i class="prevIcon"></i>
+                        <i class="nextIcon"></i>
+                        <ul class="sYear" index="1">
+                        </ul>
+                    </div>
+                </div>
+                <div class="monthSel linkage">
+                    <input id="inpPosStartMonth" type="text" class="w43 hasSetBox" value="" readonly="readonly"> 
+                    <span class="plr5">月 -</span>
+                    <div style="display: none;" class="setBox" id="">
+                        <ul class="">
+                            <li>
+                                <a href="javascript:;">1</a>                            </li>
+                            <li>
+                                <a href="javascript:;">2</a>                            </li>
+                            <li>
+                                <a href="javascript:;">3</a>                            </li>
+                            <li>
+                                <a href="javascript:;">4</a>                            </li>
+                            <li>
+                                <a href="javascript:;">5</a>                            </li>
+                            <li>
+                                <a href="javascript:;">6</a>                            </li>
+                            <li>
+                                <a href="javascript:;">7</a>                            </li>
+                            <li>
+                                <a href="javascript:;">8</a>                            </li>
+                            <li>
+                                <a href="javascript:;">9</a>                            </li>
+                            <li>
+                                <a href="javascript:;">10</a>                            </li>
+                            <li>
+                                <a href="javascript:;">11</a>                            </li>
+                            <li>
+                                <a href="javascript:;">12</a>                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="yearSel linkage">
+                    <input id="inpPosEndYear" type="text" class="w76 hasSetBox" value="" readonly="readonly"> 
+                    <span class="plr5" id="to_to">年</span>
+                    <div style="display: none;" class="setBox" id="">
+                        <i class="prevIcon"></i>
+                        <i class="nextIcon"></i>
+                        <ul class="eYear">
+                        </ul>
+                        <div class="clearBtn">
+                            [<a href="javascript:void(0);" class="nowTime">至今</a>] 
+                            [<a href="javascript:void(0);" class="clearTime">清除</a>]                        </div>
+                    </div>
+                </div>
+                <div id="spPosEnd" class="monthSel">
+                    <input id="inpPosEndMonth" type="text" class="w43 hasSetBox" value="" readonly="readonly"> 
+                    <span class="plr5">月</span>
+                    <div style="display: none;" class="setBox" id="">
+                        <ul class="">
+                            <li>
+                                <a href="javascript:;">1</a>                            </li>
+                            <li>
+                                <a href="javascript:;">2</a>                            </li>
+                            <li>
+                                <a href="javascript:;">3</a>                            </li>
+                            <li>
+                                <a href="javascript:;">4</a>                            </li>
+                            <li>
+                                <a href="javascript:;">5</a>                            </li>
+                            <li>
+                                <a href="javascript:;">6</a>                            </li>
+                            <li>
+                                <a href="javascript:;">7</a>                            </li>
+                            <li>
+                                <a href="javascript:;">8</a>                            </li>
+                            <li>
+                                <a href="javascript:;">9</a>                            </li>
+                            <li>
+                                <a href="javascript:;">10</a>                            </li>
+                            <li>
+                                <a href="javascript:;">11</a>                            </li>
+                            <li>
+                                <a href="javascript:;">12</a>                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <span id="inpPosInfo"></span>            </dd>
+        </dl>
+        <dl class="" style="z-index:870">
+            <dt>
+                工作内容
+                <b>*</b>            </dt>
+            <dd>
+                <div class="textDiv">
+                    <textarea  id="txtPerformance" class="textCon f-c7" index="1">简述一下岗位职责和工作业绩，可使用人单位对你了解更多！</textarea>
+                    <span id="txtPerformanceInfo" style="z-index:30"></span>
+                    <p class="inputTips">
+                        还可输入<span class="f-orange totalNum">800</span>字                    </p>
+                </div>
+                <!--20140521 start-->
+                <div class="textTips">
+                    <p class="unknow">
+                        不知道怎么写？                    </p>
+                   <div class="textTips">
+                        <div class="exampl">
+                            <div class="pr">
+                                <a class="tdul" href="javascript:void(0);">范例一</a>
+                                <div class="othersInfo">
+                                    <i class="topArrow"></i>
+                                    <div class="exList">
+                                        <p>
+                                            <span class="fb">（职责）</span>身为企划主管，任职期间负责公司在全国的整体宣传工作，包括制订并实施营销计划、广告宣传计划、培训、培养公司市场人员。                                        </p>
+                                        <p>
+                                            <span class="fb">（业绩）</span>在任职期间，公司销售额增长40%，全国市场占有率达到80%以上；成功策划并实施了“重金收购灰尘”、“赞助北京国安足球队胸前广告”等大型公关活动。                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pr">
+                                <a class="tdul" href="javascript:void(0);">范例二</a>
+                                <div class="othersInfo">
+                                    <i class="topArrow"></i>
+                                    <div class="exList">
+                                        <p>
+                                            1. 能根据公司的近期和远期目标、财务预算，制定高效的销售计划，提出产品价格政策。<br />
+2. 根据同类其他产品的市场动态、销售动态、存在问题及市场竞争发展状况等实施分析汇总，并提出改进方案，协同销售计划的顺利完成。<br />
+3. 保持与客户的良好关系，维护客户管理，定期组织市场调研，分析市场特点和发展趋势。<br />
+4. 带领团队于2012年成功拓展市场，实现销售额800万的产品销售业绩。                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+                </div>
+                <!--end-->
+            </dd>
+        </dl>
+        <div class="btnDiv ">
+            <a class="saveBtn postBtn" href="javascript:Exp.submitForm(false);">保存</a>
+            <a class="cancelBtn" href="javascript:Exp.subCancel();">取消</a>        </div>
+    </div>
+    <div class="experConShow showDiv">    </div>
+</div>		<div class="eduInfo" style="display:" id="containereducation">
+			<h3>
+			   <b class="tipx">*</b>
+				<span id="ed">教育经历</span>
+				<span class="tips" >（投递必填）</span>
+				<input type="hidden" id="hidUpEducId" value="0">
+				<a href="javascript:Edu.showEduInput();" class="addBtn" >添加</a>
+				<a href="javascript:void(0)" class="hideBtn">隐藏</a>
+				<span class="hideTips"><i class="botArrow"></i>该信息仅自己可见</span>			</h3>
+			<div id="eduDiv" class="eduConShow showDiv" >	  </div>
+			<div id="tabModyEduc" class="eduChange infoContent">
+				<dl class="">
+					<dt>
+						学校名称
+						<b>*</b>					</dt>
+					<dd style="z-index:900">
+						<div class="schoolName hasSel">
+							<input id="txtSchoolName" type="text" class="w236" value="">
+							<div style="display:none;" class="setBox" id="divSchoolName">
+                            <div class="danhang2"></div>
+                            </div>
+						</div>
+						 <span id="txtSchoolNameInfo"></span>					</dd>
+				</dl>
+				<dl class="">
+					<dt>
+						专&nbsp;&nbsp;&nbsp;&nbsp;业
+						<b>*</b>					</dt>
+					<dd style="z-index:890">
+						<div class="speName hasSel">
+							<input id="txtProfession" type="text" class="w236" value=""> 
+							<div style="display:none;" class="setBox" id="divProfession">
+                              <div class="danhang2"></div>
+                            </div>
+						</div>
+						<span id="txtProfessionInfo"></span>					</dd>
+				</dl>
+				<dl class="">
+					<dt>
+						在校时间
+						<b>*</b>					</dt>
+					<dd class="timeSel" id="inpEdu">
+						<div class="yearSel linkage">
+							<input id="inpEduStartYear" type="text" class="w76 hasSetBox" value="" readonly="readonly"> 
+							<span class="plr5">年</span>
+							<div style="display: none;" class="setBox" id="">
+								<i class="prevIcon"></i>
+								<i class="nextIcon"></i>
+								<ul class="sYear" index="1">
+								</ul>
+							</div>
+						</div>
+						<div class="monthSel linkage">
+							<input id="inpEduStartMonth"  type="text" class="w43 hasSetBox" value="" readonly="readonly"> 
+							<span class="plr5">月 -</span>
+							<div style="display: none;" class="setBox" id="">
+								<ul class="">
+									<li>
+										<a href="javascript:;">1</a>									</li>
+									<li>
+										<a href="javascript:;">2</a>									</li>
+									<li>
+										<a href="javascript:;">3</a>									</li>
+									<li>
+										<a href="javascript:;">4</a>									</li>
+									<li>
+										<a href="javascript:;">5</a>									</li>
+									<li>
+										<a href="javascript:;">6</a>									</li>
+									<li>
+										<a href="javascript:;">7</a>									</li>
+									<li>
+										<a href="javascript:;">8</a>									</li>
+									<li>
+										<a href="javascript:;">9</a>									</li>
+									<li>
+										<a href="javascript:;">10</a>									</li>
+									<li>
+										<a href="javascript:;">11</a>									</li>
+									<li>
+										<a href="javascript:;">12</a>									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="yearSel linkage">
+							<input id="inpEduEndYear" type="text" class="w76 hasSetBox" value="" readonly="readonly"> 
+							<span id="eduto_to" class="plr5">年</span>
+							<div style="display: none;" class="setBox" id="">
+								<i class="prevIcon"></i>
+								<i class="nextIcon"></i>
+								<ul class="eYear">
+								</ul>
+								<div class="clearBtn">
+									[<a href="javascript:void(0);" class="nowTime">至今</a>] 
+									[<a href="javascript:void(0);" class="nowclear">清除</a>]								</div>
+							</div>
+						</div>
+						<div id="spEduEnd" class="monthSel">
+							<input id="inpEduEndMonth" type="text" class="w43 hasSetBox" value="" readonly="readonly"> 
+							<span class="plr5">月</span>
+							<div style="display: none;" class="setBox" id="">
+								<ul class="">
+									<li>
+										<a href="javascript:;">1</a>									</li>
+									<li>
+										<a href="javascript:;">2</a>									</li>
+									<li>
+										<a href="javascript:;">3</a>									</li>
+									<li>
+										<a href="javascript:;">4</a>									</li>
+									<li>
+										<a href="javascript:;">5</a>									</li>
+									<li>
+										<a href="javascript:;">6</a>									</li>
+									<li>
+										<a href="javascript:;">7</a>									</li>
+									<li>
+										<a href="javascript:;">8</a>									</li>
+									<li>
+										<a href="javascript:;">9</a>									</li>
+									<li>
+										<a href="javascript:;">10</a>									</li>
+									<li>
+										<a href="javascript:;">11</a>									</li>
+									<li>
+										<a href="javascript:;">12</a>									</li>
+								</ul>
+							</div>
+						</div>
+						<span id="inpEduInfo"></span>					</dd>
+				</dl>
+				<div class="btnDiv ">
+					<a class="saveBtn postBtn" href="javascript:Edu.subForm(false);">保存</a>
+					<a href="javascript:Edu.subCancel()" class="cancelBtn hideBtn" id="eduCancel" >取消</a>				</div>
+			</div>
+		</div>
+		<div class="langInfo"  style="display:" id="languagelist">
+			<h3>
+				<span id="la">语言能力</span>
+				<input type="hidden" id="hidelanid" value="0">
+				<a href="javascript:Language.showLanInput();" class="addBtn" >添加</a>
+				<a href="javascript:void(0)" class="hideBtn">隐藏</a>
+				<span class="hideTips"><i class="botArrow"></i>该信息仅自己可见</span>			</h3>
+			<div id="lanauageView" class="langShow showDiv" style="display:">		  </div>
+			 <div id="tabModyLan" class="langChange infoContent">
+                <dl class="">
+                    <dt>
+                        语&nbsp;&nbsp;&nbsp;&nbsp;言
+                        <b>*</b>                    </dt>
+                    <dd class="langName" >
+                        <div class="linkage langType">
+                            <i class="selIcon"></i>
+                            <input type="text" class="w92 f-c7 hasSetBox" id="txtLanClass" value="语种" k="-1" readonly="readonly">
+                            <div style="display:none ;" class="setBox jsBox" id="divLanClass">
+                                <ul class="langTypeList">
+                                    <li k="0">英语</li>
+                                    <li k="1">日语</li>
+                                    <li k="2">韩语</li>
+                                    <li k="3">法语</li>
+                                    <li k="4">德语</li>
+                                    <li k="5">俄语</li>
+                                    <li k="7">西班牙语</li>
+                                    <li k="8">葡萄牙语</li>
+                                    <li k="9">阿拉伯语</li>
+                                    <li k="10">意大利语</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="linkage hsAbility">
+                            <i class="selIcon"></i>
+                            <input type="text" id="txtLanLis" class="w92 f-c7 hasSetBox" k="-1" value="听说能力" readonly="readonly"> 
+                            <div style="display: none;" v="languagelisten"  class="setBox jsBox" id="">
+                                <ul class="hsList">
+                                    <li k="0">一般</li>
+                                    <li k="1">熟练</li>
+                                    <li k="2">精通</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="linkage rwAbility">
+                            <i class="selIcon"></i>
+                            <input type="text" id="txtLanRead" k="-1" class="w92 f-c7 hasSetBox" value="读写能力" readonly="readonly">
+                            <div style="display: none;"  v="languageread" class="setBox jsBox" id="">
+                                <ul class="rwList">
+                                    <li k="0">一般</li>
+                                    <li k="1">熟练</li>
+                                    <li k="2">精通</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeInfo examination">
+                            <i class="selIcon"></i>
+                            <input type="text" id="txtLanPETS" class="w222 f-c7 hasSetBox" value="通过考试" readonly="readonly">
+                            <div style="display:none ;"  v="languagelevel" class="setBox jsBox" id="divLanPETS">
+                                <div>                                </div>
+                            </div>
+                        </div>
+                        <span id="txtLangInfo"></span>                    </dd>
+                </dl>
+                <div class="btnDiv ">
+                    <a class="saveBtn postBtn" href="javascript:void(0)" onClick="Language.subForm(false);">保存</a>
+                    <a class="cancelBtn" id="lanCancel" href="javascript:Language.subCancel();">取消</a>                </div>
+            </div>
+        </div>
+        <div class="cerInfo" style="display:" id="containercert">
+            <h3 id="ce">
+                <span>获得证书</span>
+                <a href="javascript:Cert.showAddWin();" class="addBtn" >添加</a>
+                <a href="javascript:void(0)" class="hideBtn">隐藏</a>
+                <span class="hideTips"><i class="botArrow"></i>该信息仅自己可见</span>            </h3>
+            <div id="certViewDiv" class="cerShow showDiv" style="display:">          </div>
+            
+            <div id="tabModyCert" class="cerChange infoContent">
+	            <form id="aspnetForm1" method=post enctype="multipart/form-data">
+	            <input type="hidden" id="hidUpCertId" value="0" />
+                <dl class="" style="z-index:900">
+                    <dt>
+                        证书名称
+                        <b>*</b>                    </dt>
+                    <dd style="z-index:900">
+                        <div id="txtCertName" class="cerName hasSel">
+                            <input id="inpCertName" type="text" class="w236 hasSetBox" value=""> 
+                            <!--20140515 证书-->
+                            <div class="setBox certname" id="divCertName" style="display: none;">
+                                <dl>
+                                    <dt>
+                                        可直接输入中文/英文/拼音                                    </dt>
+                                    <dd>
+                                        <div class="tabdivcertname">
+                                            <ul class="tabnav" id="tabnav1">
+                                                <li class="tnon">热门证书</li>
+                                                <li class="">服务行业</li>
+                                                <li>普工类</li>
+                                                <li>驾照/操作证</li>
+                                                <li class="">建筑/工程类</li>
+                                                <li class="">计算机证书</li>
+                                                <li class="">语言证书</li>
+                                                <li class="">财务/审计</li>
+                                                <li>商务类</li>
+                                                <li class="">教师/律师</li>
+                                                <li class="">医疗/卫生</li>
+                                                <li>职称证书</li>
+                                            </ul>
+                                        </div>
+                                        <div class="boxpre" style="display: none;">
+                                           <i class="prevIcon"></i>                                        </div>
+                                        <div class="boxnext">
+                                           <i class="nextIcon"></i>                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <!--end-->
+                        </div>
+                        <div style="display:none;" class="setBox" id="divCertNamein">
+                            <div class="danhang2"></div>
+                        </div>
+                        <span id="inpCertNameInfo" style="z-index:15"></span>                    </dd>
+                </dl>
+                <!-- dl class="" style="z-index:890">
+                    <dt>
+                        发证机构
+                        <b>*</b>
+                    </dt>
+                    <dd style="z-index:890">
+                        <div class="orgName hasSel">
+                            <input type="text" id="txtCertAuthority" class="w236" value=""> 
+                            <div style="display:none;" class="setBox" id="divCertAuthority">
+                            <div class="danhang2"></div>
+                            </div>
+                        </div>
+                        <span id="txtCertAuthorityInfo"></span>
+                    </dd>
+                </dl> -->
+                <dl class="" style="z-index:880">
+                    <dt>
+                        发证时间
+                        <b>*</b>                    </dt>
+                    <dd class="timeSel" id="inpIssue">
+                        <div class="yearSel linkage">
+                            <input type="text" id="inpIssueYear" class="w76 hasSetBox" value="" readonly="readonly"> 
+                            <span class="plr5">年</span>
+                            <div style="display: none;" class="setBox" id="">
+                                <i class="prevIcon"></i>
+                                <i class="nextIcon"></i>
+                                <ul class="sYear" index="1">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="monthSel">
+                            <input type="text" id="inpIssueMonth" class="w43 hasSetBox" value="" readonly="readonly"> 
+                            <span class="plr5">月</span>
+                            <div style="display: none;" class="setBox" id="">
+                                <ul class="">
+                                    <li>
+                                        <a href="javascript:;">1</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">2</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">3</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">4</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">5</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">6</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">7</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">8</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">9</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">10</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">11</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">12</a>                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span id="inpIssueInfo"></span>                    </dd>
+                </dl> 
+                <dl class="" style="z-index:870">
+                    <dt class="noNec">
+                        上传图片                    </dt>
+                    <dd>
+                        
+                    <div id="uploadImgcontainer1" class="clearfix pre-z imgbox90"></div>
+                    
+                    <div class="clearfix pr">
+                    <a class=" fl mr10 w_local" href="javascript:void(0)" >
+                    <span id="uploadImgcontainer1flashContent"></span>
+                    <span class="uploadTips"><i class="topArrow"></i>按住"Ctrl"可多选</span>                    </a>
+                    <!-- <a class=" fl mr10 w_phone" href="javascript:void(0)" onClick="MOBILEUP.init({showCode:$('#showCon'),codeCon:$('#codeCon'),rootcate:'1', smallcate:'36', vcode:'', infoid:'0'}); _gaq.push(['pageTracker._trackEvent', 'post', 'click', '/upload/cloud/']); ">云相机拍照</a>  -->
+                   <p class="upLoadInfo">
+                        <span class=""><span name="hazupinfo">&nbsp;&nbsp;已上传图片<b class="green mlr2 upnum">0</b>/<b class="c_666 mlr2 maxnum">0</b>，</span><span>每张最大</span><span class="action_po_top" name="size_limit">10</span><span>MB,支持</span><span name="photo_type">jpg/gif/png</span><span>格式</span></span>
+                        <span class="tipsAd">建议上传清晰自然生活照，或者您的专业代表作品。</span>                    </p>
+                    </div>
+                    
+                <div style="display:none;" id="imglist">
+                    <input type="hidden" id="picCert" name="pic" value="" />
+                </div>
+                 <span class="upload_Tip"></span>                    </dd>
+                </dl>
+                <div class="btnDiv ">
+                    <a class="saveBtn postBtn" href="javascript:void(0)" onClick="Cert.subForm(false);">保存</a>
+                     <a class="cancelBtn" id="certCancel" href="javascript:Cert.subCancel();">取消</a>                </div>
+            </div>
+            </form>
+        </div>
+        
+        <div id="containerSkill" class="skillsInfo" style="display:">
+            <h3 id="sk">
+                <span >专业技能</span>
+                <a href="javascript:void(0);" class="addBtn">添加</a>
+                <a href="javascript:void(0)" class="hideBtn">隐藏</a>
+                <span class="hideTips"><i class="botArrow"></i>该信息仅自己可见</span>            </h3>
+            <div class="skillsShow showDiv" style="display:">          </div>
+            <div id="tabAbility" class="skillsChange infoContent" idx="-1">
+                <dl class="">
+                    <dt>
+                        技能名称
+                        <b>*</b>                    </dt>
+                    <dd class="skillsName" style="z-index:900">
+                        <div class="skillsList hasSel">
+                            <i class="keyIcon"></i>
+                            <input id="inpAbiName" type="text" class="w185 hasSetBox" value=""> 
+                            <div id="divAbiName" style="display:none;" class="setBox jsBox abiname">
+                                <dl>
+                                    <dd>
+                                        <ul class="tabNav">
+                                            <li class="tnon">IT/计算机</li>
+                                            <li class="">家政/安保</li>
+                                            <li class="">美容/美发</li>
+                                            <li class="">健身/保健</li>
+                                            <li>烹饪/餐饮</li>
+                                            <li>影视/娱乐</li>
+                                            <li>汽车美容</li>
+                                            <li>物业维修</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div id="divAbiNamein" class="setBox" style="display:none;">
+                            <div class="danhang2"></div>
+                        </div>
+                        <div class="timeInfo ">
+                            <i class="selIcon"></i>
+                            <input id="txtAbiDegree" type="text" class="w92 f-c7 hasSetBox" value="请选择" readonly="readonly" k="-1">
+                            <div style="display: none;" class="skilllevel setBox jsBox" id="">
+                                <ul class="skillList">
+                                    <li k="0">一般</li>
+                                    <li k="1">熟练</li>
+                                    <li k="2">精通</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span id="txtAbiDegreeInfo"></span>
+                        <span id="inpAbiNameInfo"></span>                    </dd>
+                </dl>
+                <dl class="">
+                    <dt>
+                        使用时间
+                        <b>*</b>                    </dt>
+                    <dd>
+                        <div class="fl">
+                        <input id="txtUseTime" type="text" class="w33" value=""> 
+                        <span class="pl5">年</span>                        </div>
+                        <span id="txtUseTimeInfo"></span>                    </dd>
+                </dl>
+                <div class="btnDiv">
+                    <a class="saveBtn postBtn" href="javascript:void(0)" onClick="Skill.subForm(false)">保存</a>
+                    <a class="cancelBtn" id="skillCancel" href="javascript:void(0)" onClick="Skill.subCancel()">取消</a>                </div>
+            </div>
+        </div>
+        <div id="projectexperience" class="proInfo" style="display:">
+            <h3 id="pr">
+                <span >项目经验</span>
+                <a href="javascript:void(0);" class="addBtn">添加</a>
+                <a href="javascript:void(0)" class="hideBtn">隐藏</a>
+                <span class="hideTips"><i class="botArrow"></i>该信息仅自己可见</span>            </h3>
+            <div id="proDiv" class="experConShow showDiv" style="display:">          </div>
+            <div id="tabModyProj" class="proChange infoContent">
+            <input type="hidden" id="upprojectid" value="0">
+                <dl class="" style="z-index:900">
+                    <dt>
+                        项目名称
+                        <b>*</b>                    </dt>
+                    <dd class="proName" >
+                        <div class="proInfo">
+                            <input id="txtProjectName" type="text" class="w185" value=""> 
+                        </div>
+                        <span id="txtProjectNameInfo"></span>                    </dd>
+                </dl>
+                <dl class="" style="z-index:890">
+                    <dt>
+                        时&nbsp;&nbsp;&nbsp;&nbsp;间
+                        <b>*</b>                    </dt>
+                    <dd class="timeSel" id="inpProj">
+                        <div class="yearSel linkage">
+                            <input type="text" id="inpProjStartYear" class="w76 hasSetBox" value="" readonly="readonly"> 
+                            <span  class="plr5">年</span>
+                            <div style="display: none;" class="setBox" id="">
+                                <i class="prevIcon"></i>
+                                <i class="nextIcon"></i>
+                                <ul class="sYear" index="1">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="monthSel linkage">
+                            <input type="text" id="inpProjStartMonth" class="w43 hasSetBox" value="" readonly="readonly"> 
+                            <span class="plr5">月 -</span>
+                            <div style="display: none;" class="setBox" id="">
+                                <ul class="">
+                                    <li>
+                                        <a href="javascript:;">1</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">2</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">3</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">4</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">5</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">6</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">7</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">8</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">9</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">10</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">11</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">12</a>                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="yearSel linkage">
+                            <input type="text" id="inpProjEndYear" class="w76 hasSetBox" value="" readonly="readonly"> 
+                            <span id="proto_to"  class="plr5">年</span>
+                            <div style="display: none;" class="setBox" id="">
+                                <i class="prevIcon"></i>
+                                <i class="nextIcon"></i>
+                                <ul class="eYear">
+                                </ul>
+                                <div class="clearBtn">
+                                    [<a href="javascript:void(0);" class="nowTime">至今</a>] 
+                                    [<a href="javascript:void(0);" class="nowclear">清除</a>]                                </div>
+                            </div>
+                        </div>
+                        <div id="spProjEnd" class="monthSel">
+                            <input type="text" id="inpProjEndMonth" class="w43 hasSetBox" value="" readonly="readonly"> 
+                            <span class="plr5">月</span>
+                            <div style="display: none;" class="setBox" id="">
+                                <ul class="">
+                                    <li>
+                                        <a href="javascript:;">1</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">2</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">3</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">4</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">5</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">6</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">7</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">8</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">9</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">10</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">11</a>                                    </li>
+                                    <li>
+                                        <a href="javascript:;">12</a>                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span id="inpProjInfo"></span>                    </dd>
+                </dl>
+                <dl class="" style="z-index:880">
+                    <dt>
+                        项目简介
+                        <b>*</b>                    </dt>
+                    <dd>
+                        <div class="textDiv">
+                            <textarea id="txtProjIntro" class="textCon" index="2">建议介绍一下该项目的组织方、背景、目的等基本情况</textarea><span id="txtProjIntroInfo" style="z-index:10"></span>
+                            <p class="inputTips">
+		                        还可输入<span class="f-orange totalNum">800</span>字		                    </p>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="" style="z-index:870">
+                    <dt>
+                        职业和业绩
+                        <b>*</b>                    </dt>
+                    <dd>
+                        <div class="textDiv">
+                            <textarea  id="txtProjAcco" class="textCon" index="3"></textarea><span id="txtProjAccoInfo" style="z-index:10"></span>
+		                    <p class="inputTips">
+		                        还可输入<span class="f-orange totalNum">800</span>字		                    </p>                        
+                        </div>
+                    </dd>
+                </dl>
+                <div class="btnDiv">
+                    <a class="saveBtn postBtn" href="javascript:void(0)" onClick="Project.subForm(false)">保存</a>
+                    <a id="projectCancel" class="cancelBtn" href="javascript:void(0)" onClick="Project.subCancel()">取消</a>                </div>
+            </div>          
+        </div>
+        <div id="containerscholarship" class="schoolInfo" style="display:">
+            <h3 id="sc">
+                <span >在校情况</span>
+                <a href="javascript:void(0);"  onclick="SchoolInfo.refreshAll()" class="addBtn">添加</a>
+                <a href="javascript:void(0)" class="hideBtn">隐藏</a>
+                <span class="hideTips"><i class="botArrow"></i>该信息仅自己可见</span>            </h3>
+            <!--2014 5 20 start-->
+            <div id="schoolDis" class="schShow showDiv" style="display:">            </div>
+             
+            <!--2014 5 20 end-->
+            <div id="tabModyAtsch">
+            <div id="sec_ship" class="schConDiv infoContent">
+                   <dl class="scholarship">
+                    <dt  class="noNec">
+                        获奖学金                    </dt>
+                    <dd class="shipName">
+                    <div class="shipCon" id="scholarList_1">
+                        <div class="timeInfo shipType linkage">
+                            <i class="selIcon"></i>
+                            <input type="text" name="l" id="shipLSpan_1" rela="divScholarship" class="w92 f-c7 hasSetBox" value="哪个级别" readonly="readonly">
+                            <div style="display:none ;" class="setBox jsBox" id="">
+                                <ul class="">
+                                    <li k="1">院校级</li>
+                                    <li k="2">县市级</li>
+                                    <li k="3">省区级</li>
+                                    <li k="4">国家级</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeInfo linkage">
+                            <i class="selIcon"></i>
+                            <input type="text" id="shipGSpan_1" name="g" rela="divScholarship2" class="w92 f-c7 hasSetBox" value="几等奖" readonly="readonly">
+                            <div style="display: none;" class="setBox jsBox" id="">
+                                <ul class="">
+                                    <li k="1">一等奖</li>
+                                    <li k="2">二等奖</li>
+                                    <li k="3">三等奖</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeInfo ">
+                            <i class="selIcon"></i>
+                            <input type="text" id="shipCSpan_1" name="c" class="w92 f-c7 hasSetBox" value="多少次" readonly="readonly">
+                            <div style="display: none;" class="setBox jsBox" id="">
+                                <ul class="">
+                                    <li k="1">1次</li>
+                                    <li k="2">2次</li>
+                                    <li k="3">3次</li>
+                                    <li k="4">4次</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" id="ship_add_1" onClick="SchoolInfo.addShipInput(1,3)" class="" style="display:">继续添加</a>
+                        <a href="javascript:void(0)" id="ship_del_1"  onclick="SchoolInfo.delShipInput(1,3)" class="" style="display:">删除</a>
+                        <span class="scholarList_1Info " style="display:none"></span>                    </div>
+                    
+                    <div class="shipCon" id="scholarList_2" style="display:none">
+                        <div class="timeInfo shipType linkage">
+                            <i class="selIcon"></i>
+                            <input type="text" id="shipLSpan_2" name="l" rela="divScholarship" class="w92 f-c7 hasSetBox" value="哪个级别" readonly="readonly">
+                            <div style="display:none ;" class="setBox jsBox" id="">
+                                <ul class="">
+                                    <li k="1">院校级</li>
+                                    <li k="2">县市级</li>
+                                    <li k="3">省区级</li>
+                                    <li k="4">国家级</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeInfo linkage">
+                            <i class="selIcon"></i>
+                            <input type="text" id="shipGSpan_2"  name="g" rela="divScholarship2" class="w92 f-c7 hasSetBox" value="几等奖" readonly="readonly">
+                            <div style="display: none;" class="setBox jsBox" id="">
+                                <ul class="">
+                                    <li k="1">一等奖</li>
+                                    <li k="2">二等奖</li>
+                                    <li k="3">三等奖</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeInfo ">
+                            <i class="selIcon"></i>
+                            <input type="text" id="shipCSpan_2" name="c" class="w92 f-c7 hasSetBox" value="多少次" readonly="readonly">
+                            <div style="display: none;" class="setBox jsBox" id="">
+                                <ul class="">
+                                    <li k="1">1次</li>
+                                    <li k="2">2次</li>
+                                    <li k="3">3次</li>
+                                    <li k="4">4次</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" id="ship_add_2" onClick="SchoolInfo.addShipInput(2,3)" class="" style="display:">继续添加</a>
+                        <a href="javascript:void(0)" id="ship_del_2"  onclick="SchoolInfo.delShipInput(2,3)" class="" style="display:">删除</a>
+                        <span class="scholarList_2Info " style="display:none"></span>                    </div>
+                    
+                    <div class="shipCon"  id="scholarList_3" style="display:none">
+                        <div class="timeInfo shipType linkage">
+                            <i class="selIcon"></i>
+                            <input type="text" id="shipLSpan_3" name="l" rela="divScholarship" class="w92 f-c7 hasSetBox" value="哪个级别" readonly="readonly">
+                            <div style="display:none ;" class="setBox jsBox" id="">
+                                <ul class="">
+                                    <li k="1">院校级</li>
+                                    <li k="2">县市级</li>
+                                    <li k="3">省区级</li>
+                                    <li k="4">国家级</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeInfo linkage">
+                            <i class="selIcon"></i>
+                            <input type="text" id="shipGSpan_3" name="g" rela="divScholarship2" class="w92 f-c7 hasSetBox" value="几等奖" readonly="readonly">
+                            <div style="display: none;" class="setBox jsBox" id="">
+                                <ul class="">
+                                    <li k="1">一等奖</li>
+                                    <li k="2">二等奖</li>
+                                    <li k="3">三等奖</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeInfo ">
+                            <i class="selIcon"></i>
+                            <input type="text" id="shipCSpan_3" name="c" class="w92 f-c7 hasSetBox" value="多少次" readonly="readonly">
+                            <div style="display: none;" class="setBox jsBox" id="">
+                                <ul class="">
+                                    <li k="1">1次</li>
+                                    <li k="2">2次</li>
+                                    <li k="3">3次</li>
+                                    <li k="4">4次</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" id="ship_add_3" onClick="SchoolInfo.addShipInput(3,3)" class="" style="display:">继续添加</a>
+                        <a href="javascript:void(0)" id="ship_del_3"  onclick="SchoolInfo.delShipInput(3,3)" class="" style="display:">删除</a><span class="f-c7">(最多输入三项)</span>
+                        <span class="scholarList_3Info " style="display:none"></span>                    </div>
+                    </dd>
+                </dl>
+                <div class="btnDiv" id="shipSaveBtn">
+                    <a class="saveBtn postBtn"  onclick="SchoolInfo.subModifyShip()" href="javascript:void(0)">保存</a>                </div>
+            </div>
+            <div id="sec_post" class="postConDiv infoContent">
+                <dl class="">
+                    <dt class="noNec">
+                        校内职务                    </dt>
+                    <dd class="postName" >
+                        <!--空-->
+                                                  <a href="javascript:void(0)" class="addCon postBtn">
+                            <i class="addHoverIcon"></i>
+                            添加校内职务                          </a>
+                                               
+                        
+                        <div class="postDiv apDiv" >
+                        
+                                                       <div class="postChange apChange" style="display:none">
+                                <dl>
+                                    <dt>
+                                        校内职务                                    </dt>
+                                    <dd>
+                                        <div class="postInfo">
+                                            <input type="text" id="txtSchoPost" class="w185" value="" datatype="string"  name="p"> 
+                                        </div>
+                                        <span id="txtSchoPostInfo"></span>                                    </dd>
+                                </dl>
+                                <dl class="">
+                                    <dt>
+                                        职务和业绩                                    </dt>
+                                    <dd>
+                                        <div class="textDiv">
+                                            <textarea class="textCon"  id="txtSchoAcco" index="4" name="e" datatype="string"></textarea>
+                                            <span id="txtSchoAccoInfo"></span>
+                                             <p class="inputTips">
+					                           还可输入<span class="f-orange totalNum">800</span>字					                         </p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <div class="btnDiv">
+                                    <a class="saveBtn postBtn" href="javascript:void(0)" onClick="SchoolInfo.subModifyPosition()">保存</a>                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <div id="sec_act" class="actConDiv infoContent">
+                <dl class="actPrize">
+                    <dt class="noNec">
+                        活动奖项                    </dt>
+                    <dd class="actName" >
+                                        <a href="javascript:void(0)" class="addCon postBtn">
+                            <i class="addHoverIcon"></i>
+                            添加活动奖项                        </a>
+                                            
+                        <div class="actDiv apDiv" >
+                                                    <div class="actChange apChange" style="display:none;" >
+                                <dl style="z-index:900">
+                                    <dt>
+                                        获得奖项                                    </dt>
+                                    <dd>
+                                        <div class="postInfo hasSel">
+                                            <input type="text" class="w185" value="" id="txtPrize" name="n" datatype="string"> 
+                                        </div>
+                                        <div class="timeInfo actType">
+                                            <i class="selIcon"></i>
+                                            <input type="text" class="w92 f-c7 hasSetBox" value="哪个级别" readonly="readonly" name="l" id="awardL" datatype="int"> 
+                                            <div style="display:none ;" class="setBox jsBox" id="">
+                                                <ul class="">
+                                                    <li k="1">院校级</li>
+                                                    <li k="2">县市级</li>
+                                                    <li k="3">省区级</li>
+                                                    <li k="4">国家级</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <span id="txtPrizeInfo"></span>
+                                        <span class="awardL_Info" style="display:none"></span>                                    </dd>
+                                </dl>
+                                <dl class="" style="z-index:890" >
+                                    <dt>
+                                        获奖时间                                    </dt>
+                                    <dd class="timeSel">
+                                        <div class="yearSel linkage">
+                                            <input type="text" class="w76 hasSetBox" value="" readonly="readonly" id="inpScho_Year"  datatype="string" name="ty"> 
+                                            <span class="plr5">年</span>
+                                            <div style="display: none;" class="setBox" id="">
+                                                <i class="prevIcon"></i>
+                                                <i class="nextIcon"></i>
+                                                <ul class="sYear" index="1">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="monthSel">
+                                            <input type="text" class="w43 hasSetBox" value="" readonly="readonly" id="inpScho_Month" datatype="string" name="tm"> 
+                                            <span class="plr5">月</span>
+                                            <div style="display: none;" class="setBox" id="">
+                                                <ul class="">
+                                                    <li>
+                                                        <a href="javascript:;">1</a>                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">2</a>                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">3</a>                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">4</a>                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">5</a>                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">6</a>                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">7</a>                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">8</a>                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">9</a>                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">10</a>                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">11</a>                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">12</a>                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <span id="inpScho_Info"></span>                                    </dd>
+                                </dl>
+                                <dl class="" style="z-index:880">
+                                    <dt class="noNec">
+                                        描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述                                    </dt>
+                                    <dd>
+                                        <div class="textDiv">
+                                            <textarea class="textCon" index="5"  id="txtSchoDesc" name="d" datatype="string"></textarea>
+                                            <span id="txtSchoDescInfo"></span>
+						                    <p class="inputTips">
+						                        还可输入<span class="f-orange totalNum">800</span>字						                    </p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <div class="btnDiv">
+                                    <a class="saveBtn postBtn" href="javascript:void(0)" onClick="SchoolInfo.subModifyAward()">保存</a>                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            </div>
+        </div>
+        <div class="photoInfo" id="containerphoto">
+            <h3 id="ph">
+                <span >照片/作品</span>
+                <a href="javascript:void(0);" class="changeBtn" id="photoModBtn">修改</a>
+                <a href="javascript:void(0)" class="hideBtn">隐藏</a>
+                <span class="hideTips"><i class="botArrow"></i>该信息仅自己可见</span>            </h3>
+            <div class="photoShow showDiv">
+                <div class="schoolDetail" id="photoDivView" style="display: block;">                </div>
+            </div>
+            <div id="tabShowMe" class="photoChange infoContent">
+            <form id="aspnetForm" method=post enctype="multipart/form-data">
+            <input type="hidden" id="phoCount" value="0"/>
+                <dl class="">
+                    <dt class="noNec">
+                        上传图片                    </dt>
+                    <dd class="postName" >
+                        
+		                    <div id="uploadImgcontainer" class="clearfix pre-z imgbox90"></div>
+		                    
+		                    <div class="clearfix pr">
+		                    <a class=" fl mr10 w_local" href="javascript:void(0)" >
+		                    <span id="uploadImgcontainerflashContent"></span>
+		                    <span class="uploadTips"><i class="topArrow"></i>按住"Ctrl"可多选</span>		                    </a>
+		                    <!-- <a class=" fl mr10 w_phone" href="javascript:void(0)" onClick="MOBILEUP.init({showCode:$('#showCon'),codeCon:$('#codeCon'),rootcate:'1', smallcate:'36', vcode:'', infoid:'0'}); _gaq.push(['pageTracker._trackEvent', 'post', 'click', '/upload/cloud/']); ">云相机拍照</a>  -->
+		                    <p class="upLoadInfo">
+                                <span class=""><span name="hazupinfo">&nbsp;&nbsp;已上传图片<b class="green mlr2 upnum">0</b>/<b class="c_666 mlr2 maxnum">0</b>，</span><span>每张最大</span><span class="action_po_top" name="size_limit">10</span><span>MB,支持</span><span name="photo_type">jpg/gif/png</span><span>格式</span></span>
+                                <span class="tipsAd">建议上传清晰自然生活照，或者您的专业代表作品。</span>                            </p>
+		                    </div>
+		                    
+		                <div style="display:none;" id="imglist">
+		                        <input type="hidden" id="pic" name="pic" value="" />
+		                </div>
+		                 <span class="upload_Tip"></span>                    </dd>
+                </dl>
+                <div class="btnDiv">
+                    <a class="saveBtn postBtn" href="javascript:void(0)" onClick="Photos.subForm()">保存</a>                </div>
+              </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+			var postUp=new FEPubUpImg("postUp");
+			function getPicValueForUpdate() {
+			    var data = [];
+			    if($('#pic').val().length > 10) {
+			        var pic = $('#pic').val().split('|');
+			        $(pic).each(function(i, n) {
+			            data.push({'url': 'http://pic1.58cdn.com.cn' + n});
+			        });
+			    }
+			    return data;
+			}
+			
+			function getPicValueForPost() {
+			    var pic = [];
+			    var str = "";
+			    var data = postUp.UpImageShowBar.getImgs();
+			    if(data != null && data.length > 0) {
+			        $(data).each(function(i, n){
+			            var _url = n.url;
+			            _url = _url.replace('http://pic1.58cdn.com.cn', '').replace('/tiny/', '/big/');
+			            pic.push(_url);
+			            str += _url + "|";
+			        });
+			    }
+			    if (str.length >0) { str = str.substring(0, str.length - 1); }
+			    $('#pic').val(str);
+			    return { "pic" : pic };
+			}
+			$(document).ready(function(){
+			     postUp.UpImageShowBar.initBar({
+			           //labels:["选择类型","二手手机"],
+			           hazDetail:false,
+			           container:"uploadImgcontainer",
+			           imgMax:8,
+			           images:getPicValueForUpdate()
+			        });
+			});
+        </script>
+        
+        <div class="advantInfo" id="containerhighlights">
+            <h3 id="hi">
+                <span >我的亮点</span>
+                <a href="javascript:void(0)" class="changeBtn" onClick="Highlights.switchView(true)">修改</a>            </h3>
+            <div class="advantCon showDiv">
+                <ul class="advantList" id="divShowBrig">
+                </ul>
+                <div class="advantAdd" id="tabModyBrig">
+                    
+                                        <div class="adCon">
+	                    <input type="hidden" id="hideHihtId" value=""> 
+	                    <ul class="advantSel" id="jobHighlightSelect">
+                        </ul> 
+	                    <ul class="diyLiList" id="jobHighlightSelf">
+	                    </ul>
+	                    <span id="hltWarn" style="display:none; z-index:1000"></span>                        
+	                    <div id="addNewLight" class="advantDIY">
+	                        <div class="fl">
+	                        <input type="text" class="f-c7" value="请输入不超过8个字">
+	                        </div>
+	                        <a href="javascript:Highlights.selfAddNew()" class="addAdvantBtn postBtn" style="display:">添加亮点</a>	                    </div>
+	                    </div>
+                                        <div class="btnDiv">
+                        <a class="saveBtn postBtn" href="javascript:Highlights.subForm();">保存</a>                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="typeInfo">
+            <h3>
+                <span>选择信息</span>
+                <span class="tips">（填写更加分，提高竞争力）</span>            </h3>
+            <div class="typeCon" id="selectMode">
+                <ul class="typeSel">
+                    <li class="postBtn" c="containerexperience" cname="experInfoShow"><i class="addHoverIcon"></i>工作经验</li>
+                    <li class="postBtn" c="containereducation" cname="eduInfoShow"><i class="addHoverIcon"></i>教育经历</li>
+                    <li class="postBtn" c="languagelist" cname="langInfoShow" jsname="Language"><i class="addHoverIcon"></i>语言能力</li>
+                    <li class="postBtn" c="containerSkill" cname="skillsInfoShow" jsname="Skill"><i class="addHoverIcon"></i>专业技能</li>
+                    <li class="postBtn" c="containercert" cname="cerInfoShow" jsname="Cert"><i class="addHoverIcon"></i>获得证书</li>
+                    <li class="postBtn" c="projectexperience" cname="proInfoShow" jsname="Project"><i class="addHoverIcon"></i>项目经验</li>
+                    <li class="postBtn" c="containerscholarship" cname="schoolInfoShow" jsname="SchoolInfo"><i class="addHoverIcon"></i>在校情况</li>
+                    <li class="postBtn" c="containerphoto" cname="photoInfoShow"><i class="addHoverIcon"></i>照片/作品</li>
+                </ul>
+            </div>
+        </div>
+                                    <script>var isSkilled = true;</script>
+                <p class="jPostTips" id="ptRresume" style="display:none">
+                    <input type="hidden" id="hideRSign" value="26c84c1d97413210803b70c3abb221ac"/>
+                    <input type="hidden" id="hideRpid" value="13226"/>
+                    <input type="hidden" id="hideRpWkTp" value="0"/>
+		            <i class="check" id="ptRresumeChk"></i>
+		            您是一位<span class="fb">技能型</span>人才，建议创建一份兼职简历，利用闲暇时间赚点外快吧！
+		            <span class="red">(保存简历立即创建成功)</span>		        </p>
+                        <div class="saveDiv"><a class="saveResume postBtn" href="javascript:void(0)" id="resumesave" onClick="saveresume();">保存简历</a></div>
+  </div>
+</div>
+<div class="delconfirm" style="left: auto; top: auto; display: none;">
+    <div class="dcbg">
+        <p>确定删除该<span id="delMessage"></span>吗？</p>
+        <div class="dcba">
+            <label class="btn-v7">
+            <input type="button" value="取消" class="hidbtn" id="delnobtn">
+            </label>
+            <label class="btn-v8">
+            <input type="button" value="确定" class="savbtn" id="delyesbtn">
+            </label>
+        </div>
+    </div>
+</div>
+<script src="js/secondJobCates_v0.js"></script>
+<script src="js/3_v0.js"></script>
+<script src="js/resumeV2_v0.js"></script>
+<script src="js/baseV2_v0.js"></script>
+<script src="js/edtresumeV2_v20141211204835.js"></script>
+<script src="js/jl_post_v0.js"></script>
+<script src="js/jobPosttj_v0.js"></script>
+<script type="text/javascript">
+try{
+var _gaq = _gaq || [], site_name = "58", page_type = "post";
+var trackpw = "/jn/searchjob/qztech/person/fillout_2/update";
+var m=false;
+var _trackURL;
+if(m){
+	_trackURL = "{'cate':'9225,13129,13226','area':'265,267','areaList':'265,267','pagetype':'post','poststep':'fillout_2','postmode':'update','usertype':'person','GA_pageview':'"+trackpw+"'}";	
+}else{
+	_trackURL = "{'cate':'9225,13129,13226','area':'265,267','areaList':'265,267','pagetype':'post','poststep':'fillout_2','postmode':'add','usertype':'person','GA_pageview':'"+trackpw+"'}";
+}
+_gaq.push(['pageTracker._setAccount', 'UA-877409-4']);
+_gaq.push(['pageTracker._setDomainName', '.58.com']);
+_gaq.push(['pageTracker._setAllowLinker', true]);
+_gaq.push(['pageTracker._addOrganic', 'sogou', 'query']);
+_gaq.push(['pageTracker._addOrganic', 'baidu', 'word']);
+_gaq.push(['pageTracker._addOrganic', 'soso', 'w']);
+_gaq.push(['pageTracker._addOrganic', 'youdao', 'q']);
+_gaq.push(['pageTracker._addOrganic', '360', 'q']); 
+_gaq.push(['pageTracker._trackPageview',trackpw]);
+$.getScript( ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js');
+$.getScript('js/referrer4.js');
+}catch(err){}
+function saveresume(){
+	gotoAccess('81074612396293',m);
+	var day = new Date();
+    var Year = 0;
+    var Month = 0;
+    var Day = 0;
+    var CurrentDate = "";
+    Year= day.getFullYear();
+    Month= day.getMonth()+1;
+    Day = day.getDate();
+    CurrentDate += Year;
+    if (Month >= 10 ){
+     CurrentDate += Month;
+    }
+    else{
+     CurrentDate += "0" + Month;
+    }
+    if (Day >= 10 ){
+     CurrentDate += Day ;
+    }
+    else{
+     CurrentDate += "0" + Day ;
+    }
+    clickLog("from=zhaopin_saveresume&AreaPath=265,267&CatePath=9225,13129,13226&userid=28276741794823&ROI=job");
+}
+window.__gsxw_conf = {
+    input: ['InpUserJob'],
+    button: ['^btninfo', '^resumesave'],
+    editor: ['txtOtherBright'],
+    form: 'aspnetForm'
+}
+</script>
+<script src="js/fa8cc0bfc7.js"></script>
+<!-- 接入前端行为收集js end-->
+<!-- flag=iResearch-zp-jl -->
+<div class="bottom">校企网 大学生综合服务平台版权所有<br />
+Copyright © 1998 - 2014 Tencent. All Rights Reserved</div>
+</body>
+</html>

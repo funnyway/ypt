@@ -1,0 +1,566 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" onkeydown="preventBSK();">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>求职简历发布-58同城</title>
+	<link rel=stylesheet type=text/css href="__PUBLIC__/css/common_v0.css"/>
+	<link rel=stylesheet type=text/css href="__PUBLIC__/css/user20120822_v0.css"/>
+    <script src="js/jquery_v0.js"></script>
+     <script>
+    	var ttoday = "2015-01-15";
+    </script>
+	<style>
+.top {
+	height: 122px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(images/zp02.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+.top a:link {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+}
+.top a:visited {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+}
+.top a:hover {
+	font-size: 12px;
+	color: #0000FF;
+	text-decoration: blink;
+}
+.toptxt {
+	text-align: justify;
+	font-size: 12px;
+	color: #333333;
+}
+
+.topbg {
+	background-image: url(images/index_r1_c4.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 122px;
+	width: 100%;
+	font-size: 12px;
+}
+.topewm {
+	float: right;
+	height: 80px;
+	width: 60px;
+	padding-top: 30px;
+	text-align: center;
+}
+.bottom {
+	background-color: #f5f5f5;
+	padding-left: 50px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #464646;
+	font-size: 14px;
+	line-height: 32px;
+	margin-top: 15px;
+}
+.topimg {
+	position: absolute;
+	top: 56px;
+	left: 1010px;
+}
+</style>
+
+    </head>
+<body>
+	<a id="firhead"></a>
+	<div class="logHeader">
+    <div class="topbg">
+  <div class="top">
+    <div class="toptxt">济南[<a href="#">切换城市</a>] 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="#">小杜</a>　<a href="#">退出</a>　 | 　 <a href="#">返回首页</a></div>
+  </div>
+</div>
+</div>
+	<div class="resume_flow">
+		<ul class="step2">
+			<li class="s_pre">1.登录/注册易平台</li>
+			<li class="s_cur">2.填写简历</li>
+			<li>3.简历预览</li>
+			<li>4.完成</li>
+		</ul>
+	</div>
+	<div class="chuangjian pad10">
+	   <div id="view">
+            <form method="post" enctype="multipart/form-data" id="aspnetform" name="aspnetform">
+            <div class="modtab nobg">
+						<h3>基本信息</h3>
+			</div>
+			<input type="hidden" name="jscode" id="jscode" value=""/>
+            <input type="hidden" id="hidresume" value="0">
+                <div class="sample baseinfoedit" id="divminfo" style="display: block">
+                    <table cellspacing="0" cellpadding="0" class="box_table">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <span>姓&nbsp;&nbsp;&nbsp;&nbsp;名</span><b>*</b>
+                                </th>
+								<td>
+								<span class="choose clickwindow" style="z-index: 100">
+									<input type="text" size="10" maxlength="4" class="textstyle username" id="txtUserName" name="txtUserName" value="牛玉茹"/>
+								</span>
+								<span class="choose clickwindow veralmid" style="z-index: 93">
+                                                                            <input type="radio"  name="sexType" class="male" value="0"/>男<input type="radio"  name="sexType" class="female" value="1" checked="checked" />女
+                                                                     </span>
+								<span id="txtUserNameInfo"></span>
+								</td>
+							</tr><tr>
+							</tr>
+							<!--tr>
+								<th>
+									 <span>性&nbsp;&nbsp;&nbsp;&nbsp;别</span><b>*</b>
+								</th>
+                                <td>
+                                	<span class="choose clickwindow veralmid" style="z-index: 93">
+                                	                                		<input type="radio"  name="sexType" class="male" value="0"/>男<input type="radio"  name="sexType" class="female" value="1" checked="checked" />女
+                                	                                	</span>
+                                	<span id="txtSexInfo"></span>
+								</td>
+							</tr-->
+							<tr>
+							</tr>
+							<tr>
+								<th>
+									 <span>出生日期</span><b>*</b>
+								</th>
+                               <td id="spInfo">
+                                    <span class="dingweiyong" id="spInfoYear" style="z-index: 91">
+										<input id="inpBirthYear" type="text" size="4" maxlength="4" class="txtyear" value="1981" readonly="readonly">
+									</span>
+									<span class="ymdtxt">年</span><input type="hidden" value="" id="hidmonth">
+                                    <span class="dingweiyong" id="spInfoMonth" style="z-index: 92">
+										<input id="inpBirthMonth" type="text" size="2" maxlength="2" class="txtmonth" value="02" readonly="readonly">
+									</span>
+									<span class="ymdtxt">月</span><input type="hidden" value="" id="hidmonth">
+                                    <span class="dingweiyong" id="spInfoDay" style="z-index: 93">
+										<input id="inpBirthDate" type="text" size="2" maxlength="2" class="txtdate"  value="01" readonly="readonly">
+									</span>
+									<span class="ymdtxt">日</span>
+									<span id="spInfoInfo"></span>
+                                </td>
+                            </tr>
+							<tr>
+                                <th>
+                                    <span>现居住地</span><b>*</b>
+                                </th>
+                                <td>
+                                	<input type="hidden" id="hidnowlive"  cid='265' cname='济南' aid='267' aname='历下区' nid='' nname='' value='0' />
+                                    <span class="choose clickwindow" style="z-index: 85">
+                                        <span class="city" id="txtlivecity">
+											<input type="text" id="inplivecity"  class="spinpstyle" value="济南">
+											<i></i>
+										</span>
+										<div class="setbox" id="divlivecityin" style="display:none;">
+											<div class="danhang2"></div>
+										</div>
+                                    </span>
+                                    <span class="choose clickwindow" style="z-index: 83">
+                                    	                                        <span class="city" id="txtlivearea">历下区</span>
+                                                                            </span>
+                                    <span class="choose clickwindow" style="z-index: 11">
+                                                                        	<span class="city  c99" id="txtlivename">请选择商圈</span>
+                                                                        </span>
+                                    <span id="hidnowliveInfo"></span>
+                                </td>
+							</tr>
+							<tr>
+								<th>
+									 <span>籍&nbsp;&nbsp;&nbsp;&nbsp;贯</span><b>*</b>
+								</th>
+                                <td>
+                                	<input id="hidnativeid" type="hidden" value="265"/>
+                                	<span style="z-index: 71" class="choose clickwindow">
+                                	                                        <span id="txtnativeprovince" class="city">山东</span>
+                                                                        </span>
+                                    <span style="z-index: 72" class="choose clickwindow">
+                                                                            <span id="txtnativecity" class="city" value="山东济南" k="265">济南</span>
+                                                                        </span>
+                                    <span id="hidnativeidInfo"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span>最高学历</span><b>*</b>
+                                </th>
+                                <td>
+	            	<span class="choose clickwindow" style="z-index: 60">
+	            			            	   <span k="4" class="xueli" id="selEducation">大专</span>
+	            	   	                    <div style="padding: 0px; width: 126px; display: none;" class="setbox" id="divselEducation">
+	                	    <div class="danhang">
+	                	        <a k="1" href="javascript:void(0);">高中以下</a>
+	                	        <a k="2" href="javascript:void(0);">高中</a>
+	                	        <a k="3" href="javascript:void(0);">中专/技校</a>
+	                	        <a k="4" href="javascript:void(0);">大专</a>
+	                	        <a k="5" href="javascript:void(0);">本科</a>
+	                	        <a k="6" href="javascript:void(0);">硕士</a>
+	                	        <a k="7" href="javascript:void(0);">博士</a>
+	                	        <a k="8" href="javascript:void(0);">MBA/EMBA</a>
+	                	    </div>
+	                    </div>
+	                    <div class="setboxline"></div>
+	                </span>
+	            	<span id="selEducationInfo"></span>
+	            </td>
+                            </tr>
+							<tr>
+	            	 			<th>
+                                    <span>我的身份</span><b>*</b>
+                                </th>
+					            <td>
+					                <label>
+					                					                <input type="radio" value="1" name="rdoIdentity" style="margin:0;" > 在校学生</label> &nbsp; &nbsp; &nbsp; &nbsp; 
+					                <label><input type="radio" value="0" name="rdoIdentity" style="margin:0;" checked="checked"> 社会人才</label>
+					            						            </td> 
+					        </tr>
+							<tr>
+                                <th>
+                                    <span>实践经验</span><b>*</b>
+                                </th>
+                                <td>
+					            	<span class="choose clickwindow" style="z-index: 55">
+					            							            		 	<span k="3" class="xueli" id="selWorked">有经验</span>
+					            							                    <div style="padding: 0px; width: 126px; display: none;" class="setbox" id="divselWorked" >
+					                	    <div class="danhang">
+					                	        <a k="1" href="javascript:void(0);">有</a>
+					                	        <a k="0" href="javascript:void(0);">无</a>
+					                	    </div>
+					                    </div>
+					                    <div class="setboxline"></div>
+					                </span>
+					            	<span id="selWorkedInfo"></span>
+								</td>
+                            </tr>
+                             <tr>
+                                <th>
+                                    <span>电子邮箱</span>
+                                </th>
+                                <td>
+                                <span class="choose clickwindow" style="z-index: 50">
+                                	                                		<input type="text" class="textstyle email" id="txtEmail" value="">
+                                	                                	</span>
+                                    <span id="txtEmailInfo"></span><a id="authMobilet"></a>
+                                </td>
+                            </tr>
+							                            
+                                                        <input type="hidden" value="1" id="isSigleAuth"></input>
+                            <input type="hidden" value="1" id="isAuthed"></input>
+                            <tr id="authMobileListTr">
+                            	<th style="vertical-align:top">
+                                    <span>手机号码</span><!--<b>*</b>-->
+                                </th>
+                              <td>
+                            	                            		<p class="vericomplete">
+										<strong class="fl" id="sigleMobileAuth">15168813080</strong>
+										<span class="veritelok">已认证</span>
+									</p>
+                            	                            	<span id="mselectedWarn"></span>
+								<a class="getCodeBtn mar10 fl" href="javascript:void(0)" onclick="BaseInfo.chgAuthMobile()">更换号码</a>
+							</td>
+							</tr>	 
+                                                        
+                            <tr id="authSingleEmptyTr" style="display:none">
+                                <th>
+                                    <span>手机号码</span><b>*</b>
+                                </th>
+                                <td>
+                                	<p class="vericomplete">
+										<strong class="fl" id="legalMobile"></strong>
+										<span class="veritelok">已认证</span>
+										<a class="getCodeBtn fl" href="javascript:void(0)" onclick="BaseInfo.chgAuthMobile()">更换号码</a>
+									</p>
+								 </td>
+                            </tr>
+                                                        	<tr id="authEmptyTr" style="display:none">
+                            	                                <th>
+	                                    <span>手机号码</span><b>*</b>
+	                                </th>
+	                                <td id="authmobileTd">
+	                                <span class="choose clickwindow" style="z-index: 40">
+	                                    <input type="text" class="textstyle phone" id="txtMobile" value="15168813080">
+	                                </span>    
+	                                     	                                    <span id="txtMobileInfo" style="z-index: 12"><span class="codeSuccess codetip fl">该号码还未验证，验证号码可以有效增加简历浏览量哦！</span></span>
+	                                		                                     <p class="codeInfo" style="display:none">验证码已下发到您的手机，请查收！</p>
+										 <p class="codeInfo pad8" style="display:none">
+											如果您180秒内未收到验证码
+											<span class="getMessBtn">
+												<a href="javascript:void(0)" id="resendMsg">(180秒后)重新获取短信</a>
+											</span>
+										</p>
+	                                </td>
+	                            </tr>
+	                             	                            <tr id="ahthInputEmptyTr" style="display:none">
+	                            	                                <th>
+	                                    <span>验证手机</span>
+	                                </th>
+	                                <td id="authCodeTd">
+										<span style="z-index: 30" class="choose clickwindow">
+	                                    	<input type="text" value="" id="txtMobileCode" class="textstyle phoneCode" maxlength="6">
+	                                	</span>
+										<a id="mobileAuthBtn" class="getCodeBtn fl" href="javascript:void(0)" onclick="BaseInfo.getMobileAuth()">免费获取</a>
+										<span id="txtMobileCodeInfo"></span>
+									</td>
+								</tr>
+                            <tr>
+					            <th><span>空余时间</span><b>*</b></th>
+					            <td>
+					            <span class="choose clickwindow" style="z-index: 30">
+					                <table cellspacing="0" cellpadding="0" selval="1$0,2$0,3$0,4$0,5$0,6$3,7$3" class="time_table">
+					                 <tbody><tr><th>&nbsp;</th><th>星期一</th><th>星期二</th><th>星期三</th><th>星期四</th><th>星期五</th><th>星期六</th><th>星期日</th></tr>
+					                    <tr>
+					                        <th>上午</th>
+					                        <td><input type="checkbox" id="chk_1_1"></td>
+					                        <td><input type="checkbox" id="chk_2_1"></td>
+					                        <td><input type="checkbox" id="chk_3_1"></td>
+					                        <td><input type="checkbox" id="chk_4_1"></td>
+					                        <td><input type="checkbox" id="chk_5_1"></td>
+					                        <td><input type="checkbox" id="chk_6_1"></td>
+					                        <td><input type="checkbox" id="chk_7_1"></td>
+					                    </tr>
+					                    <tr>
+					                        <th>下午</th>
+					                        <td><input type="checkbox" id="chk_1_2"></td>
+					                        <td><input type="checkbox" id="chk_2_2"></td>
+					                        <td><input type="checkbox" id="chk_3_2"></td>
+					                        <td><input type="checkbox" id="chk_4_2"></td>
+					                        <td><input type="checkbox" id="chk_5_2"></td>
+					                        <td><input type="checkbox" id="chk_6_2"></td>
+					                        <td><input type="checkbox" id="chk_7_2"></td>
+					                    </tr>
+					                </tbody></table>
+					                </span>
+					                <span id="txtFreeTimeInfo" class="promptpop"></span>
+					            </td>
+					        </tr>
+					        <a id="authMobilet"></a>
+					        <tr>
+                                    <th class="veraltop">
+                                        <span>自我介绍</span>
+                                    </th>
+                                    <td>
+                                        <textarea class="c99" style="color:#95969E" onfocus="if(this.innerHTML=='说出您的亮点，可以提高15%的简历下载机会哦！'){this.innerHTML='';this.style.color='#404040';}" onblur="if(this.innerHTML==''){this.innerHTML='说出您的亮点，可以提高15%的简历下载机会哦！';this.style.color='#95969E';}else{this.style.color='#404040';}" id="txtOtherBright">说出您的亮点，可以提高15%的简历下载机会哦！</textarea>
+                                        <span style="z-index:30" id="txtOtherBrightInfo"></span>
+                                    </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="c"></div>
+                </div>
+					<div class="modtab nobg mar7">
+						<h3>求职意向</h3>
+					</div>
+					<div class="sample baseinfoedit"  style="display: block">
+						<table cellspacing="0" cellpadding="0" id="tabModyPurp" class="box_table">
+							<tbody>
+							<tr>
+                                    <th>
+                                        <span>简历标题</span><b>*</b>
+                                    </th>
+                                    <td style="z-index:100;position:relative;">
+                        <span class="choose clickwindow" style="z-index:81">
+                            <input class="textstyle" id="InpUserJob" name="InpUserJob" type="text" value="例：求职销售经理 2年经验"  onclick="this.style.color=''" style="color: #95969E">
+                            <div style="display:none;" class="setbox" id="divUserJob">
+                            <div class="danhang2"></div>
+                        </div>
+                        </span>
+                        <span id="InpUserJobInfo"></span>
+                        </td>
+                                </tr>
+								<tr>
+									<th class="veraltop">
+										<span>职位类别</span><b>*</b>
+									</th>
+									<td style="z-index:99;position:relative;">
+					<ul class="selectedjob" id="selectedJob" style="display:none;"></ul>
+					<span class="choose clickwindow">
+						<span class="leibie" id="txtJobCate" jltype="1">
+							<input type="text" id="inpJobCate"  class="spinpstyle" value="您可以选择或输入" notactive="true"  style="color: #95969E">
+							<i></i>
+						</span>
+                                    <div style="display:none;" class="setbox jobcate partTimeCate" id="divJobCate">
+							<dl>
+							    <dd class="confirmarea">
+                                    <p class="fl">最多可选<strong class="red">3</strong>项</p><a onclick="$('#divJobCate').hide();$('#inpJobCate').val('您可以选择或输入');$('#inpJobCate').css('color','#95969E');" class="closeSetBox" href="javascript:void(0)"></a>                              
+                                </dd>
+								<dd>
+									<ul id="jobdistype"></ul>
+								</dd>
+							</dl>
+						</div>
+						<div style="display:none;" class="setbox" id="divJobCatein">
+							<div class="danhang"></div>
+							<div class="confirmarea">
+								<p class="fl">最多可选<strong class="red">3</strong>项</p><a onclick="$('#divJobCatein').hide();$('#inpJobCate').val('您可以选择或输入');$('#inpJobCate').css('color','#95969E');" class="closeSetBox" href="javascript:void(0)"></a>
+							</div>
+						</div>
+					</span>
+					<span id="txtJobCateInfo"></span>								
+					</td>
+								</tr>
+								<tr>
+									<th>
+										<span>期望月薪</span><b>*</b>
+									</th>
+									<td>
+										<span style="z-index:71" class="choose clickwindow">
+											<span k="-1" class="xinzi c99" id="selUserPosSala">请选择薪资</span>
+											<div style="display:none;" class="setbox" id="divUserPosSala">
+												<div class="danhang">
+													<a k="1" href="javascript:void(0);">1000以下</a>
+													<a k="2" href="javascript:void(0);">1000-2000</a>
+													<a k="3" href="javascript:void(0);">2000-3000</a>
+													<a k="4" href="javascript:void(0);">3000-5000</a>
+													<a k="5" href="javascript:void(0);">5000-8000</a>
+													<a k="6" href="javascript:void(0);">8000-12000</a>
+													<a k="7" href="javascript:void(0);">12000-20000</a>
+													<a k="8" href="javascript:void(0);">20000-25000</a>
+													<a k="9" href="javascript:void(0);">25000以上</a>
+													<a k="0" href="javascript:void(0);">保密</a>
+												</div>
+											</div>
+										</span>
+										<span class="ymdtxt">元/月</span>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<span>求职地区</span><b>*</b>
+									</th>
+										<td>
+				<span class="choose clickwindow" style="z-index:61">
+				<input type="hidden" id="hidjoblive"  cid='' cname='' aid='' aname='' nid='' nname='' value='0' />
+                    <span class="city" id="txtPosRegi2">
+					                        <input type="text" id="inpposregi" k="-1" class="spinpstyle"  value="">
+                                                <i></i>
+                     </span>
+                                    <div class="setbox" id="divPosRegiin2" style="display:none;">
+											<div class="danhang2"></div>
+										</div>
+                                </span>
+                   <span class="choose clickwindow" style="z-index:60">
+              					                                    	<span class="city c99" id="txtjobarea">请选择区域</span>
+                                                            </span>
+                    <span class="choose clickwindow" style="z-index:60">
+                			                                    	<span class="city  c99" id="txtjobname">请选择商圈</span>
+                                                        </span>
+                     <span id="hidjobliveInfo"></span>
+				</td>
+									</tr>
+								<tr>
+									<th class="veraltop">
+										<span>公开程度</span><b>*</b>
+									</th>
+									<td>
+										<span style="z-index:51" class="choose clickwindow">
+											<ul class="openinfo" id="divOpenInfo">
+												<li>
+													<label class="oisel"><input type="radio" name="openinfoinp" value="1" checked="checked">公开</label><label class="c66">允许所有企业下载您的简历</label>
+												</li>
+												<li>
+													<label class="oisel"><input type="radio" name="openinfoinp" value="2">对认证企业公开</label><label class="c66">只有58同城认证过营业执照的企业才能搜索到您的简历</label>
+												</li>
+												<li>
+													<label class="oisel"><input type="radio" name="openinfoinp" value="0">保密</label><label class="c66">企业不能主动搜索到您的简历，但您可以用此简历申请职位</label>
+												</li>
+												<li>
+													<label><input type="checkbox" checked="checked" name="allowSearch">允许搜索引擎搜到我的简历</label>
+												</li>
+											</ul>
+										</span>
+									</td>
+									</tr>
+									<tr style="display:none" id="trValidate">
+									<th>验证码：<b>*</b></th>
+									<td>
+									<span class="choose clickwindow" style="z-index:10">
+									<input type="text" maxlength="5" name="validatecode" onfocus="BaseInfo.switchvalCode(false)" id="validatecode" size="7" class="code textstyle"> <img
+										align="middle"
+										onclick="document.getElementById('vcodeImg').src='/ajax/validatecode/?temp=123'+ (new Date().getTime().toString(36)); return false"
+										name="vcodeImg" id="vcodeImg" src="/ajax/validatecode/?temp=123ha0nfr7q"> 
+										<a class="f12" onclick="document.getElementById('vcodeImg').src='/ajax/validatecode/?temp=123'+ (new Date().getTime().toString(36)); return false" href="javascript:void(0)">看不清，换一个</a> 
+										</span>
+										
+										<span id="txtValidateInfo" class="promptpop wrong2" style="z-index: 9;display:none"><span class="promptpos"><span class="prompttxt" id="txtValidateInfoTxt"></span><span class="arrbg"></span></span></span>
+										</td>
+									</tr>
+									<tr>
+                                	<th>&nbsp;
+									</th>
+                                	<td>
+                                    	<label class="butt mar19">
+                                       		<input type="button" value="保存并下一步" onclick="BaseInfo.subForm();" class="btns" id="btninfo">
+                                  	  	</label>
+									</td>
+                           		</tr>
+							</tbody>
+						</table>
+					</div>
+            </form>
+        </div>
+        </div>
+<div class="bottom">校企网 大学生综合服务平台版权所有<br />
+    	  Copyright © 1998 - 2014 Tencent. All Rights Reserved</div>
+	<div class="delconfirm" style="left: auto; top: auto; display: none;">
+		<div class="dcbg">
+			<p>确定删除该<span id="delMessage">专业技能</span>吗？</p>
+			<div class="dcba">
+				<label class="btn-v7">
+				<input type="button" value="取消" class="hidbtn" id="delnobtn">
+				</label>
+				<label class="btn-v8">
+				<input type="button" value="确定" class="savbtn" id="delyesbtn">
+				</label>
+			</div>
+		</div>
+	</div>
+	<div id="limitWarn" class="limitWarn" style="left: auto; top: auto; display: none;"><p id="limitWarnTitle">最多可创建6份简历，</p><p id="limitWarnContent">您已达到上限！</p></div>
+</body>
+<script src="http://j1.58cdn.com.cn/n/js/jianli/3_v0.js"></script>
+<script src="http://j1.58cdn.com.cn/n/js/jianli/base_v0.js"></script>
+<script src="http://j1.58cdn.com.cn/n/js/jianli/resume_v0.js"></script>
+<script src="http://j1.58cdn.com.cn/n/js/jianli/addresume_v0.js"></script>
+<script src="http://j1.58cdn.com.cn/n/js/zp/jobPosttj_v0.js"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [], site_name = "58", page_type = "post";
+var _trackURL = "{'cate':'','area':'','pagetype':'post','poststep':'fillout_1','postmode':'add','usertype':'person','GA_pageview':''}";
+_gaq.push(['pageTracker._setAccount', 'UA-877409-4']);
+_gaq.push(['pageTracker._setDomainName', '.58.com']);
+_gaq.push(['pageTracker._setAllowLinker', true]);
+_gaq.push(['pageTracker._addOrganic', 'sogou', 'query']);
+_gaq.push(['pageTracker._addOrganic', 'baidu', 'word']);
+_gaq.push(['pageTracker._addOrganic', 'soso', 'w']);
+_gaq.push(['pageTracker._addOrganic', 'youdao', 'q']);
+_gaq.push(['pageTracker._addOrganic', '360', 'q']); 
+_gaq.push(['pageTracker._trackPageview','']);
+$.getScript( ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js');
+$.getScript('http://tracklog.58.com/referrer4.js');
+var jscode;
+try{
+	var obj = eval({"isAddGrayList":"0","isCheckRelative":"1","mathCheckFormula":"function a(){var b=\"-3029678422643796571\";var c=\"\";for(var d=0;d<b.length;d+=2){var e=(d+1)%b.length;c+=(b.charCodeAt(d)^b.charCodeAt(e)>>3)};return c};a();","downRightScore":"0.0"});
+	var jscode = eval(obj.mathCheckFormula);
+}catch(err){}
+if(jscode){
+	$("#jscode").val(jscode);
+}else{
+	jscode="";
+}
+window.__gsxw_conf = {
+    input: ['InpUserJob'],
+    button: ['^btninfo', '^resumesave'],
+    editor: ['txtOtherBright'],
+    form: 'aspnetform'
+}
+</script>
+<script src="js/fa8cc0bfc7.js"></script>
+<!-- 接入前端行为收集js end-->
+</html>

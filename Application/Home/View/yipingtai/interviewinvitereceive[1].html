@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>应聘简历</title>
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/windows_v0.css" />
+    <script type="text/javascript" src="js/jquery_v0.js"></script>
+    <script type="text/javascript" src="js/interviewinvitereceive_v0.js"></script>
+</head>
+<body>
+<div class="box" style="width:700px">
+    <div class="mbn">
+		<span class="weidu">共<b><span><span> 1 </span></span></b>封</span>
+        <ul class="scrool"><li class="hover"><a href="javascript:void(0);">全部</a></li><li><a href="javascript:ChangeSelect(this,0);">未读</a></li><li><a href="javascript:ChangeSelect(this,1);">已读</a></li></ul>
+    </div>
+    <div id="pnlInfo">
+        <table class="xiaoxi" cellpadding="0" cellspacing="0">
+            <tr class="th">
+                <td width="4%">&nbsp;</td>
+				<td width="12%"> 姓名 </td>
+				<td width="20%" > 现职位 </td>
+				<td width="10%"> 性别 </td>
+				<td width="10%"> 年龄 </td>
+				<td width="10%"> 学历 </td>
+				<td width="10%"> 工作经验 </td>
+				<td width="10%"> 应聘日期 </td>
+				<td align="center" width="10%"> 操作 </td>
+            </tr>
+            <tr onmouseover="this.style.background='#F7F7F7'" onmouseout="this.style.background='#fff'"><td><input type="checkbox" id="cbID" name="cbID" value="417010018902069" /><input type="hidden" id="messageIsRead" value="1" /></td><td><a  href="showresumeinfo[1].html" target="_blank">马先生</a></td><td>库管</td><td>男</td><td>21岁</td><td>大专</td><td>1年以下</td><td>2014-12-22</td><td align="center"><a class="linkDelete" id="lbtnDelete" href="javascript:void(0)">删除</a></td></tr>
+        </table>
+        <div class="area_cz4">
+            <div class="pager" style="float:right; padding:2px 0;"></div>
+            <input id="CheckboxSelectAll" type="checkbox" value="0" />全选&nbsp;<input type="button" class="btn-v2" onclick="javascript:DeleteAll();" value="删除" />
+        </div>
+	</div>
+</div>
+</body>
+</html>

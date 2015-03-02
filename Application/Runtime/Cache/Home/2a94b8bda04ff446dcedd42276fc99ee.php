@@ -1,0 +1,154 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/ppt/Public/css/css.css" rel="stylesheet" type="text/css" />
+<link href="/ppt/Public/css/main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.itemInfo{
+	width:170px;
+	float:right;
+	display:inline;
+	border:1px solid #cdcfd1;
+	border-bottom-color:#abadb2;
+	background:#fff;
+	margin-bottom: 15px;
+	position: relative;
+}
+.itemInfo .itemT{width: 162px; padding-left:8px;height:32px; line-height:32px;float:left; color: #666; display:inline;cursor:pointer}
+.itemInfo .itemT a{color: #323234} 
+.itemInfo .itemT b{ width:7px; height:4px; overflow:hidden; display:inline-block; background:url(http://img.58cdn.com.cn/ui7/job/hire/hirelist.png) no-repeat -202px 0; position:absolute; top:14px; right:7px}
+-->
+</style>
+</head>
+
+<script src="/ppt/Public/js/jquery-1.4a2.min.js" type="text/javascript"></script>
+<script src="/ppt/Public/js/jquery.KinSlideshow-1.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	$("#KinSlideshow").KinSlideshow({
+			moveStyle:"down",
+			intervalTime:4,
+			mouseEvent:"mouseover",
+			titleFont:{TitleFont_size:12,TitleFont_color:"#FFffff"},
+			titleBar:{titleBar_height:28,titleBar_bgColor:"#000000",titleBar_alpha:0.5},
+	});
+})
+</script>
+
+
+<body>
+<div class="topbg">
+  <div class="top">
+    <div class="toptxt"><a href="<?php echo U('Public/reg');?>">注册</a> | <a href="#">登录</a> | <a href="#">设为首页</a></div>
+	<div class="topewm">
+	  <p><img src="/ppt/Public/images/index_r3_c16.jpg" /></p>
+	  <p>校园微社区</p>
+	</div>
+  </div>
+</div>
+<div class="bannerbg"></div>
+<div class="dhbg">
+  <div class="dh">　<a href="#">大赛</a>　　　　　　<a href="#">测评</a>　　　 　　<a href="#">培训</a>　　　　 　<a href="#">招聘</a>　　　　　　<a href="#">金融服务</a>　　　　 　<a href="#">心理辅导</a>　　　　　 <a href="#">法律服务</a>　　　　　 <a href="#">联系我们</a></div>
+</div>
+<div class="center">
+<div class="xinwenBox">
+  <!-- 新闻频道_焦点图开始 -->
+  <div id="KinSlideshow">
+        <a href="#" target="_blank"><img src="/ppt/Public/ls/tp01.jpg" alt="这是标题一" width="343" height="228" border="0" /></a>
+        <a href="#" target="_blank"><img src="/ppt/Public/ls/tp02.jpg" alt="这是标题二" width="343" height="228" /></a>
+        <a href="#" target="_blank"><img src="/ppt/Public/ls/tp03.jpg" alt="这是标题三" width="343" height="228" /></a>
+        <a href="#" target="_blank"><img src="/ppt/Public/ls/tp04.jpg" alt="这是标题四" width="343" height="228" /></a></div>
+<!-- 新闻频道_焦点图结束 -->
+   <div class="xinwenLeft">
+     <div><p class="xwH1">山东省大学生综合素质大赛总决赛圆满落幕
+       <p class="xwNR"><a href="#">2011山东省大学生综合素质大赛暨首届青年人才评价推荐<br />
+        活动总决赛于12月15日下午圆满落幕。[详情]</a></div>
+	 <div>
+	  <ul>
+	   <li><a href="#">多名大学生综合素质决赛中签约 冠军签约新媒体</a></li>  
+       <li><a href="#">关于获奖证书的通知</a></li> 
+       <li><a href="#">12月15日14:00现场直播总决赛</a></li>
+	   <li><a href="#">网络投票结果公布</a></li>  
+       <li><a href="#">多家知名企业面对面招聘，优秀毕业生有望现场获</a></li> 
+
+      </ul> 
+	 </div>
+   </div>
+   <div class="xinwengg"><a href="#"><img src="/ppt/Public/images/index_r8_c15.jpg" width="192" height="84" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r10_c15.jpg" width="192" height="84" border="0" /></a></div>
+ </div>
+ <div class="dasaiBox">
+   <div class="dasaidh">　　　　　　　　　　　<a href="#">大赛</a>　　　　　        <a href="#">就业</a> 　　　　　        <a href="#">实习</a>　　　　　        <a href="#">兼职</a> 　　　　　        <a href="#">测评</a> 　　　　　        <a href="#">培训</a> 　　　　　        <a href="#">创业</a> 　　　　　        <a href="#">法律服务</a></div>
+   <div class="dasaigg"><a href="#"><img src="/ppt/Public/images/index_r14_c3.jpg" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r14_c8.jpg" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r19_c3.jpg" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r18_c7.jpg" border="0" /></a></div>
+   <div class="xinwenLeft">
+     <div>
+	  <ul>
+	   <li><a href="#">多名大学生综合素质决赛中签约 冠军签约新媒体</a></li>  
+       <li><a href="#">关于获奖证书的通知</a></li> 
+       <li><a href="#">12月15日14:00现场直播总决赛</a></li>
+	   <li><a href="#">网络投票结果公布</a></li>  
+       <li><a href="#">多家知名企业面对面招聘，优秀毕业生有望现场获</a></li> 
+	   <li><a href="#">多名大学生综合素质决赛中签约 冠军签约新媒体</a></li>  
+      </ul> 
+	 </div>
+   </div>
+   <div class="xinwengg"><a href="#"><img src="/ppt/Public/images/index_r15_c14.jpg" width="192" height="84" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r20_c14.jpg" width="192" height="84" border="0" /></a></div>
+ </div>
+ <div class="zhaopinBox">
+   <div class="zhaopindh">　　　　　　　　　　　<a href="#">就业</a>　　　　　        <a href="#">实习</a> 　　　　　        <a href="#">家教</a>　　　　　        <a href="#">兼职</a> 　　　　　        <a href="#">派单</a> 　　　　　        <a href="#">钟点工</a> 　　　　　        <a href="#">志愿者</a></div>
+   <div class="zhaopingg"><a href="#"><img src="/ppt/Public/images/index_r26_c3.jpg" width="168" height="100" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r26_c9.jpg" width="168" height="100" border="0" /></a><a href="#"><img src="/ppt/Public/images/zp_r1_c1.jpg" width="108" height="34" border="0" /></a><a href="#"><img src="/ppt/Public/images/zp_r1_c5.jpg" width="108" height="34" border="0" /></a><a href="#"><img src="/ppt/Public/images/zp_r1_c11.jpg" width="108" height="34" border="0" /></a></div>
+   <div class="xinwenLeft">
+     <div>
+	  <ul>
+	   <li><a href="#">网络推广专员</a></li>  
+       <li><a href="#">法治中国传媒诚聘市场专员</a></li> 
+       <li><a href="#">5000诚聘信用卡专员</a></li>
+	   <li><a href="#">诚聘银行综合金融客户经理</a></li>  
+       <li><a href="#">市场专员+奖金五险包住 </a></li> 
+      </ul> 
+	 </div>
+   </div>
+   <div class="xinwengg">
+     <div class="itemInfo">
+			<div class="itemT" default="请选择职位类别">
+			<span>请选择职位类别</span><b></b>						</div>
+	  </div>
+<div class="itemInfo">
+		<div class="itemT" default="请选择行业类别">
+		<span>请选择行业类别</span><b></b>						</div>
+</div>
+<div class="menu"><a href="#">找工作</a></div>
+
+   </div>
+ </div>
+ <div class="zongheBox">
+   <div class="zonghedh">　　　　　　　　　　　<a href="#">测评</a>　　　　　        <a href="#">培训</a> 　　　　　        <a href="#">创业</a>　　　　　        <a href="#">公考</a> 　　　　　        <a href="#">法律服务</a>　　　　　        <a href="#">生活服务</a></div>
+   <div class="dasaigg"><a href="#"><img src="/ppt/Public/images/index_r30_c3.jpg" width="168" height="90" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r30_c7.jpg" width="168" height="90" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r32_c3.jpg" width="168" height="90" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r33_c8.jpg" width="168" height="90" border="0" /></a></div>
+   <div class="xinwenLeft">
+     <div>
+	  <ul>
+	   <li><a href="#">济南欧蓝英语 加拿大美国留学培训一站服务</a></li>  
+       <li><a href="#">学JAVA,就来华育,元旦立享500元优惠</a></li> 
+       <li><a href="#">山东天聪新学期电商培训火爆招生中</a></li>
+	   <li><a href="#">百度推广设计培训机构 火星时代独家研..</a></li>  
+       <li><a href="#">欧蓝英语雅思托福SAT等名师授课-专业质量教学8年</a></li> 
+	   <li><a href="#">山东师范大学国际汉语教师资格证培训周末班报名中</a></li>  
+      </ul> 
+	 </div>
+   </div>
+   <div class="xinwengg"><a href="#"></a><a href="#"></a>
+     <form id="form1" name="form1" method="post" action="">
+       <label>
+         <textarea name="textarea" class="fbxu">我要发布需求</textarea>
+        </label>
+     </form>
+	 <div class="fbmenu"><a href="#">我要发布</a></div>
+    </div>
+ </div>
+</div>
+<div class="bottom">校企网 大学生综合服务平台版权所有<br />
+Copyright © 1998 - 2014 Tencent. All Rights Reserved</div>
+</body>
+</html>

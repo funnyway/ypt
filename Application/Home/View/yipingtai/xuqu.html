@@ -1,0 +1,465 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<link href="__PUBLIC__/css/user-n2012.css"
+			rel="stylesheet" type="text/css" />
+		<link href="__PUBLIC__/css/myinfo.css"
+			rel="stylesheet" type="text/css" />
+		<link type="text/css" rel="stylesheet"
+			href="__PUBLIC__/css/prompt.css" media="all" />
+		<link type="text/css" rel="stylesheet"
+			href="__PUBLIC__/css/zhaob_1120_liu.css" media="all" />
+		<link rel="stylesheet" href="__PUBLIC__/css/pupup2.css"/>	
+		<title>用户中心</title>
+		<script type="text/javascript" src="js/require_jquery_load.js"></script>
+		<script type="text/javascript">document.domain = '58.com'; </script>
+		<script src="js/jquery-1.7.2.min.js"	type="text/javascript"></script>
+		<script type="text/javascript">try { var ____json4fe = { catentry: { dispid: '', name: '', listname: '39' }, locallist: { dispid: '265', name: '济南', listname: 'jn' }, modules: 'my'} } catch (e) { };</script>
+		<script
+			src="js/boot_mypage_version.js"
+			type="text/javascript"></script>
+		<script type="text/javascript"> var win = new GetToolTipWindow('tooltipdiv', 'keyword', '3', '1', '', true, 4); win.setSearchButton('searchbtn');</script>	
+		<script type="text/javascript">
+		requirejs.config({
+		baseUrl : 'http://pic2.58.com/js/v8/modules/'
+		});
+		</script>
+		<script type="text/javascript">
+			requirejs.config({
+				baseUrl : 'http://pic2.58.com/js/v8/modules/'
+			});
+		</script>
+		
+		<script type="text/javascript">
+						function displayPhoneAlias(infoId, alias) {
+				var html = $('#phone_alias_button_' + infoId).html();
+				$.ajax('http://my.58.com/phonealias/display/' + infoId + "/" + alias,{
+					dataType: 'json',
+					type: 'POST',
+					beforeSend: function(){$('#phone_alias_button_' + infoId).html('处理中...')},
+					error: function(){
+						alert('显示失败');
+						$('#phone_alias_button_' + infoId).html(html);
+					},
+					success: function(json) {
+						if(json && json.code == 0) {
+							$('#pao_container_' + infoId).html('小号：' + alias);
+							$('#phone_alias_button_' + infoId).fadeOut();	
+						}else {
+							alert('显示失败:' + json.msg);
+							$('#phone_alias_button_' + infoId).html(html);
+						}
+					}
+				});
+			}
+		</script>
+<style>
+.top {
+	height: 122px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(images/yh.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+.top a:link {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+}
+.top a:visited {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+}
+.top a:hover {
+	font-size: 12px;
+	color: #0000FF;
+	text-decoration: blink;
+}
+.toptxt {
+	text-align: justify;
+	font-size: 12px;
+	color: #333333;
+}
+
+.topbg {
+	background-image: url(images/index_r1_c4.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 122px;
+	width: 100%;
+	font-size: 12px;
+}
+.topewm {
+	float: right;
+	height: 80px;
+	width: 60px;
+	padding-top: 30px;
+	text-align: center;
+}
+.bottom {
+	background-color: #f5f5f5;
+	padding-left: 50px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #464646;
+	font-size: 14px;
+	line-height: 32px;
+	margin-top: 15px;
+}
+.topimg {
+	position: absolute;
+	top: 56px;
+	left: 1010px;
+}
+.STYLE1 {color: #FFFFFF}
+</style>
+
+	</head>
+
+	<body id="qwe">
+	<div class="logHeader">
+    <div class="topbg">
+  <div class="top">
+    <div class="toptxt">济南[<a href="#">切换城市</a>] 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="#">小杜</a>　<a href="#">退出</a>　 | 　 <a href="#">返回首页</a></div>
+  </div>
+</div>
+</div>
+		<input type="hidden" name="myInputToken" id="myInputToken"
+			value="5eff11bd9ffc5f104c4aa241f1cbaf4d" />
+		<script>boot.require('business.topbar', function (Frame, topbar) {topbar.init();})</script>
+		<!-- container-->
+		<div id="container" class="win1000">
+			<!-- title -->
+			<!-- end title -->
+            <!-- menu -->
+<div class="nav">
+				<div class="nav-left">
+					<div class="nav-right">
+						<ul class="clearfix">
+							<li id="home">
+								<a href="/" onclick="my58track('tab_click_my58');">我的大赛</a>							</li>
+														<li id="myzp"" >
+							<a href="/zhaopinqiuzhi" onclick="my58track('tab_click_job');">求职<em>/</em>简历</a></li>
+							<li class="s >
+								<a href="http://t.58.com/usercenter/"
+									onclick="my58track('tab_click_tuan');" target="_blank"><span class="STYLE1">我的需求</span></a>							</li>
+							
+														<div class="righttips" id="menuNavTip" style="display: none;">
+								精准/智能推广在这里哦
+								<a href="javascript:closeNavMenuTip();">我知道了</a><span
+									class="tipsrow"></span>							</div>
+						</ul>
+					</div>
+				</div>
+		  </div>
+			<!-- end menu -->
+
+			<!-- wraper -->
+			<div id="wraper" class="clearfix">
+				<!-- left menu -->
+								<div class="lmenu left" id="lmenu">
+	<ul id="lmenu_ul">
+	  <li id="wdqz"><span><i class="opened"></i>我的需求</span>
+			<ul class="listmenu clearfix">
+				<li id="gerenjianli"  class="open" ><a href="/myseekjob/1" tongji='resumeinfoextend_new' rel="2">我的发布</a></li>
+				<li id="resumehisotry"  ><a href="/resumehisotry" tongji='resumehisotry_new' rel="16">我的报名</a></li>
+			</ul>
+		</li>
+		<li id="help"><span><i class="icon-help"></i><a href="#" target="_blank"   tongji='help' >帮助中心</a></span></li>
+	</ul>
+</div>								<!-- left menu end -->
+				<div class="right" id="right-con-user">
+					<!-- include -->
+					 <style>
+.bankpay
+{
+	margin-left:0px; 
+	padding-left:0px;
+	width:815px;
+	height:1020px;
+}
+.userscore
+{
+   background-color:#fff;margin-left:0px; padding-left:0px;height:600px;width:815px; 
+}
+.container1
+{
+   margin-left:0px; padding-left:0px;height:600px;width:815px; 
+}
+.container2
+{
+   margin-left:0px; padding-left:0px;height:770px;width:815px; 
+}
+</style>
+<script type="text/javascript">
+    function stateChangeIE(_frame) {
+        if (_frame.readyState == "complete") { ResizeFrame(_frame);}
+    }
+    function ResizeFrame(iframe) {
+        try {
+            var height = Math.max(iframe.contentWindow.document.body.scrollHeight, iframe.contentWindow.document.documentElement.scrollHeight);
+            iframe.style.height = Math.max(height, 460)+"px";
+        }
+        catch (ex) { }
+    }
+</script>
+<iframe scrolling="no" frameborder="0" marginheight="0" marginwidth="0" class="userscore" src="" onload="ResizeFrame(this)" onreadystatechange="stateChangeIE(this)" name="ContainerFrame" id="ContainerFrame" style="height: 800px;"></iframe> 					<!-- include end -->
+				</div>
+			</div>
+			<!-- end wraper -->
+
+				<!-- right tip -->
+				<!-- end container-->
+	</div>
+		<script type="text/javascript">document.write('<scri'+'pt src="http://static.track.58.com/baidu_wangmeng_ad.js?r=' + Math.random() + '"></scri'+'pt>');</script>
+		
+
+		<script type="text/javascript">
+	$(function(){
+			    $(".qt_position").mouseover(function(){
+	        $(this).find(".car_new_icon").show();
+	    }).mouseout(function(){
+	        $(this).find(".car_new_icon").hide();
+	    })
+    
+		$("#lmenu").bind("click",function(b){
+			var a=b.target;
+			if(a.nodeName.toLowerCase()=="a"){
+				addHis($(a).attr("rel"));
+			}
+		});
+		$("a[tongji]").each(function(a){
+			$(this).click(function(b){
+				tongjiClick($(this).attr("tongji"))
+			})
+		})
+		
+		menuEventInit();
+	});	
+	
+	
+	function addHis(b){
+		var d="myvisithistory28276741794823";
+		var f=fe.util.cookie.get(d);
+		if(f==null){
+			setMyHisCookie(d,b);
+			}else{
+				var a=f.split(",");
+				var e=false;
+				for(var c=0;c<a.length;c++){
+					if(a[c]==b){
+						e=true;
+						break;
+						}
+					}
+				if(!e){
+					if(a.length<6){
+						f=b+","+f;setMyHisCookie(d,f);
+						}else{
+							a.pop();
+							var g=a.reverse();
+							a.push(b);
+							g=g.reverse();
+							f=g.join(",");
+							setMyHisCookie(d,f);
+							}
+					}
+				}
+		}
+	function setMyHisCookie(b,c){var a=new Date;var e=new Date(a.getFullYear(),a.getMonth()+1,a.getUTCDate());fe.util.cookie.set(b,c,e,"/","my.58.com");}
+	function tongjiClick(a){_gaq.push(["pageTracker._trackEvent","my","click",a])};
+	
+	function menuEventInit(){  
+        $("#lmenu_ul > li").each(function(){  
+            //获得菜单大类样式  
+            var v_css = $(this).find("i").attr("class") ; 
+            if(v_css=="closed"||v_css=="opened"){
+	            //为每个大类菜单添加点击事件  
+	            $(this).find("span").click(function(){  
+	                var v_css_t = $(this).find("i").attr("class") ;  
+	                if(v_css_t == "closed"){  
+	                    $(this).find("i").attr("class","opened");  
+	                    $(this).next("ul").show();  
+	                }else{  
+	                    $(this).find("i").attr("class","closed");  
+	                    $(this).next("ul").hide();  
+	                }  
+	            });  
+            }
+            //若该菜单默认为折叠样式  
+            if(v_css == "closed"){  
+                //当子菜单为选中状态，则折叠样式需要改成展开样式  
+                $(this).find("li").each(function(){  
+                    var v_css_li = $(this).attr("class");  
+                    if(v_css_li == "open"){  
+                        $(this).parent().prev().find("i").attr("class","opened");  
+                        $(this).parent().show();  
+                    }  
+                }) ;  
+            }  
+        });  
+	 }  	
+	    
+    	 function initMenuOpenSet(){
+		 var mymenuopened = fe.util.cookie.get("mymenuopened_28276741794823");
+		 if(mymenuopened!=null && mymenuopened!=''){
+		 	var menuids = mymenuopened.split("_");
+		 	if(menuids!=null){
+		 		for(var i=0 ;i<menuids.length;i++){
+		 			$("#"+menuids[i]).removeClass("closed");
+		 			$("#"+menuids[i]).addClass("opened");
+		 			$("#"+menuids[i]+"dtl").show();
+		 		}
+		 	}
+		 }
+	}
+	
+		function setmenuopenedstate(menuid){
+	  var a=new Date;
+	  var e=new Date(a.getFullYear(),a.getMonth()+1,a.getUTCDate());
+	  var c_cur_name = "mymenuopened_28276741794823" ;
+	  var mymenuopened = fe.util.cookie.get(c_cur_name);
+	  
+	  	  var menustate = $("#"+menuid).attr("class");
+	  if(menustate == "closed"){ 		  if(mymenuopened == null || mymenuopened == 0 || mymenuopened == ""){ 
+			 fe.util.cookie.set(c_cur_name,menuid,e,"/","my.58.com");
+		  }else{ 
+		  	 var reg = new RegExp(menuid, "");
+			 if(mymenuopened.match(reg)=="" || mymenuopened.match(reg)==null){ 
+			  	 fe.util.cookie.set(c_cur_name,mymenuopened + "_" + menuid,e,"/","my.58.com");
+			 }
+		  }
+	  
+	  }else{ 	  	var menuids = mymenuopened.split("_");
+  		if(menuids!=null){
+  			var setstr = "";
+	 		for(var i=0 ;i<menuids.length;i++){
+	 			if(menuids[i]!=menuid){
+	 				setstr = menuids[i] + "_" ;
+	 			}
+	 		}
+	 		if(setstr.indexOf('_')>=0){
+				setstr = setstr.substring(0,setstr.length-1);
+			}
+			
+		   	 fe.util.cookie.set(c_cur_name,setstr,e,"/","my.58.com"); 	 	}
+	  
+	  }
+	  
+	  
+	}
+	
+	
+	
+		function operBuyMenu(){
+	  	  setmenuopenedstate('buyjymenu');
+	}
+		function operSaleMenu(){
+	  	  setmenuopenedstate('salejymenu');
+	}
+		function operShopMenu(){
+		setmenuopenedstate('shopnemu');
+	}
+	
+	</script>
+
+		<script type="text/javascript">
+	document.write('<scr' + 'ipt src="http://usdtop.58.com/advertising/echo.js?cityid=0&cateid=0&categorycode=43_44_45_46_47_48_49_50_52&rand=' + Math.random() + '"></scr' + 'ipt>');
+</script>
+
+
+		<script type="text/javascript">
+    var _gaq = _gaq || []; var site_name = "58";
+    _gaq.push(['pageTracker._setAccount', 'UA-877409-4']);
+    _gaq.push(['pageTracker._setDomainName', '.58.com']);
+    _gaq.push(['pageTracker._setAllowLinker', true]);
+    _gaq.push(['pageTracker._addOrganic', 'sogou', 'query']);
+    _gaq.push(['pageTracker._addOrganic', 'baidu', 'word']);
+    _gaq.push(['pageTracker._addOrganic', 'soso', 'w']);
+    _gaq.push(['pageTracker._addOrganic', 'youdao', 'q']); 
+        _gaq.push(['pageTracker._trackPageview']); 
+     (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+     
+ 	function my58track(tracesource){
+ 		_gaq.push(['pageTracker._trackEvent', 'my', 'click', tracesource]);
+ 	}
+	</script>
+		<input type="hidden" value='' />
+		<script type="text/javascript" src="http://tracklog.58.com/referrer4.js"></script>
+</body>
+</html>
+<div id="masklayer" style="display:none;"><iframe src="" frameborder="0" height="100%" width="100%"></iframe></div>
+<div class="my58wx">
+	<span class="tooff">收起</span>
+	<span class="line"></span>
+</div>
+<script>
+	$(function(){
+		$(".tooff").click(function(){
+			$(".my58wx").slideUp("slow",function(){$('#masklayer').hide()});
+		})
+	})
+</script>
+
+<div id="job_doalog_mask" class="fe_window_mask" style=" position: fixed; height:100%; width:100%; _position:absolute;display: none"></div>
+<div id="job_doalog_content" class="fe_window" style=" display: none; left: 50%; margin: -135px 0px 0px -260px; top: 45%;">
+<div class="outer">
+	<div class="frame" style="width: 520px; height: 270px; padding: 8px;"></div>
+	<div class="contains" style="width: 520px; height: 270px; top: 8px; left: 8px;">
+		<div class="topbar" style="height: 34px;"><a id="job_doalog_closebtn" target="_self" class="closebtn" href="javascript:void(0);"></a><span id="fe_window_5990_title" class="title" style="">帖子刷新提示</span></div>
+		
+	</div>
+</div>
+</div>
+
+<div class="syn_wx_mask"></div>
+<div class="syn_wx_con">
+	<a class="syn_wx_close" title="关闭"></a>
+	<div class="syn_wx_code"></div>
+</div>
+
+<script type="text/javascript">
+	function __openDialog(who) {
+		var url = who.attr('openurl');
+		var title = who.html();
+		$('#fe_window_5990_title').html(title);
+		$('#fe_window_5990_iframe').attr('src',url);
+		clickLog('from=mygzypjd');
+		$('#job_doalog_mask').show();
+		$('#job_doalog_content').show();
+		var logsrc = who.attr('logsrc');
+		clickLog('from=' + logsrc);
+	}
+	function __closeDialog() {
+		$('#job_doalog_mask').hide();
+		$('#job_doalog_content').hide();
+	}
+	
+	$(document).ready(function(){
+		$('#job_doalog_closebtn').click(function(){__closeDialog();});
+		$('.open_dialog_anchor').click(function(){__openDialog($(this));});
+		
+		$('.wx_float_layer').click(function(){
+			$('.syn_wx_mask').css('display','block');
+			$('.syn_wx_con').css('display','block');
+			clickLog('from=mylistwx');
+		});
+		
+		$('.syn_wx_close').click(function(){
+			$('.syn_wx_mask').css('display','none');
+			$('.syn_wx_con').css('display','none');
+		});
+	});
+</script>
+<div id="footer" class="win1000">
+		<p>校企网 大学生综合服务平台版权所有</p>
+</div>

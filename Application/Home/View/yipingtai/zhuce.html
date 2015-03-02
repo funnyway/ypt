@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>注册会员-58同城</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="stylesheet" href="__PUBLIC__/css/login_6.css" type="text/css" />
+<style>
+.porleft p {
+ height: 35px;
+}
+.fb{ font-weight:bold;}
+.link-login{font-family: '宋体';}
+#nextwrap{position:relative;}
+#validatecode{width:75px;}
+#pre{font-size:12px;line-height:34px;cursor:pointer;}
+.btnGray input.disable{color:#a0a0a0;cursor:default;}
+.bottom {	background-color: #f5f5f5;
+	padding-left: 50px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #464646;
+	font-size: 14px;
+	line-height: 32px;
+	margin-top: 15px;
+}
+</style>
+<script type="text/javascript">
+var cur_tab = 'weixin';
+</script>
+</head>
+<body>
+	<div id="header" class="win1000">
+		<a id="logo" href="http://www.58.com"><img src="images/logo-49h.png" alt="中文最大生活信息门户" width="160" height="80" /></a>
+		<div id="cityname" class="regname"><span>用户注册</span></div>
+		<div id="logintext"><a href="http://www.58.com/">返回首页</a>|<a target="_blank" href="http://about.58.com/">帮助</a></div>
+</div>
+	<div class="cb win1000">
+		<form id="submitForm" action="/domobileregister" method="post" name="submitForm" target="formSubmit">
+<div class="porleft">
+			<input type="hidden" name="ptk" id="ptk" value="f189f346d7484e2ba2363ed4107febd4"/>
+			<input type="hidden" name="cd" id="cd" value="5369"/>
+			            <div class="regMenu"><span id="regTab"><a href="javascript:void(0);" onclick="cur_tab='mail';clickLog('from=reg_'+cur_tab);">邮箱注册</a></span>
+               <span id="loginTab">已有账号？<a href="https://passport.58.com/login/">去登录</a></span>            </div>
+            <div class="regWrap">
+              <div id="origReg">
+                <!-- 邮箱注册 -->
+                <div  id="regCon">
+                    <p>
+                    	<span class="regtlx">用　户　名</span>
+                        <input type="text" size="20" value="" class="inp inw" id="nickName" maxlength="20" name="nickName" style=""/>
+                        <span id="nickName_Tip"></span> 
+                    </p>
+                    <div id="reg-keyword-username" class="w234-ui2" style="display:none">
+                        <i></i>
+                        <p class="ui2-key-t"><a title="关闭" href="javascript:clearSug('username');">×</a>选择推荐用户名：</p>
+                        <ul id="username_comp">
+                        </ul>
+                    </div>
+                    <p>
+                    	<span class="regtlx">电&nbsp;子&nbsp;邮&nbsp;箱</span>
+                        <input type="text" size="20" value="" class="inp inw" id="txtemail" name="txtemail" style="" />
+                        <span id="txtemail_Tip"></span> 
+                    </p>
+                    <div id="reg-keyword-email" class="w234-ui2" style="display:none">
+                        <i></i>
+                        <p class="ui2-key-t"><a title="关闭" href="javascript:clearSug('email');">×</a>请选择你的邮箱类型：</p>
+                        <ul id="email_comp">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 手机注册 -->
+                <div id="passwordCon">
+                <p>
+                	<span class="regtlx">密　　　码</span>
+                    <input type="password" size="30" name="password" id="password" class="inp inw" onkeyup="$.c.user.reg.CheckPasswordStrength(this)" onpaste="return false" maxlength="16"  />
+                    <span id="password_Tip" style="z-index: 100;"></span> 
+                </p>
+                <p id="cpp">
+                	<span class="regtlx">确&nbsp;认&nbsp;密&nbsp;码</span>
+                    <input type="password" size="30" name="cpassword" id="cpassword" class="inp inw" maxlength="16" onpaste="return false"  />
+                    <span id="cpassword_Tip"></span> 
+                </p>
+				</div>
+				<p class="agreement">
+                    <span class="regtlx">&nbsp;</span>
+                    <input type="checkbox" checked="checked" id="chkagreement" name="chkagreement"/> <span>我已阅读并同意</span><a target="_blank" href="http://about.58.com/home/announcement.html">《58同城使用协议》</a>
+                    <span id="chkagreement_Tip"></span>
+                </p>
+                
+                <p id="nextwrap">
+                    <span class="regtlx">&nbsp;</span>
+                    <label id="butt" class="butt"><input type="button" class="btns" value="立即注册" checked="checked" id="btnNext" style="width:110px;height:34px;"/></label>
+                    <span id="loginOpt">已有账号？<a href="https://passport.58.com/login/">去登录</a></span>
+                </p>
+			  </div>
+				
+          </div>
+		</div>		</form>
+	</div>
+	<div id="footer" class="win1000">
+		<p>校企网 大学生综合服务平台版权所有</p>
+</div>
+</div><div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1020842622/?label=KoYtCPqyoQIQ_qTj5gM&amp;guid=ON&amp;script=0"/>
+</div>
+</body>
+</html>

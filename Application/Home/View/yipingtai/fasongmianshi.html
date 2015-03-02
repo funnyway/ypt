@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>发送面试邀请</title>
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/user20111115.css" />
+    <script type="text/javascript">    document.domain = '58.com';</script>
+     <script type="text/javascript" src="js/jquery1.3.2.js"></script>
+     <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+    <form id="form1">
+    <div>
+            <div class="title clearfix">
+	      <h2 class="balance-h2">发送的面试邀请</h2>
+       </div>
+             <table class="qz">
+            <tbody>
+                <tr class="tablehead">
+                    <th width="2%"></th>
+                    <th width="8%">受邀者</th>
+                    <th width="7%">邀请职位</th>
+                    <th width="6%">现职位</th>
+                    <th width="10%">短信内容</th>
+                    <th width="6%">性别</th>
+                    <th width="6%">年龄</th>
+                    <th width="6%">学历</th>
+                    <th width="8%">工作经验</th>
+                    <th width="9%">邀请时间</th>
+                    <th width="8%">邀请类型</th>
+                    <th width="9%">操作</th>
+                </tr>
+               </tbody>
+			   <tbody>
+                	                <tr>
+                    <td><input class="checkqx" type="checkbox" id="cbID" name="cbID" value="850554658136984" /></td>
+                                        <td width="100">
+                    	<div class="zpj_tp ">
+							                    			<a href="http://jn.58.com/tech/20017127351170x.shtml" target="_blank" title="网页平面设计师">马先生</a>               							  </div>
+                    <td>
+                   		                   			网管          							  </td>
+												                    	<td class="dfk">网管</td>
+	                    					                            <td>请于2015-01-20 13点来面试 </td>
+                                                                        <td>
+                                        男</td>
+                    <td>21</td>
+                    <td>中专</td>
+                    <td>1年以下</td>
+                    <td>2015-01-14</td>
+                    <td>面试</td>
+                    <td><a href="javascript:DeleApply(850554658136984);">删除</a> 　<a href="#">查看</a> </td>
+                </tr>
+      </tbody>
+        </table>
+        <div class="area_cz4">
+            <div id="pageInfo" class="pager" style="float: right; padding: 2px 0;">
+            <script type="text/javascript">  seperatePageForhiden("pageInfo","/invite/sendedlist",0, 1);</script>
+            </div>
+            <input type="checkbox" onclick="SelectAllCheckBox(this)" class="checkqx" />全选
+            <input type="button" class="btn-v2" value="删除" onclick="delMultiMsg();return false;" />
+            &nbsp;<span style="color: Red;" id="spanTipForReflash"></span>
+            <span id="ctl00_cphMain_InfoFL1List1_UPager1"></span>
+        </div>
+    </div>
+    </form>
+<script type="text/javascript">
+var jq=jQuery.noConflict();
+var index = "";
+var show = false;
+var viewContent = function(id){
+	var rowId = "content_" + id;
+   	if( rowId == index){
+   		if(show){
+   			jq("#"+rowId).show();
+   			show = false;
+   		}else{
+   			jq("#"+rowId).hide();
+   			show = true;
+   		}
+   	}else if( rowId != index){
+   		jq("#"+rowId).show();
+   		if(index != ""){
+   			jq("#"+index).hide();
+   		}
+   		index = rowId;
+   		var css = jq("#row_"+id).attr("class");
+   		if(css == "jiachu"){
+   			jq("#row_"+id).attr("class", "");
+   		}
+   		show = false;
+   	}
+};
+var delMsg = function(msgId) {
+	var url = "/invite/delete/" + msgId + "/0/01df2594e5f22b148dffc26a2b6167bb";
+	if(!confirm("要删除面试邀请吗？")){
+		return;
+	}
+	jq.post(url,
+			function(txt){
+				if(txt == 1){
+					alert("删除成功！");
+					jq("#invite_"+msgId).hide();
+				} else {
+					alert("删除失败！");
+				}
+				
+			}
+		);
+}
+
+var delMultiMsg = function(){
+	var msgs="";   
+	var items = document.getElementsByTagName("input");
+	for (i = 0; i < items.length; i++) {
+        if (items[i].id == "cbID" && items[i].checked) {
+        	msgs+= items[i].value+",";   
+        }
+    }
+    if(msgs == ""){
+    	alert("请选择要删除的信息！");
+    } else {
+    	if(!confirm("要删除选择的面试邀请吗？")){
+    		return;
+    	}
+    	msgs= msgs.substring(0,msgs.length - 1);
+    	var url = "/invite/multidelete/"+msgs+"/0/01df2594e5f22b148dffc26a2b6167bb";
+    	jq.post(url,
+    			function(txt){
+    				if(txt == 1){
+    					alert("删除成功！");
+    					for (i = 0; i < items.length; i++) {
+    				        if (items[i].id == "cbID" && items[i].checked) {
+    							jq("#invite_"+items[i].value).hide();
+    				        }
+    					}
+    				} else {
+    					alert("删除失败！");
+    				}
+    			}
+    		);
+    }
+}
+
+var SelectAllCheckBox = function(obj){
+	 var items = document.getElementsByTagName("input");
+ 	for (i = 0; i < items.length; i++) {
+        if (items[i].id == "cbID") {
+            items[i].checked = obj.checked;
+        }
+    }
+}
+
+var $=jQuery.noConflict();
+</script>
+<script language="javascript">
+        window.onload = function() {
+            setTimeout("resizeFrame()", 500);
+        }
+        function resizeFrame() {
+            if (parent.document.getElementById("ContainerFrame") != null) {
+                var hh = parent.document.getElementById("ContainerFrame").contentWindow.document.body.scrollHeight;
+                parent.document.getElementById("ContainerFrame").style.height = hh +20 + "px";
+            }
+        }
+    	$(".qz tr").hover(function(){ 
+			$(this).children("td").addClass("hover") 
+		},function(){ 
+			$(this).children("td").removeClass("hover") 
+		}) 
+</script>
+</body>
+</html>
