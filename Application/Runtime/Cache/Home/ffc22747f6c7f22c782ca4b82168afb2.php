@@ -3,12 +3,12 @@
 <head>
 <title>注册会员-58同城</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<script src="/ppt/Public/js/jquery-1.7.2.min.js" type="text/javascript"></script>
-<script src="/ppt/Public/js/formValidator-4.0.1.js" type="text/javascript"></script>
-<link rel="stylesheet" href="/ppt/Public/css/login_6.css" type="text/css" />
-<link rel="stylesheet" href="/ppt/Public/css/login_6_v0.css" type="text/css" />
-<script src="/ppt/Public/js/boot_passport_version_v0.js" type="text/javascript"></script>
-<link rel="stylesheet" href="/ppt/Public/css/login_6_v20150127134112.css" type="text/css" />
+<script src="/ypt/Public/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="/ypt/Public/js/formValidator-4.0.1.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/ypt/Public/css/login_6.css" type="text/css" />
+<link rel="stylesheet" href="/ypt/Public/css/login_6_v0.css" type="text/css" />
+<script src="/ypt/Public/js/boot_passport_version_v0.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/ypt/Public/css/login_6_v20150127134112.css" type="text/css" />
 <style>
 .porleft p {
  height: 35px;
@@ -204,7 +204,7 @@ $(function(){
 </head>
 <body>
 	<div id="header" class="win1000">
-		<a id="logo" href="/ppt"><img src="/ppt/Public/images/logo-49h.png" alt="中文最大生活信息门户" width="160" height="80" /></a>
+		<a id="logo" href="/ypt"><img src="/ypt/Public/images/logo-49h.png" alt="中文最大生活信息门户" width="160" height="80" /></a>
 		<div id="cityname" class="regname"><span>用户注册</span></div>
 		<div id="logintext"><a href="http://www.58.com/">返回首页</a>|<a target="_blank" href="http://about.58.com/">帮助</a></div>
 </div>
