@@ -199,6 +199,10 @@ $(function(){
         $('#tipwrap').fadeOut();
     });
     
+    //提交
+    $('#btnSubmit').click(function() {
+    	$('#submitForm').submit();
+    })
 })
 </script>
 </head>
@@ -209,7 +213,7 @@ $(function(){
 		<div id="logintext"><a href="http://www.58.com/">返回首页</a>|<a target="_blank" href="http://about.58.com/">帮助</a></div>
 </div>
 	<div class="cb win1000">
-		<form id="submitForm" action="/domobileregister" method="post" name="submitForm" target="formSubmit">
+		<form id="submitForm" action="{:U('regAct')}" method="post" name="submitForm" target="formSubmit">
 <div class="porleft">
 			<input type="hidden" name="ptk" id="ptk" value="f189f346d7484e2ba2363ed4107febd4"/>
 			<input type="hidden" name="cd" id="cd" value="5369"/>
@@ -251,7 +255,7 @@ $(function(){
                 
                 <p id="nextwrap">
                     <span class="regtlx">&nbsp;</span>
-                    <label id="butt" class="butt"><input type="button" class="btns" value="立即注册" checked="checked" id="btnNext" style="width:110px;height:34px;"/></label>
+                    <label id="butt" class="butt"><input type="button" id="btnSubmit" class="btns" value="立即注册" checked="checked" id="btnNext" style="width:110px;height:34px;"/></label>
                     <span id="loginOpt">已有账号？<a href="https://passport.58.com/login/">去登录</a></span>
                 </p>
 			  </div>
