@@ -9,9 +9,8 @@ class PublicController extends Controller {
     	if(!IS_POST) {
     		die('非法访问');
     	}
-    	print_r($_POST);DIE;
     	$model = D('user');
-    	if(!$this->create()) {
+    	if(!$model->create()) {
     		$msg = $model->getError();
     		$flag = 0;
     	}else {
@@ -21,6 +20,6 @@ class PublicController extends Controller {
     			$msg= '注册失败，请重新尝试';
     		}
     	}
-    	$this->display();
+    	//$this->display();
     }
 }
