@@ -18,4 +18,16 @@ class  UserModel extends  Model {
 		'nickName' =>'name', // 把表单中name映射到数据表的username字段        
 		'txtemail'  =>'email', // 把表单中的mail映射到数据表的email字段   
 	);
+	/**
+	 * 检测用户名或者邮箱是否存在
+	 * @param unknown $arr
+	 */
+	public function checkUnique($arr=array()) {
+		
+	}
+	public function login($pwd=false,$username=false,$email=false) {
+		if($username&&$pwd) {
+			
+		}
+	}
 }
