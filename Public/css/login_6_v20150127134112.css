@@ -123,6 +123,7 @@ ul.password-scrool li.hover{ background-position:0 0; font-weight:bold; color:#0
 .passwordbox{ padding:20px 10px;}
 
 .reg-sucess{ width:660px; padding:40px 0 0px 0px; margin:0 auto ; position:relative; color:#666; line-height:2; font-size:14px; }
+.reg-fail{ width:660px; padding:40px 0 0px 0px; margin:0 auto ; position:relative; color:red; line-height:2; font-size:14px; }
 .reg-sucess h2{ height:43px;  font:25px/1.7 "微软雅黑","黑体", sans-serif;color:#009900; position:relative;padding:0 0 0 55px; margin:0 0 30px 0; }
 .reg-sucess h2 span.reg-sucess-icon{ position:absolute; left:0; top:0px; display:block; background:url(https://passport.58.com/pic2/ui6/my/images/reg-ok.png) 0 0 no-repeat; width:39px; height:39px; overflow:hidden; margin:0px 5px 0 0;}
 

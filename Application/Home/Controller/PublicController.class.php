@@ -13,13 +13,22 @@ class PublicController extends Controller {
     	if(!$model->create()) {
     		$msg = $model->getError();
     		$flag = 0;
+    		$this->assign('msg',$msg);
+    		$this->display('regerror');
     	}else {
-    		if($model->add()==1) {
+    		$model->password = md5(md5($model->password));
+    		if($model->add()) {
     			$msg = '注册成功！';
+    			$flag =1;
+    			$this->assign('name',I('nickName'));
+    			$this->assign('email',I('txtemail'));
+    			$this->display('regok');
     		}else {
-    			$msg= '注册失败，请重新尝试';
+    			$msg= $model->getError();
+    			$flag = 0;
+    			$this->assign('msg',$msg);
+    			$this->display('regerror');
     		}
     	}
-    	//$this->display();
     }
 }
