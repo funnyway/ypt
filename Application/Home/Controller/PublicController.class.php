@@ -22,8 +22,11 @@ class PublicController extends Controller {
     			$flag =1;
     			$this->assign('name',I('nickName'));
     			$this->assign('email',I('txtemail'));
-    			$model->login();
-    			$this->display('regok');
+    			if($model->login()) {
+    				$this->display('regok');
+    			}else {
+    				
+    			}
     		}else {
     			$msg= $model->getError();
     			$flag = 0;

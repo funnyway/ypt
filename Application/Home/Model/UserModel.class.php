@@ -27,7 +27,21 @@ class  UserModel extends  Model {
 	}
 	public function login($pwd=false,$username=false,$email=false) {
 		if($username&&$pwd) {
-			
+			$data['name'] = $username;
+			$data['password'] = md5(md5($pwd));
+		}else if($email&&$pwd) {
+			$data['email'] = $email;
+			$data['password'] = md5(md5($pwd));
+		}else {
+			$data['name'] = I('username')||$data['email'] = I('email');
+			$data['password'] = md5(md5(I('password')));
+		}
+		if($this->select($data)) {
+			session('ypt_username',$data['name']);
+			session('ypt_useremail',$data['email']);
+			return true;
+		}else {
+			return false;
 		}
 	}
 }
