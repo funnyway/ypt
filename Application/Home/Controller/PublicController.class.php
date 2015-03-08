@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class PublicController extends Controller {
+class PublicController extends BaseController {
     public function index(){
 		$this->display();
     }
@@ -34,5 +34,9 @@ class PublicController extends Controller {
     			$this->display('regerror');
     		}
     	}
+    }
+    public function  login() {
+    	$this->assign('title','用户注册');
+    	$this->assign('page_tilte','用户注册——'.$this->getSiteName());
     }
 }
