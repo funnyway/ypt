@@ -1,0 +1,234 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>11</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="private" />
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/usermgm20121108_v20150305170743.css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery_v0.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/common_v20150210232843.js"></script>
+<script type="text/javascript"> document.domain = '__ROOT__';</script>
+<script type="text/javascript">
+var jq=jQuery.noConflict();
+var index = "";
+var show = false;
+var viewContent = function(id){
+	var rowId = "content_" + id;
+   	if( rowId == index){
+   		if(show){
+   			jq("#"+rowId).show();
+   			show = false;
+   		}else{
+   			jq("#"+rowId).hide();
+   			show = true;
+   		}
+   	}else if( rowId != index){
+   		jq("#"+rowId).show();
+   		if(index != ""){
+   			jq("#"+index).hide();
+   		}
+   		index = rowId;
+   		var css = jq("#row_"+id).attr("class");
+   		if(css == "jiachu"){
+   			jq("#row_"+id).attr("class", "");
+   			readInvite(id);
+   		}
+   		show = false;
+   	}
+};
+
+var delInvite = function(msgId){
+	if(confirm("确定删除?")){
+		jq("#row_"+msgId).hide();
+		jq("#content_"+msgId).hide();
+		var url = "/invite/delete/"+msgId + "/1/627dfb3d1d4df8698b31d6f79075d8b8" ;
+		jq.post(url,
+				function(txt){
+				}
+			);
+	}
+};
+
+var readInvite = function(msgId){
+	var url = "/invite/read/"+msgId+"/627dfb3d1d4df8698b31d6f79075d8b8";
+	jq.post(url,
+			function(txt){
+			}
+	);
+};
+
+var delMultiMsg = function(){
+	var msgs="";   
+	var items = document.getElementsByTagName("input");
+	for (i = 0; i < items.length; i++) {
+        if (items[i].id == "cbID" && items[i].checked) {
+        	msgs += items[i].value+",";   
+        }
+    }
+    if(msgs == ""){
+    	alert("请选择要删除的信息！");
+    } else {
+    	if(!confirm("确定删除?")){
+    		return;
+    	}
+    	msgs= msgs.substring(0,msgs.length - 1);
+    	var url = "/invite/multidelete/" + msgs + "/1/627dfb3d1d4df8698b31d6f79075d8b8";
+    	jq.post(url,
+    			function(txt){
+    				if(txt == 1){
+    					alert("删除成功！");
+    					for (i = 0; i < items.length; i++) {
+    				        if (items[i].id == "cbID" && items[i].checked) {
+    				        	jq("#content_"+ items[i].value).hide();
+    				        	jq("#row_"+items[i].value).hide();
+    				    		jq("#content_"+items[i].value).hide();
+    				        }
+    				    }
+    				} else {
+    					alert("删除失败！");
+    				}
+    			}
+    	);
+    }
+};
+
+var readMultiMsg = function(){
+	var msgs="";
+	var items = document.getElementsByTagName("input");
+	for (i = 0; i < items.length; i++) {
+        if (items[i].id == "cbID" && items[i].checked) {
+        	msgs+= items[i].value+",";   
+        }
+    }
+	
+    if(msgs == ""){
+    	alert("请选择要设置的信息！");
+    } else {
+    	msgs= msgs.substring(0,msgs.length - 1);
+    	var url = "/invite/readmulti/"+msgs+"/627dfb3d1d4df8698b31d6f79075d8b8";
+    	jq.post(url,
+    			function(txt){
+    				if(txt == 1){
+    					alert("设置成功！");
+    					for (i = 0; i < items.length; i++) {
+    				        if (items[i].id == "cbID" && items[i].checked) {
+    				        	jq("#row_"+items[i].value).attr("class", "");
+    				        	items[i].checked = false;
+    				        }
+    				    }
+    				} else {
+    					alert("设置失败！");
+    				}
+    			}
+    	);
+    }
+};
+
+function selectAllBox(obj){
+	 var items = document.getElementsByTagName("input");
+ 	for (i = 0; i < items.length; i++) {
+        if (items[i].id == "cbID") {
+            items[i].checked = obj.checked;
+        }
+    }
+};
+var $=jQuery.noConflict();
+</script>
+</head>
+<body>
+<div class="applyhistory">
+<div class="topinfomsg wxtips" id="topinfomsgshow">
+	<strong></strong> 关注“58同城”微信公众号，把您推荐给适合的好公司！且时时接收面试邀请！找好工作其实挺容易。<A href="http://weixin.58.com/pc?from=myqiuzhitop#scb_01" target=_blank>去扫码关注》</A>
+
+	<span class="btn-q"
+		onclick="document.getElementById('topinfomsgshow').style.display='none';">×</span>
+</div>
+			<div class="title clearfix">
+		<div class="xinxi-title">
+	    <ul class="clearfix" id="details-ul">
+	      <li><a href="http://jianli.58.com/receivedresumeinvitelist" id="gzndqy">关注您的企业<span id="unreadcount"></span></a></li>
+	      <li class="hover shows"><a href="javascript:void(0);">面试邀请</a></li>
+	    </ul>
+	    <span class="history-tip">
+    		<div class="toudi" id="toudi">
+    		   <span>收到的面试邀请</span>
+                <div class="toudilist" id="toudilist" style="display:none">
+                	<ul>
+                			<li><a href="javascript:window.document.location.href='http://qy.58.com/invite/toresumeinvites'">不限</a></li>
+                								     							     			<li><a href="javascript:window.document.location.href='http://qy.58.com/invite/toresumeinvites/1/81655688400903/2/1'" title="啊啊啊">啊啊啊</a></li>
+					     							     						     							     			<li><a href="javascript:window.document.location.href='http://qy.58.com/invite/toresumeinvites/1/81651879497479/2/1'" title="求职发单员三年经验">求职发单员三年经验</a></li>
+					     							     						     							     			<li><a href="javascript:window.document.location.href='http://qy.58.com/invite/toresumeinvites/1/81648500774151/2/1'" title="ananadddd">ananadddd</a></li>
+					     							     						     							     			<li><a href="javascript:window.document.location.href='http://qy.58.com/invite/toresumeinvites/1/81647604707847/2/1'" title="求销售工作 负2年经验">求销售工作 负2年经验</a></li>
+					     							     						     							     			<li><a href="javascript:window.document.location.href='http://qy.58.com/invite/toresumeinvites/1/81566606611716/2/1'" title="求职传菜员">求职传菜员</a></li>
+					     							     	                    </ul>
+                </div>
+            </div>
+	    </span>
+	    </div>
+	</div>
+    <div class="c"></div>
+    <table class="qz">
+	<tbody>
+		<tr>
+			<th width="36px">&nbsp;</th>
+			<th width="232px">邀请职位</th>
+			<th width="254px">邀请公司</th>
+            <th width="92px">邀请内容</th>
+			<th width="109px">投递时间</th>
+			<th width="92px">操作</th>
+		</tr>
+													        <tr id="row_50738677" >
+			                 <td><input type="checkbox" class="checkqx" id="cbID" name="cbID" value="50738677" /></td>
+			                 <td align="center">求销售工作 负2年经验</td>
+			                 <td><a href="http://qy.58.com/14502188407302" target="_blank">沈阳麦塔通讯信息有限公司</a></td>
+			                 <td align="center"><a href="javascript:void(0);" onclick="viewContent(50738677); return false;">查看</a></td>
+			                 <td align="center">15-02-09</td>
+			                 <td align="center">
+			                 	<a href="http://qy.58.com/14502188407302/?position=3"	target="_blank" class="comment">点评</a>
+			                    <a href="javascript:void(0);" onclick="delInvite(50738677);return false;">删除</a>
+			                 </td>
+			         </tr>
+			          <tr class="invitationWrap" id="content_50738677" style="display: none">
+			          		<td colspan="6">张三，我公司收到您的应聘简历，在家就能轻松赚钱，工资现结，有意者请加在线客服 QQ:597564039 为好友，客服马上与您联系(58同城人事招聘部) 02月09日 09:23</td>
+			          </tr>
+	              </tbody>
+    </table>
+    <div class="area_cz3">
+       	<div id="pageInfo" style="float:right; padding:2px 0;" class="pager"></div>
+        <input id="checkqx"  type="checkbox" class="checkqx" onclick="selectAllBox(this);"  /> 全选        
+        <input type="button" class="btn-v2" onclick="delMultiMsg();" value="删除" />
+        <input type="button" class="btn-read" OnClick="readMultiMsg();" value="设为已读" />
+    </div>
+     <script type="text/javascript" language="javascript">
+	    seperatePage("pageInfo", "/invite/toresumeinvites/0/29029422534404/" +2, 1, 1);
+		$(".qz tr").hover(function(){ $(this).children("td").addClass("hover") },function(){ $(this).children("td").removeClass("hover") }) 
+	</script>
+    <div class="c"></div>
+    <script type="text/javascript" language="javascript">
+        $("#toudi").mouseover(function(){
+        	$("#toudilist").show();
+        	$("#toudilist").prev().addClass("active");
+        });
+        $("#toudi").mouseout(function(){
+        	$("#toudilist").hide();
+        	$("#toudilist").prev().removeClass("active");
+        });
+        $.ajax({
+        	url:"http://jianli.58.com/getqzunreadinvitecount?callback=?",
+        	type:"get",
+        	dataType:"jsonp",
+        	success:function(result){
+            	if(result&&result!=0){
+                    $("#unreadcount").text("（"+result+"）");
+            	}
+        	},
+        	error:function(){
+        		
+        	}
+        	
+        });
+    </script>
+</div>
+</body>
+</html>
