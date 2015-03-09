@@ -11,6 +11,7 @@
 		<link type="text/css" rel="stylesheet"
 			href="__PUBLIC__/css/zhaob_1120_liu.css" media="all" />
 		<link rel="stylesheet" href="__PUBLIC__/css/pupup2.css"/>	
+		<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/person_center.css" media="all" />
 		<title>用户中心</title>
 		<script type="text/javascript" src="http://pic2.58.com/js/require_jquery_load.js"></script>
 		<script type="text/javascript">document.domain = '58.com'; </script>
@@ -54,72 +55,7 @@
 				});
 			}
 		</script>
-<style>
-.top {
-	height: 122px;
-	width: 960px;
-	margin-right: auto;
-	margin-left: auto;
-	background-image: url(images/yh.jpg);
-	background-repeat: no-repeat;
-	background-position: left bottom;
-}
-.top a:link {
-	font-size: 12px;
-	color: #333333;
-	text-decoration: none;
-}
-.top a:visited {
-	font-size: 12px;
-	color: #333333;
-	text-decoration: none;
-}
-.top a:hover {
-	font-size: 12px;
-	color: #0000FF;
-	text-decoration: blink;
-}
-.toptxt {
-	text-align: justify;
-	font-size: 12px;
-	color: #333333;
-}
-
-.topbg {
-	background-image: url(images/index_r1_c4.jpg);
-	background-repeat: repeat-x;
-	background-position: left top;
-	height: 122px;
-	width: 100%;
-	font-size: 12px;
-}
-.topewm {
-	float: right;
-	height: 80px;
-	width: 60px;
-	padding-top: 30px;
-	text-align: center;
-}
-.bottom {
-	background-color: #f5f5f5;
-	padding-left: 50px;
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	color: #464646;
-	font-size: 14px;
-	line-height: 32px;
-	margin-top: 15px;
-}
-.topimg {
-	position: absolute;
-	top: 56px;
-	left: 1010px;
-}
-</style>
-
 	</head>
-
 	<body id="qwe">
 	<div class="logHeader">
     <div class="topbg">
@@ -165,10 +101,10 @@
 	<ul id="lmenu_ul">
 	  <li id="wdqz"><span><i class="opened"></i>我的求职</span>
 			<ul class="listmenu clearfix">
-				<li id="gerenjianli"  class="open" ><a href="/myseekjob/1" tongji='resumeinfoextend_new' rel="2">我的简历</a></li>
-				<li id="resumehisotry"  ><a href="/resumehisotry" tongji='resumehisotry_new' rel="16">简历投递记录</a></li>
-				<li id="resumedownhis"  ><a href="/resumedownhis" tongji='resumedownhis_new' rel="24">谁下载了我的简历</a></li>				
-				<li id="interviewinvited" ><a href="/interviewinvited" tongji='interviewinvited_new' rel="25">面试邀请</a></li>
+				<li id="gerenjianli"  class="open" ><a href="resumeList" target="ContainerFrame" tongji='resumeinfoextend_new' rel="2">我的简历</a></li>
+				<li id="resumehisotry"  ><a href="pushList" target="ContainerFrame" tongji='resumehisotry_new' rel="16">简历投递记录</a></li>
+				<li id="resumedownhis"  ><a href="pullList" target="ContainerFrame" tongji='resumedownhis_new' rel="24">谁下载了我的简历</a></li>				
+				<li id="interviewinvited" ><a href="inviteList" target="ContainerFrame" tongji='interviewinvited_new' rel="25">面试邀请</a></li>
 			</ul>
 		</li>
 		<li id="help"><span><i class="icon-help"></i><a href="http://about.58.com/help.html" target="_blank"   tongji='help' >帮助中心</a></span></li>
@@ -209,7 +145,7 @@
         catch (ex) { }
     }
 </script>
-<iframe scrolling="no" frameborder="0" marginheight="0" marginwidth="0" class="userscore" src="resuelist[1].html" onload="ResizeFrame(this)" onreadystatechange="stateChangeIE(this)" name="ContainerFrame" id="ContainerFrame" style="height: 800px;"></iframe> 					<!-- include end -->
+<iframe scrolling="no" frameborder="0" marginheight="0" marginwidth="0" class="userscore" src="{:U('resumeList')}" onload="ResizeFrame(this)" onreadystatechange="stateChangeIE(this)" name="ContainerFrame" id="ContainerFrame" style="height: 800px;"></iframe> 					<!-- include end -->
 				</div>
 			</div>
 			<!-- end wraper -->
@@ -241,6 +177,8 @@
 		})
 		
 		menuEventInit();
+		
+
 	});	
 	
 	
@@ -303,9 +241,12 @@
                     }  
                 }) ;  
             }  
-        });  
+        });
+        //二级菜单切换
+		$('.listmenu>li').click(function() {
+			$(this).addClass('open').siblings().removeClass('open');
+		})
 	 }  	
-	    
     	 function initMenuOpenSet(){
 		 var mymenuopened = fe.util.cookie.get("mymenuopened_28276741794823");
 		 if(mymenuopened!=null && mymenuopened!=''){

@@ -8,4 +8,7 @@ class BaseController extends Controller {
    public function getSite() {
    		return "平台";
    }
+   public function getUserId() {
+   		return session('ypt_user_id');
+   }
 }

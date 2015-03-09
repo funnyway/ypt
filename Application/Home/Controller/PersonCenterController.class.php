@@ -20,8 +20,8 @@ class PersonCenterController extends BaseController {
     		if($model->add()) {
     			$msg = '注册成功！';
     			$flag =1;
-    			$this->assign('name',I('nickName'));
-    			$this->assign('email',I('txtemail'));
+    			$this->assign('name', I('nickName'));
+    			$this->assign('email', I('txtemail'));
     			if($model->login()) {
     				$this->display('regok');
     			}else {
@@ -35,8 +35,14 @@ class PersonCenterController extends BaseController {
     		}
     	}
     }
-    public function  login() {
-    	$this->assign('title','用户注册');
-    	$this->assign('page_tilte','用户注册——'.$this->getSiteName());
+    public function  resumeList() {
+    	$this->assign('title','我的简历');
+    	$user_id = $this->getUserId();
+    	$model = M('resume');
+    	$number = $model->where(array('user_id'=>$user_id))->count();
+    	$this->assign('resume_total',$number);
+    	$rs = $model->where(array('user_id'=>$user_id))->select();
+    	$this->assign('resumes',$rs);
+    	$this->display();
     }
 }

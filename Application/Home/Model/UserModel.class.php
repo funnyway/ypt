@@ -36,9 +36,11 @@ class  UserModel extends  Model {
 			$data['name'] = I('username')||$data['email'] = I('email');
 			$data['password'] = md5(md5(I('password')));
 		}
-		if($this->select($data)) {
-			session('ypt_username',$data['name']);
-			session('ypt_useremail',$data['email']);
+		if(($rs = $this->select($data)) !== false) {
+			$user = $rs[0];
+			session('ypt_user_id',$user['user_id']);
+			session('ypt_user_name',$user['name']);
+			session('ypt_user_email',$user['email']);
 			return true;
 		}else {
 			return false;
