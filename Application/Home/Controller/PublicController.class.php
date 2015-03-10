@@ -38,5 +38,12 @@ class PublicController extends BaseController {
     public function  login() {
     	$this->assign('title','用户注册');
     	$this->assign('page_tilte','用户注册——'.$this->getSiteName());
+    	$this->display();
+    }
+    public function doLogin() {
+    	if(!IS_POST) {
+    		die('非法访问！');
+    	}
+    	print_r($_POST);
     }
 }
