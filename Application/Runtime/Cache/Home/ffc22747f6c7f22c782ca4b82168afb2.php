@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>注册会员-58同城</title>
+<title><?php echo ($title); ?></title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <script src="/ppt/Public/js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script src="/ppt/Public/js/formValidator-4.0.1.js" type="text/javascript"></script>
@@ -210,7 +210,7 @@ $(function(){
 	<div id="header" class="win1000">
 		<a id="logo" href="/ppt"><img src="/ppt/Public/images/logo-49h.png" alt="中文最大生活信息门户" width="160" height="80" /></a>
 		<div id="cityname" class="regname"><span>用户注册</span></div>
-		<div id="logintext"><a href="http://www.58.com/">返回首页</a>|<a target="_blank" href="http://about.58.com/">帮助</a></div>
+		<div id="logintext"><a href="/ypt">返回首页</a>|<a target="_blank" href="http://about.58.com/">帮助</a></div>
 </div>
 	<div class="cb win1000">
 		<form id="submitForm" action="<?php echo U('regAct');?>" method="post" name="submitForm" >

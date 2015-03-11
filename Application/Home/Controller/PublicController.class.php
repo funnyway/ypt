@@ -5,6 +5,7 @@ class PublicController extends BaseController {
     public function index(){
 		$this->display();
     }
+
     public function regAct() {
     	if(!IS_POST) {
     		die('非法访问');
@@ -22,11 +23,8 @@ class PublicController extends BaseController {
     			$flag =1;
     			$this->assign('name',I('nickName'));
     			$this->assign('email',I('txtemail'));
-    			if($model->login()) {
-    				$this->display('regok');
-    			}else {
-    				
-    			}
+    			$model->login();
+    			$this->display('regok');
     		}else {
     			$msg= $model->getError();
     			$flag = 0;
@@ -36,8 +34,32 @@ class PublicController extends BaseController {
     	}
     }
     public function  login() {
+    	session('ypt_http_referer',$_SERVER['HTTP_REFERER']);
     	$this->assign('title','用户注册');
     	$this->assign('page_tilte','用户注册——'.$this->getSiteName());
     	$this->display();
+    }
+    public function doLogin() {
+    	if(!IS_POST) {
+    		die('非法访问！');
+    	}
+    //	session();
+    	$account = I('account');
+    	$data['password'] = I('password');
+    	if($account = pregEmail($account)[0]) {
+    		$data['email'] = $account;
+    	}else {
+    		$data['name'] = $account;
+    	}
+    	$model = D('User');
+    	if($model->login($data)) {
+    		header('Location:'.session('ypt_http_referer'));
+    	}else {
+    		$this->error('登录失败');
+    	}
+
+    }
+    public function checkLogin() {
+    	$this->ajaxReturn('yes');
     }
 }
