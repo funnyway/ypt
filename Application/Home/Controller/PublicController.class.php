@@ -38,5 +38,6 @@ class PublicController extends BaseController {
     public function  login() {
     	$this->assign('title','用户注册');
     	$this->assign('page_tilte','用户注册——'.$this->getSiteName());
+    	$this->display();
     }
 }
