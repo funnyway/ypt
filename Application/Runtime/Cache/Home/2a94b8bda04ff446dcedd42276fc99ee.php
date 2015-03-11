@@ -23,15 +23,9 @@
 -->
 </style>
 </head>
-<<<<<<< HEAD
-
+<script src="/ppt/Public/js/common.js" type="text/javascript"></script>
 <script src="/ppt/Public/js/jquery-1.4a2.min.js" type="text/javascript"></script>
 <script src="/ppt/Public/js/jquery.KinSlideshow-1.1.js" type="text/javascript"></script>
-=======
-<script src="/ypt/Public/js/common.js" type="text/javascript"></script>
-<script src="/ypt/Public/js/jquery-1.4a2.min.js" type="text/javascript"></script>
-<script src="/ypt/Public/js/jquery.KinSlideshow-1.1.js" type="text/javascript"></script>
->>>>>>> 5b88d1b8fc9a89cb47054335d3585bf4c2d4bda6
 <script type="text/javascript">
 $(function(){
 	$("#KinSlideshow").KinSlideshow({
@@ -46,8 +40,8 @@ $(function(){
 		url:"<?php echo U('Public/checkLogin');?>",
 		type:'POST',
 		dataType: "json",
-		success:function(data) {
-			getSession()
+		success:function(data){
+			alert(data);
 		}
 	})
 })
@@ -55,11 +49,7 @@ $(function(){
 <body>
 <div class="topbg">
   <div class="top">
-<<<<<<< HEAD
-    <div class="toptxt"><a href="<?php echo U('Public/reg');?>">注册</a> | <a href="<?php echo U('Public/login');?>">登录</a> | <a href="#">设为首页</a></div>
-=======
     <div class="toptxt"><span id="login"><a href="<?php echo U('Public/reg');?>">注册</a> | <a href="<?php echo U('Public/login');?>">登录</a></span> | <a href="#">设为首页</a></div>
->>>>>>> 5b88d1b8fc9a89cb47054335d3585bf4c2d4bda6
 	<div class="topewm">
 	  <p><img src="/ppt/Public/images/index_r3_c16.jpg" /></p>
 	  <p>校园微社区</p>

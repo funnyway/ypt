@@ -25,7 +25,7 @@ class  UserModel extends  Model {
 	public function checkUnique($arr=array()) {
 		
 	}
-	public function login($data) {
+	public function login($data, $remember=false) {
 		$data['password'] = md5(md5($data['password']));
 		if(($rs = $this->where($data)->select())) {
 			$user = $rs[0];

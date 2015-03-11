@@ -3,10 +3,14 @@ namespace Home\Controller;
 use Think\Controller;
 class PublicController extends BaseController {
     public function index(){
+    	echo session_id();die;
 		$this->display();
+		    	
     }
 
     public function regAct() {
+    	echo session_id();
+    	 die;
     	if(!IS_POST) {
     		die('非法访问');
     	}
@@ -60,6 +64,6 @@ class PublicController extends BaseController {
 
     }
     public function checkLogin() {
-    	$this->ajaxReturn('yes');
+    	//if()
     }
 }

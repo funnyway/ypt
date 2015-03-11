@@ -210,7 +210,7 @@ $(function(){
 	<div id="header" class="win1000">
 		<a id="logo" href="/ppt"><img src="/ppt/Public/images/logo-49h.png" alt="中文最大生活信息门户" width="160" height="80" /></a>
 		<div id="cityname" class="regname"><span>用户注册</span></div>
-		<div id="logintext"><a href="/ypt">返回首页</a>|<a target="_blank" href="http://about.58.com/">帮助</a></div>
+		<div id="logintext"><a href="/ppt">返回首页</a>|<a target="_blank" href="http://about.58.com/">帮助</a></div>
 </div>
 	<div class="cb win1000">
 		<form id="submitForm" action="<?php echo U('regAct');?>" method="post" name="submitForm" >
