@@ -25,18 +25,9 @@ class  UserModel extends  Model {
 	public function checkUnique($arr=array()) {
 		
 	}
-	public function login($pwd=false,$username=false,$email=false) {
-		if($username&&$pwd) {
-			$data['name'] = $username;
-			$data['password'] = md5(md5($pwd));
-		}else if($email&&$pwd) {
-			$data['email'] = $email;
-			$data['password'] = md5(md5($pwd));
-		}else {
-			$data['name'] = I('username')||$data['email'] = I('email');
-			$data['password'] = md5(md5(I('password')));
-		}
-		if(($rs = $this->select($data)) !== false) {
+	public function login($data) {
+		$data['password'] = md5(md5($data['password']));
+		if(($rs = $this->where($data)->select())) {
 			$user = $rs[0];
 			session('ypt_user_id',$user['user_id']);
 			session('ypt_user_name',$user['name']);

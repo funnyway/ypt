@@ -23,7 +23,7 @@
 -->
 </style>
 </head>
-
+<script src="/ypt/Public/js/common.js" type="text/javascript"></script>
 <script src="/ypt/Public/js/jquery-1.4a2.min.js" type="text/javascript"></script>
 <script src="/ypt/Public/js/jquery.KinSlideshow-1.1.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -35,14 +35,21 @@ $(function(){
 			titleFont:{TitleFont_size:12,TitleFont_color:"#FFffff"},
 			titleBar:{titleBar_height:28,titleBar_bgColor:"#000000",titleBar_alpha:0.5},
 	});
+	//检查自动登录
+	$.ajax({
+		url:"<?php echo U('Public/checkLogin');?>",
+		type:'POST',
+		dataType: "json",
+		success:function(data) {
+			getSession()
+		}
+	})
 })
 </script>
-
-
 <body>
 <div class="topbg">
   <div class="top">
-    <div class="toptxt"><a href="<?php echo U('Public/reg');?>">注册</a> | <a href="<?php echo U('Public/login');?>">登录</a> | <a href="#">设为首页</a></div>
+    <div class="toptxt"><span id="login"><a href="<?php echo U('Public/reg');?>">注册</a> | <a href="<?php echo U('Public/login');?>">登录</a></span> | <a href="#">设为首页</a></div>
 	<div class="topewm">
 	  <p><img src="/ypt/Public/images/index_r3_c16.jpg" /></p>
 	  <p>校园微社区</p>
