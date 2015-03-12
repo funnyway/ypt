@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link href="/ppt/Public/css/css.css" rel="stylesheet" type="text/css" />
-<link href="/ppt/Public/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/ypt/Public/css/css.css" rel="stylesheet" type="text/css" />
+<link href="/ypt/Public/css/main.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
 .itemInfo{
@@ -23,9 +23,9 @@
 -->
 </style>
 </head>
-<script src="/ppt/Public/js/common.js" type="text/javascript"></script>
-<script src="/ppt/Public/js/jquery-1.4a2.min.js" type="text/javascript"></script>
-<script src="/ppt/Public/js/jquery.KinSlideshow-1.1.js" type="text/javascript"></script>
+<script src="/ypt/Public/js/common.js" type="text/javascript"></script>
+<script src="/ypt/Public/js/jquery-1.4a2.min.js" type="text/javascript"></script>
+<script src="/ypt/Public/js/jquery.KinSlideshow-1.1.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function(){
 	$("#KinSlideshow").KinSlideshow({
@@ -51,7 +51,7 @@ $(function(){
   <div class="top">
     <div class="toptxt"><span id="login"><a href="<?php echo U('Public/reg');?>">注册</a> | <a href="<?php echo U('Public/login');?>">登录</a></span> | <a href="#">设为首页</a></div>
 	<div class="topewm">
-	  <p><img src="/ppt/Public/images/index_r3_c16.jpg" /></p>
+	  <p><img src="/ypt/Public/images/index_r3_c16.jpg" /></p>
 	  <p>校园微社区</p>
 	</div>
   </div>
@@ -64,10 +64,10 @@ $(function(){
 <div class="xinwenBox">
   <!-- 新闻频道_焦点图开始 -->
   <div id="KinSlideshow">
-        <a href="#" target="_blank"><img src="/ppt/Public/ls/tp01.jpg" alt="这是标题一" width="343" height="228" border="0" /></a>
-        <a href="#" target="_blank"><img src="/ppt/Public/ls/tp02.jpg" alt="这是标题二" width="343" height="228" /></a>
-        <a href="#" target="_blank"><img src="/ppt/Public/ls/tp03.jpg" alt="这是标题三" width="343" height="228" /></a>
-        <a href="#" target="_blank"><img src="/ppt/Public/ls/tp04.jpg" alt="这是标题四" width="343" height="228" /></a></div>
+        <a href="#" target="_blank"><img src="/ypt/Public/ls/tp01.jpg" alt="这是标题一" width="343" height="228" border="0" /></a>
+        <a href="#" target="_blank"><img src="/ypt/Public/ls/tp02.jpg" alt="这是标题二" width="343" height="228" /></a>
+        <a href="#" target="_blank"><img src="/ypt/Public/ls/tp03.jpg" alt="这是标题三" width="343" height="228" /></a>
+        <a href="#" target="_blank"><img src="/ypt/Public/ls/tp04.jpg" alt="这是标题四" width="343" height="228" /></a></div>
 <!-- 新闻频道_焦点图结束 -->
    <div class="xinwenLeft">
      <div><p class="xwH1">山东省大学生综合素质大赛总决赛圆满落幕
@@ -84,11 +84,11 @@ $(function(){
       </ul> 
 	 </div>
    </div>
-   <div class="xinwengg"><a href="#"><img src="/ppt/Public/images/index_r8_c15.jpg" width="192" height="84" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r10_c15.jpg" width="192" height="84" border="0" /></a></div>
+   <div class="xinwengg"><a href="#"><img src="/ypt/Public/images/index_r8_c15.jpg" width="192" height="84" border="0" /></a><a href="#"><img src="/ypt/Public/images/index_r10_c15.jpg" width="192" height="84" border="0" /></a></div>
  </div>
  <div class="dasaiBox">
    <div class="dasaidh">　　　　　　　　　　　<a href="#">大赛</a>　　　　　        <a href="#">就业</a> 　　　　　        <a href="#">实习</a>　　　　　        <a href="#">兼职</a> 　　　　　        <a href="#">测评</a> 　　　　　        <a href="#">培训</a> 　　　　　        <a href="#">创业</a> 　　　　　        <a href="#">法律服务</a></div>
-   <div class="dasaigg"><a href="#"><img src="/ppt/Public/images/index_r14_c3.jpg" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r14_c8.jpg" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r19_c3.jpg" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r18_c7.jpg" border="0" /></a></div>
+   <div class="dasaigg"><a href="#"><img src="/ypt/Public/images/index_r14_c3.jpg" border="0" /></a><a href="#"><img src="/ypt/Public/images/index_r14_c8.jpg" border="0" /></a><a href="#"><img src="/ypt/Public/images/index_r19_c3.jpg" border="0" /></a><a href="#"><img src="/ypt/Public/images/index_r18_c7.jpg" border="0" /></a></div>
    <div class="xinwenLeft">
      <div>
 	  <ul>
@@ -101,11 +101,11 @@ $(function(){
       </ul> 
 	 </div>
    </div>
-   <div class="xinwengg"><a href="#"><img src="/ppt/Public/images/index_r15_c14.jpg" width="192" height="84" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r20_c14.jpg" width="192" height="84" border="0" /></a></div>
+   <div class="xinwengg"><a href="#"><img src="/ypt/Public/images/index_r15_c14.jpg" width="192" height="84" border="0" /></a><a href="#"><img src="/ypt/Public/images/index_r20_c14.jpg" width="192" height="84" border="0" /></a></div>
  </div>
  <div class="zhaopinBox">
    <div class="zhaopindh">　　　　　　　　　　　<a href="#">就业</a>　　　　　        <a href="#">实习</a> 　　　　　        <a href="#">家教</a>　　　　　        <a href="#">兼职</a> 　　　　　        <a href="#">派单</a> 　　　　　        <a href="#">钟点工</a> 　　　　　        <a href="#">志愿者</a></div>
-   <div class="zhaopingg"><a href="#"><img src="/ppt/Public/images/index_r26_c3.jpg" width="168" height="100" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r26_c9.jpg" width="168" height="100" border="0" /></a><a href="#"><img src="/ppt/Public/images/zp_r1_c1.jpg" width="108" height="34" border="0" /></a><a href="#"><img src="/ppt/Public/images/zp_r1_c5.jpg" width="108" height="34" border="0" /></a><a href="#"><img src="/ppt/Public/images/zp_r1_c11.jpg" width="108" height="34" border="0" /></a></div>
+   <div class="zhaopingg"><a href="#"><img src="/ypt/Public/images/index_r26_c3.jpg" width="168" height="100" border="0" /></a><a href="#"><img src="/ypt/Public/images/index_r26_c9.jpg" width="168" height="100" border="0" /></a><a href="#"><img src="/ypt/Public/images/zp_r1_c1.jpg" width="108" height="34" border="0" /></a><a href="#"><img src="/ypt/Public/images/zp_r1_c5.jpg" width="108" height="34" border="0" /></a><a href="#"><img src="/ypt/Public/images/zp_r1_c11.jpg" width="108" height="34" border="0" /></a></div>
    <div class="xinwenLeft">
      <div>
 	  <ul>
@@ -132,7 +132,7 @@ $(function(){
  </div>
  <div class="zongheBox">
    <div class="zonghedh">　　　　　　　　　　　<a href="#">测评</a>　　　　　        <a href="#">培训</a> 　　　　　        <a href="#">创业</a>　　　　　        <a href="#">公考</a> 　　　　　        <a href="#">法律服务</a>　　　　　        <a href="#">生活服务</a></div>
-   <div class="dasaigg"><a href="#"><img src="/ppt/Public/images/index_r30_c3.jpg" width="168" height="90" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r30_c7.jpg" width="168" height="90" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r32_c3.jpg" width="168" height="90" border="0" /></a><a href="#"><img src="/ppt/Public/images/index_r33_c8.jpg" width="168" height="90" border="0" /></a></div>
+   <div class="dasaigg"><a href="#"><img src="/ypt/Public/images/index_r30_c3.jpg" width="168" height="90" border="0" /></a><a href="#"><img src="/ypt/Public/images/index_r30_c7.jpg" width="168" height="90" border="0" /></a><a href="#"><img src="/ypt/Public/images/index_r32_c3.jpg" width="168" height="90" border="0" /></a><a href="#"><img src="/ypt/Public/images/index_r33_c8.jpg" width="168" height="90" border="0" /></a></div>
    <div class="xinwenLeft">
      <div>
 	  <ul>

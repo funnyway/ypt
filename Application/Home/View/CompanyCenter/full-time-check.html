@@ -1,0 +1,46 @@
+<include file="full-time-top" />
+<div class="xinxi-title">
+	<ul class="clearfix" id="details-ul">
+					<li><a href="full-time-new">最新信息</a></li>
+							<li><a href="full-time-show">显示中的信息</a></li>
+							<li class="hover"><a href="javascript:void(0);" id="sh">审核中的信息</a></li>
+							<li><a href="full-time-hide">未显示的信息</a></li>
+			</ul>
+</div>			<div style="text-align: center; padding: 50px 30px;">暂时还没有审核中的信息</div>
+	</div>
+
+<div class="area_cz4">
+		</div>
+
+<div class="noteread">
+	<p> <b>说明：</b></p>
+	<p> 1、审核中：待审核中的信息除了您自己外，其他人无法看到，工作人员会在24小时内为您审核。</p>
+	<p> 2、审核不通过：审核不通过的信息为58同城审核人员审核不通过的信息，别人无法看到您的信息。<a href="http://about.58.com/27.html?categid=1" target="_blank">【58版规】</a></p>
+</div>
+<script type="text/javascript">
+	var reasonDtlTimer;
+	function showReasonDtl(infoId){
+	  closeAllReasonDtl();
+	  $("#ReasonDtl_"+infoId).show();
+	}
+	
+	function hideReasonDtl(infoId){
+		clearTimeout(reasonDtlTimer);
+	    reasonDtlTimer = setTimeout("hideReasonDtlDiv("+infoId+")", 200);
+	}
+	
+	function hideReasonDtlDiv(infoId){
+	    $("#ReasonDtl_"+infoId).hide();
+	}
+	function showReasonDtlDiv(infoId){
+		clearTimeout(reasonDtlTimer);
+	}
+	function closeAllReasonDtl(){
+	  $("div[id^='ReasonDtl_']").each(function(i){
+  	 	$(this).hide();
+	  });
+	}
+	
+</script>
+<!-- flag=iResearch-zp-qy -->
+</body>
