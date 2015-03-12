@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+
+.lmenu li i.icon-zb{ top:9px; _top:7px; width:12px;left:20px; height:12px; background:url(../images/icon_zb.png) no-repeat;}
+.lmenu li.open i.icon-zb{ left:22px;background:url(../images/icon_zb_open.png) no-repeat;}
+.xinfabu{ margin-top:0px; margin-bottom:20px; width:820px;}
+.czfr{ color:#333;}
+/*.xinfabu td{width: auto;}*/
+.shuxian{ padding:0 10px;}
+.con_c{ margin-top:10px; width:800px;}
+.con_c li{ height:36px; line-height:36px; border-top:1px dashed #ededed;}
+.con_c li span{ display:inline-block;}
+.con_c li.shix{border-top:1px solid #ededed;}
+.gsmc{ width:300px; padding-right:10px;}
+.xinfabu td .gsmc a{ color:#2255dd;}
+.lxdh{ width:210px; padding-right:5px;}
+.pingjia{display:inline-block;width:50px;height:24px; line-height:24px; text-align:center;background: url(../images/pingjia.png) no-repeat 0 0;cursor:pointer;overflow:hidden;vertical-align:middle;}
+.pingjia:hover{ background-image:url(../images/pingjia_h.png);}
+.pingjia input{display:block;width:50px;border:none;background:none;height:24px;color:#fff; text-indent:55px;cursor:pointer;overflow:hidden}
+
+.pager { padding:20px 0;}
+
+/* 主站弹出框样式 20130425 by liza */
+
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#000;}
+#colorbox{ border:8px solid #9f9f9f;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-top:34px;}
+        #cboxTitle{    background:url("../images/fe_window_bg.png") repeat-x 0 0;
+    height: 34px;
+    font: 400 14px/34px "";
+    padding: 0 10px; width:100%; color:#333; position:absolute; left:0;top:0;}
+        #cboxClose{position:absolute; top:0; right:10px; background:url("../images/fe_window_bg.png") no-repeat 0 -35px; float: right;
+    height: 18px;
+    margin-top: 7px;
+    width: 18px; text-indent:-5000px; overflow:hidden;}
+		#cboxClose:hover{ background-position:0 -53px;}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+
+
+/*
+  The following provides PNG transparency support for IE6
+  Feel free to remove this and the /ie6/ directory if you have dropped IE6 support.
+*/
+
+.scheme_list{ width:830px;}
+.pup_list{width:740px; overflow:hidden;}
+.w450{width:450px;}
+
+.pup_p1{ font:400 14px/24px "微软雅黑"; margin:0 0 20px;}
+.price_step_btns { overflow:hidden; clear:both;  height:34px; text-align:center; }
+.price_step_btns a{ display:inline-block;}
+.ding_btn{ margin-right:10px;}
+.ding_btn, .ding_btn em { display:inline-block; vertical-align:top; height:34px; background:url(../images/ding_btn.gif) no-repeat; font:700 14px/34px arial; color:#fff; }
+.ding_btn, .ding_btn:hover { background-position:right top; padding-right:20px;text-decoration:none; color:#fff;}
+.ding_btn em { background-position:left top; width:20px;}
+a.ding_btn_gray, a.ding_btn_gray em { display:inline-block; vertical-align:top; height:34px; background:url(../images/ding_btn_gray.gif) no-repeat; font:700 14px/34px arial; color:#fff; }
+a.ding_btn_gray, a.ding_btn_gray:hover { background-position:right top; padding-right:20px;text-decoration:none; color:#585858;}
+a.ding_btn_gray em { background-position:left top; width:20px;}
+
+.step_content { margin:0; padding:10px 20px 20px; background:#fff; border:1px solid #5A79AC; overflow:hidden;}
+.step_content .price_step { padding-top:10px;}
+.step_content .price_region_line { margin:0;}
+.step_content .price_step_select { background:#fffeef; border:1px solid #ece8dc; padding:5px 10px; margin:20px 0;}
+
+/*我的微58*/
+#masklayer{ z-index:9998; background:#666; width:100%; height:100%; display:none; left:0; top:0; filter:alpha(opacity=60); opacity:0.6; position:fixed; _position:absolute;_height:expression(documentElement.scrollTop + documentElement.clientHeight + "px"); }
+#masklayer iframe{opacity:0; filter:alpha(opacity:0)}
+.my58wx{ background: #363636; height:430px; width: 100%; position: absolute; top:136px; left:0; z-index: 9999; display: none;}
+.my58wx img{ display: block; margin: 20px auto; padding:0 20px; background: #363636;}
+.my58wx .tooff{ color:#a1a1a1; display: inline-block; padding:; height: 30px; line-height: 30px; width: 80px; text-align: center; border:1px solid #5e5e5e; background: #414141; font-size: 14px; cursor: pointer; position: absolute; bottom: 0px; left: 50%; margin-left: -41px;}
+.my58wx .line{ display: block; height: 1px; background: #d7d7d7; font-size: 0; width: 100%; position: absolute; top:214px; z-index: -1;}
+/*2014721 微58自动弹出*/
+.my58wx_auto{background:#339966;height:430px;width:100%;position:fixed;_position:absolute;_top:expression(documentElement.scrollTop+136+'px');top:136px;left:0;z-index:9999;display:none;}
+.my58wx_auto .line_auto{display:block;height:1px;background:#d7d7d7;font-size:0;width:100%;position:absolute;top:214px;z-index:-1;}
+.my58wx_auto .tooff_auto{color:#ccc;display:inline-block;height:30px;line-height:30px;width:80px;text-align:center;border:1px solid #aeaeae;background:#339966;font-size:14px;cursor:pointer;position:absolute;bottom:0px;left:50%;margin-left:-41px;}
+.my58wx_auto img{display:block;margin:20px auto;}
+.fullscreep_div{display:none;position:fixed;height:100%;width:100%;z-index:9997;background:#666;left:0;top:0;filter:alpha(opacity=60);opacity:0.6;_position:absolute;_height:expression(documentElement.scrollTop + documentElement.clientHeight + "px");}
+/*2014.9.15 微58增加另一个弹层 lijian06*/
+.other_my58wx{  display: none;position:fixed; _position:absolute; height:435px; top:50%;  _top:expression(documentElement.scrollTop+136+'px');  margin-top:-217px;  _margin-top:0;  left:0; width:100%; background:#006633; text-align:center;  z-index:9999;}
+.other_my58wx img{display:inline-block;position:relative;z-index:20;margin-top:40px;}
+.other_my58wx .left_line{  width:100%; left:0; height:7px; background:#7cb096; position:absolute;  top:50%;  margin-top:-4px;  z-index:10;}
+.other_my58wx .close_other{  background:url(../images/other_wx58_close.png)no-repeat;  width:34px; height:34px;  position:absolute;  left:50%; margin-left:460px;  top:14px;}

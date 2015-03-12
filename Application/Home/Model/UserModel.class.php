@@ -25,13 +25,22 @@ class  UserModel extends  Model {
 	public function checkUnique($arr=array()) {
 		
 	}
-	public function login($data, $remember=false) {
+	public function login($data, $autologin=false) {
 		$data['password'] = md5(md5($data['password']));
-		if(($rs = $this->where($data)->select())) {
-			$user = $rs[0];
-			session('ypt_user_id',$user['user_id']);
-			session('ypt_user_name',$user['name']);
-			session('ypt_user_email',$user['email']);
+		if(($user  = $this->where($data)->find())) {
+			session('ypt_user_id', $user['user_id']);
+			session('ypt_user_type', $user['user_type']);
+			session('ypt_user_name', $user['name']);
+			session('ypt_user_email', $user['email']);
+			if($autologin) {
+				 $session_id = session_id();
+				$user['auto_login_sessionid'] = $session_id;
+				if($this->save($user)) {
+					cookie('ypt_user_autologin', $session_id, 0);
+				}
+			}else {
+				cookie('ypt_user_autologin', null);
+			}
 			return true;
 		}else {
 			return false;

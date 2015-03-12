@@ -1,0 +1,160 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>简历投递记录</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="private" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/usermgm20121108_v20150305170743.css" />
+    <script type="text/javascript" src="__PUBLIC__/js/resumeinfo_v0.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/common_v20150210232843.js"></script>
+    <script type="text/javascript">        document.domain = '58.com';</script>
+</head>
+<body>
+<div class="telephoneJianli">
+		<i class="telephoneIcon"></i>
+		<div class="telephoneJianli_tip">
+			<p class="topTip">手机投递简历功能，尚未开启</p>
+			<P class="bottomTip">开启后，您可以在手机上管理、投递、免费刷新简历，找工作更容易！<a class="lookContent"  href="javascript:setParentSetbgFun('开启新功能',570,240,'http://jianli.58.com/scanerweima');" onClick="clickLog('from=myzp_open_sendresume');" >查看详情>></a></P>
+		</div>
+		<a class="telephoneJianli_turnOn" href="javascript:setParentSetbgFun('开启新功能',570,240,'http://jianli.58.com/scanerweima');" onClick="clickLog('from=myzp_open_sendresume');">马上开启</a>
+	</div>
+	<div class="applyhistory">
+		<div class="title clearfix">
+		<h2 class="balance-h2">简历投递记录<span class="a-tip">(最近1天申请  <span class="red">0</span> 条，共申请1条职位)</span></h2>
+	    <span class="history-tip">
+    		<div class="toudi" id="toudi">
+              <span title="投递的简历">投递的简历</span>
+                <div class="toudilist" id="toudilist" style="display:none;">
+                	<ul>
+                		                    	<li><a  href="/applypositionhistoryui/r81655688400903/" title="啊啊啊">啊啊啊</a></li>
+                    	                    	<li><a  href="/applypositionhistoryui/r81651879497479/" title="求职发单员三年经验">求职发单员三年经验</a></li>
+                    	                    	<li><a  href="/applypositionhistoryui/r81648500774151/" title="ananadddd">ananadddd</a></li>
+                    	                    	<li><a  href="/applypositionhistoryui/r81647604707847/" title="求销售工作 负2年经验">求销售工作 负2年经验</a></li>
+                    	                    	<li><a  href="/applypositionhistoryui/r81566606611716/" title="求职传菜员">求职传菜员</a></li>
+                    	                    	<li><a  class="selectToudi"  href="/applypositionhistoryui/">不限</a></li>
+                    </ul>
+                </div>
+            </div>
+	    </span>
+	</div>
+	<div class="c"></div>
+    <table class="qz">
+	<thead>
+		<tr>
+			<th width="36px">&nbsp;</th>
+			<th width="201px">投递的职位</th>
+			<th width="214px">公司名称</th>
+            <th width="100px">投递反馈</th>
+			<th width="110px">投递时间</th>
+			<th width="154px">操作</th>
+		</tr>
+     </thead>
+     <tbody>
+		<!-- <col width="10" />
+		<col width="270" />
+		<col width="270" />
+		<col width="100" />
+		<col width="165" />
+		<tr>
+			<th>&nbsp;</th>
+			<th>投递的职位</th>
+			<th>公司名称</th>
+			<th>投递时间</th>
+			<th>操作</th>
+		</tr> -->
+                	                <tr>
+                    <td><input class="checkqx" type="checkbox" id="cbID" name="cbID" value="866139829838287" /></td>
+                                        <td>
+                    	<div class="zpj_tp ">
+							                    			<a href="http://sh.58.com/zplvyoujiudian/20880321476360x.shtml" target="_blank" title="服务员1000包食宿">服务员1000包食宿</a>
+                    				                    		                    							</div>
+                    <td>
+                   		                   		                   			<a href="http://qy.58.com/29029422534404/" target="_blank">尚方云科技有限公司</a>
+                   			                   							</td>
+												                    	<td class="yikan">企业已查看</td>
+	                    					                    <td>2015-02-05</td>
+                    <td>
+                                        <a href="http://sh.58.com/zplvyoujiudian/20880321476360x.shtml" target="_blank" class="comment">点评</a> 
+                                        <a href="javascript:DeleApply(866139829838287);">删除</a>
+                    </td>
+                </tr>
+                          </tbody>
+    </table>
+    <div class="area_cz3">
+        <div style="float:right; padding:2px 0;" class="pager" id="pageInfo">
+        	<script type="text/javascript">seperatePage("pageInfo", "/applypositionhistoryui", 1, 1)</script>
+        </div>
+        <input type="checkbox" class="checkqx" onclick="SelectAllCheckBox(this)" value="0" /> 全选
+        <input type="button" class="btn-v2" onclick="javascript:DeleteAllApply();" value="删除" />
+    </div>
+    <div class="c"></div>
+    
+    <script type="text/javascript" src="http://static.58.com/n/js/jianli/favoriteinfo.js?v=20120614"></script>
+    <script type="text/javascript" language="javascript">
+        $(".qz tr").hover(function(){ $(this).children("td").addClass("hover") },function(){ $(this).children("td").removeClass("hover") });
+        $("#toudi").mouseover(function(){
+        	$("#toudilist").show();
+        	$("#toudilist").prev().addClass("active");
+        });
+        $("#toudi").mouseout(function(){
+        	$("#toudilist").hide();
+        	$("#toudilist").prev().removeClass("active");
+        });
+	    resizeFrame();
+        function resizeFrame() {
+            document.domain = "58.com";
+            if (parent.document.getElementById("ContainerFrame") != null) {
+                parent.document.getElementById("ContainerFrame").style.height = 1000 + "px";
+            }
+        }
+        parent.IM_QueryUserState("29029422534404", jianlishouim);
+    </script>
+        
+              <!-- cyc智能推荐  开始-->
+<div id="zp_recommend"></div>
+ <script type="text/javascript">
+     var ZPRECOMMENSIZE=815;// 此容器的宽度 一般 有 815 999 等
+     var ZPRECOMCONFIG ={
+     "entryapptype" : 2 ,//0： 未知 1. M_IE 2:www_IE 3:58客户端 4:帮帮  5:番茄快点 6 weixin
+     "businessentitytype" : 2 ,//1 简历 2 职位
+     "entityid": 0 ,//简历:resumeid, 职位: infoid
+     "dispcatid": "" ,//归属类别id
+     "localid": "" ,//归属地域id
+     "Iarea":"37,40,8899",	//表现地区id
+     "entitysubtype": "" ,//业务_业务子类型(置顶，加精，普通, 认证...)
+     "devicetype": 2 ,//0:  未知 1:手机 2:PC 3:平板
+     "pageid" : 22 ,//展示_展示页面编号(约定) 详细见姣瑶文档
+     "regionid" : 1 ,//展示_展示区域编号(约定)详细见姣瑶文档
+     "pageSize": 6 , //见姣瑶文档 每页展示条数
+     'pageCount': 5 //换一换，可以换几页 
+};
+</script>
+<script type="text/javascript" src="http://pic2.58.com/js/5_1/jquery1.4.4.js"></script>
+<script src="http://j1.58cdn.com.cn/n/js/zp/zp_recommend_v0.js" type="text/javascript"></script>
+<!-- cyc智能推荐  结束-->
+      </div>
+    
+<script type="text/javascript">
+var _gaq = _gaq || [];var site_name = "58"; 
+var _trackURL = "{'pagetype':'jianli_my','page':'applypositionhistoryui','Ptag':'1'}";
+_gaq.push(['pageTracker._setAccount', 'UA-877409-4']);
+_gaq.push(['pageTracker._setDomainName', '.58.com']);
+_gaq.push(['pageTracker._setAllowLinker', true]);
+_gaq.push(['pageTracker._addOrganic', 'sogou', 'query']);
+_gaq.push(['pageTracker._addOrganic', 'baidu', 'word']);
+_gaq.push(['pageTracker._addOrganic', 'soso', 'w']);
+_gaq.push(['pageTracker._addOrganic', 'youdao', 'q']);
+_gaq.push(['pageTracker._addOrganic', '360', 'q']); 
+_gaq.push(['pageTracker._trackPageview', '/applypositionhistoryui']);
+$.getScript( ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js');
+$.getScript('http://tracklog.58.com/referrer4.js');
+(function(){
+	try{
+       clickLog('from=mydeliver');
+	}catch(e){};
+})();
+
+</script>
+</body>
+</html>

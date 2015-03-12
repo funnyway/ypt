@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*121018-fbx*/
+
+/* header */
+/*#header{ height:80px; margin: 0 auto; position:relative; overflow:hidden; }
+#headerinside{background:url(http://pic2.58.com/n/images/h_bg.gif) repeat-x;height:60px}
+#login{ position:absolute; right:160px;top:50px;}
+#logintext{right:10px; top:50px; color:#666;}
+#logintext a{margin:0 14px; color:#666;}
+#logintext a:hover{ color:#ff0000; text-decoration:underline;}*/
+#login-header{width:1000px;/*height:80px;*/height:70px; border:none; margin: 0 auto; position:relative; /*overflow:hidden;*/ z-index:1;}
+#logo,#cityname,#logintext,#hlr{position:absolute;}
+#logo{/*left:20px;top:17px;*/left:0;top:10px;margin:0;}
+#logo img{ display:block;}
+#cityname{ height:39px; /*top:30px; left:190px;*/ top:23px; left:170px; padding-left:15px;}
+#cityname .cityname{font:22px/1.8 "微软雅黑","黑体", sans-serif; color:#585858;}
+#cityname a{padding-left:10px;margin:0;float:none;}
+#hlr{top:40px;right:-8px;line-height:16px;}
+#hlr a{color:#666;float:left;display:inline;padding:0 8px;}
+#hlr span{float:left;color:#D9D9D9;}
+#login-header #login{position:absolute;top:40px;right:-8px;line-height:16px;padding: 0 8px;float:left;}
+/*#login a{color:#666;float:left;display:inline;padding:0 8px;}
+#login span{float:left;color:#D9D9D9;}*/
+.gap{color: #CCCCCC;margin:0 6px;}
+
+/* footer */
+.cb,#footer{width:1000px;margin:0 auto;clear:both;overflow:hidden;border:none;background:#fff;zoom:1;display:block;}
+.cb{margin-bottom:40px}
+#footer p,.copyright{width:1000px;margin:0 auto;text-align:center;/*line-height:24px; padding:10px 0; */border-top:1px solid #ccc;line-height:32px; font-size:12px;}
+a.fduihua{
+	padding-right:22px;
+	margin-left:5px;
+	background-image: url(../images/bgpic.gif);
+	background-repeat: no-repeat;
+	background-position: right -505px;
+}
+
+/*简历创建流程*/
+#usernametr span,#passwordtr span{float:left;display:inline;width:80px;font-size:14px;height:40px;line-height:40px;color:#666;}
+.hire_flow{width:1000px;margin:0 auto;overflow:hidden;}
+.hire_flow ul{background-image:url(../images/jl.jpg);background-repeat:no-repeat;overflow:hidden;zoom:1;}
+.hire_flow .step1{background-position:0 0;}
+.hire_flow .step2{background-position:0 0;}
+.hire_flow .step3{background-position:0 0;}
+.hire_flow li{width:250px;height:35px;float:left;display:inline;font:bold 14px/35px Arial,Tahoma,"宋体",sans-serif;color:#585858;text-align:center;}
+/*.hire_flow ul .s_pre{color:#404040;}*/
+.hire_flow .s_cur{color:#fff;}
+.hire_flow li .s_num{font-size:18px;font-family:"arial";font-weight:normal;padding-right:5px;vertical-align:top;*vertical-align:middle;_vertical-align:baseline;}
+.hire_flow li .resele{font-size:12px;font-weight:normal;color:#888;}

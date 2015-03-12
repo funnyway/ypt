@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+*:focus {outline: none}
+.pop{background:#fffdcc; border:1px solid #f2e2ae; font:12px/18px "宋体"; color:#333; position:absolute; padding:8px 0; padding-right:20px; z-index:2999;}
+.shadow1{border-right:2px solid #999; border-bottom:2px solid #999;}
+.close{display:block; position:absolute; top:10px; right:5px; width:13px; height:13px; background:url('../images/pop.png') -33px -12px;}
+.close:hover{background:url('../images/pop.png') -64px -12px;}
+.lamp{background:#fffdcc url('../images/lamp.jpg') no-repeat 10px 4px; padding-left:40px;}
+.tri_top{position:absolute; display:block; width:7px; height:11px; background:url('../images/pop.png') no-repeat  -153px -16px; top:-6px; left:100px;}
+.tri_left{position:absolute; left:-7px; top:20px; display:block; width:7px; height:11px; background:url('../images/pop.png') no-repeat -128px -13px;}
+.lamp a{text-decoration:underline}
+.arrow1{background:url('../images/pop.png') -6px -11px; display:block; width:13px; height:13px; position:absolute; right:-11px; top:3px;}
+
+
+.user_01{line-height:18px; width:790px;}
+.user_02{width:150px; padding-left:10px;z-index:9999; }
+.user_03{padding-left:10px; padding-right:10px; width:150px;}
+.user_03 .tri_top{left:40px; z-index:50;}
+
+.fang_01{width:968px;}
+.post_01{width:250px; position:static; }
+
+.city_01{padding:0px 10px 0 10px; line-height:22px; margin-top:-6px; }
+.city_01 .tri_top{left:50px;}
+.city_01 a{float:left; margin:0 5px; position:relative}
+
+/*tishi*/
+.qpts{background:url(../images/qpts.gif) no-repeat right 0; height:15px; padding-right:2px; display:inline-block; vertical-align:middle; margin-top:-6px; *margin-top:-6px; margin-left:-10px; overflow:hidden; position:absolute;top:0;right:15px;}
+.qpts i{background:url(../images/qpts.gif) no-repeat 0 0; color:#fff; font-size:11px; height:12px; line-height:11px; _line-height:12px;padding-bottom:3px; vertical-align:baseline; font-family:"Microsoft YaHei", "SimSun";  font-style:normal; padding-left:2px; float:left; -webkit-text-size-adjust:none;display:inline-block; overflow:hidden}
+.nav ul li.s .qpts i{font-weight:lighter}
+.nav ul li#myzj{background-position:right 120px}
+.nav ul li.s#myzj{
+	background-image: url(../images/btn-2012.gif);
+	background-repeat: no-repeat;
+	background-position: 0 -414px;
+}
+.nav ul li{position: relative;}
+/*search*/
+#searchbar{position:absolute;left:430px;top:21px; line-height:26px; overflow:hidden}#searchbar i{font-style:normal}#key,#keyword,#searchbtn{background-image:url(../images/newbg.png) !important}#key{background:url() no-repeat 0 0; height:34px; padding:0 0 1px 8px; display:inline-block; float:left}#keyword{background:url() repeat-x 0 -37px; width:290px;height:22px; font-size:14px; line-height:22px; padding:6px 29px 6px 2px; border:none; float:left; display:inline-block; overflow:hidden}.keyword{color:#b5b5b5}.keyword2{color:#000}#searchbtn{background:url() no-repeat -28px -74px;width:89px;height:35px; font-size:14px; font-weight:bold; cursor:pointer; overflow:hidden; text-align:center; color:#000; line-height:33px; line-height:34px\0; _line-height:35px; padding-bottom:4px;border:none; float:left}#searchbtn.btnal2{ background:url() no-repeat -28px -111px; color:#7a7a7a}
+.tooltip{width:326px; padding:1px;border:1px solid #dcdadc; border-top:none;background:#fff;margin-top:-4px; margin-left:-8px; overflow:hidden}.tooltip li{height:24px; line-height:24px; overflow:hidden;padding:0 8px}.tooltip li a{text-decoration:none;color:#666;font-size:12px; font-weight:bold}.tooltip li a b{color:#666; font-weight:lighter}.tooltip li .tool_r{float:right;color:#008000;font-size:11px}.tooltip li.selected{background:#f7f7f7;cursor:pointer}.closewindow{float:right;margin:-5px 5px 0 0;}
+.shoujihao{margin-top:7px; display:inline-block}
+/*bangbang*/
+.lmenu li.bbinfo{width:120px; margin-top:4px; padding-top:7px; padding-bottom:7px; text-indent:0; padding-left:20px}
+.lmenu li.bbinfo{border-top:1px solid #dfdfdf; border-bottom:1px solid #dfdfdf; color:#666; line-height:22px}
+.lmenu li .kftit{text-indent:0; padding-left:18px; display:inline-block}
+.lmenu li .kf-help{ background:url(../images/kfico.gif) no-repeat; width:11px; height:11px; left:20px; top:13px}
+.lmenu li .bbimg{width:90px; height:90px; padding:5px; background:#fff; border:1px solid #e7e7e7; margin:5px 0 10px 0; display:inline-block}
+.lmenu li .bbltico{margin-bottom:5px; display:inline-block}
+
+
+/*评价星星*/
+.minstars{background-image:url(../images/xing2.gif)!important;display:inline-block;width:64px;height:12px;}
+.minstar-0{background:url() no-repeat 0 -220px}
+.minstar-0-5{background:url() no-repeat 0 -198px}
+.minstar-1{background:url() no-repeat 0 -176px}
+.minstar-1-5{background:url() no-repeat 0 -154px}
+.minstar-2{background:url() no-repeat 0 -132px}
+.minstar-2-5{background:url() no-repeat 0 -110px}
+.minstar-3{background:url() no-repeat 0 -88px}
+.minstar-3-5{background:url() no-repeat 0 -66px}
+.minstar-4{background:url() no-repeat 0 -44px}
+.minstar-4-5{background:url() no-repeat 0 -22px}
+.minstar-5{background:url() no-repeat 0 0}
+.comentstable .minstars{margin-bottom:5px}
+/*预约手机验证码 140115 by hezc*/
+.p_yuyue{ background:url(../images/sj01.png) no-repeat left center; padding-left:20px;  margin-top:5px; zoom:1; color:#888;}
+.yzm,.no_yzm{ display:inline-block; height:23px; line-height:23px; font-size:12px; width:105px; text-align:center; color:#585858; vertical-align:middle; background:url(../images/yzm.png) no-repeat;}
+a.yzm:hover{ color:#000; background-position:0 -23px; text-decoration:none;}.no_yzm,a.no_yzm:hover{background-position:0 -46px; color:#888; text-decoration:none;}
+.p_yz{ color:#888; margin-top:5px;}
+.nbut{ background:url(../images/nbut.png) no-repeat; width:180px; *display:block; *float:left; height:34px; margin-right:3px; border:0; cursor:pointer; text-align:center; font:700 14px/34px "宋体",sans-serif; color:#fff;}
+a.way-shop{ display:inline-block; padding-right:13px; background:url(../images/nhelp.png) no-repeat right center; color:#000;}
+a.way-shop:hover{ text-decoration:none; color:#f00;}
+
+/*弹窗20140411 by fs*/
+body {_background-image: url(about:blank); _background-attachment: fixed;}
+.fe_window_mask1{width:100%;height:100%; position:fixed; _position:absolute;top:0;left:0;filter:Alpha(Opacity=40);opacity:0.4;background-color:#000;z-index:100000; _top:expression(documentElement.scrollTop + "px"); }
+.fe_window1 {left: 50%;top:50%;position:fixed;_position:absolute;z-index:100001;_top:expression(documentElement.scrollTop + documentElement.clientHeight/2+ "px");margin: -140px 0px 0px -250px;}
+.fe_window1 .outer1{position:relative;}
+.fe_window1 .contains1{position:absolute;background:#fff;z-index:100003;top:8px;left:8px; text-align:left}
+.fe_window1 .frame1{background:#fff;opacity:0.3;filter:alpha(opacity=30);position:absolute;top:0;left:0;z-index:100002;border-width:0; border-top-width:9px; border-top-color:#fff;border-style:solid;padding:8px;}
+.fe_window1 .contains1 .contains1-t{ background:#f7f7f7;border-bottom:1px solid #e5e5e5;height:34px;text-align:left}
+.fe_window1 .contains1 .contains1-t .title{font:700 14px/34px "宋体";margin-left:10px;color:#1a1a1a;width:50%;zoom:1;}
+.fe_window1 .contains1 .contains1-t .closebtn{display:inline-block;zoom:1;width:13px;height:13px;background:url(../images/fe_window_close.png) no-repeat 0 0;line-height:100px;overflow:hidden;margin:10px 10px 0;float:right}
+.fe_window1 .contains1 .contains1-t .closebtn:hover{ background-position:right 0;}
+.fe_window1 .contains1 .contains1-c{display:bolck;padding:40px 60px 20px 60px;font-size:14px}
+.fe_window1 .contains1 .a_underline{ text-decoration:underline}
+.fe_window1 .contains1 .btnbar{ text-align:center}
+.fe_window1 .contains1 .qrbtn,.fe_window1 .contains1 .fhbtn{ display:inline-block;width:100px;height:36px; line-height:36px;overflow:hidden;background:url(../images/btn01.png) no-repeat;font-size:14px;font-weight:700; text-align:center}
+.fe_window1 .contains1 .qrbtn{ color:#fff!important; background-position:0 0}
+.fe_window1 .contains1 .qrbtn:hover{ text-decoration:underline}
+.fe_window1 .contains1 .fhbtn{color:#585858!important;margin-left:20px; background-position:0 -164px;}
+.fe_window1 .contains1 .fhbtn:hover{text-decoration:underline}
