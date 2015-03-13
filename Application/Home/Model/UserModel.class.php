@@ -34,7 +34,7 @@ class  UserModel extends  Model {
 				 $session_id = session_id();
 				$user['auto_login_sessionid'] = $session_id;
 				if($this->save($user)) {
-					cookie('ypt_user_name') = $user['name'];
+					cookie('ypt_user_name', $user['name']);
 					cookie('ypt_user_autologin', $session_id, 0);
 				}
 			}else {
@@ -52,12 +52,5 @@ class  UserModel extends  Model {
 		session('ypt_user_name', $user['name']);
 		session('ypt_user_email', $user['email']);
 	}
-	protected function logout() {
-		session('ypt_user_id', null);
-		session('ypt_user_type', null);
-		session('ypt_user_name', null);
-		session('ypt_user_email', null);
-		cookie('ypt_user_name',null);
-		cookie('ypt_user_autologin', null);
-	}
+
 }

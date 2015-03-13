@@ -41,10 +41,30 @@ $(function(){
 		type:'POST',
 		dataType: "json",
 		success:function(data){
-			console.log(data);
+			if(data.is_login ==1) {
+				var url1 = "<?php echo U('Person/Index/index');?>";
+				var url2 = "<?php echo U('Public/logout');?>";
+				var content =data.user_name+' | <a href="javascript:void(0),logout()">退出</a>';
+				$('#login').html(content);
+			}
+
 		}
 	})
+	
 })
+function logout() {
+	$.ajax({
+		url:"<?php echo U('Public/logout');?>",
+		type:'POST',
+		dataType: "json",
+		success:function(data){
+				var url1 = "<?php echo U('Public/reg');?>";
+				var url2 = "<?php echo U('Public/login');?>";
+				var content = '<a href="'+url1+'">注册</a> | <a href="'+url2+'">登录</a>';
+				$('#login').html(content);
+		}
+	})
+}
 </script>
 <body>
 <div class="topbg">

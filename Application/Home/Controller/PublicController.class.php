@@ -42,6 +42,15 @@ class PublicController extends BaseController {
     	$this->assign('page_title','用户登录--'.$this->getSiteName());
     	$this->display();
     }
+    public function  logout() {
+		session('ypt_user_id', null);
+		session('ypt_user_type', null);
+		session('ypt_user_name', null);
+		session('ypt_user_email', null);
+		cookie('ypt_user_name',null);
+		cookie('ypt_user_autologin', null);
+		$this->ajaxReturn(1);
+    }
     public function doLogin() {
     	if(!IS_POST) {
     		die('非法访问！');
