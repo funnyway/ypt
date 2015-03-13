@@ -27,15 +27,14 @@ class  UserModel extends  Model {
 	}
 	public function login($data, $autologin=false) {
 		$data['password'] = md5(md5($data['password']));
-		if(($user  = $this->where($data)->find())) {
-			session('ypt_user_id', $user['user_id']);
-			session('ypt_user_type', $user['user_type']);
-			session('ypt_user_name', $user['name']);
-			session('ypt_user_email', $user['email']);
+		if(($user  = $this->where($data)->field('user_id,name,email,user_type')->find())) {
+			$user['last_login_time'] = time();
+			$this->autoLogin($user);
 			if($autologin) {
 				 $session_id = session_id();
 				$user['auto_login_sessionid'] = $session_id;
 				if($this->save($user)) {
+					cookie('ypt_user_name') = $user['name'];
 					cookie('ypt_user_autologin', $session_id, 0);
 				}
 			}else {
@@ -45,5 +44,20 @@ class  UserModel extends  Model {
 		}else {
 			return false;
 		}
+	}
+	protected function autoLogin($user) {
+		$this->save($user);
+		session('ypt_user_id', $user['user_id']);
+		session('ypt_user_type', (int)$user['user_type']);
+		session('ypt_user_name', $user['name']);
+		session('ypt_user_email', $user['email']);
+	}
+	protected function logout() {
+		session('ypt_user_id', null);
+		session('ypt_user_type', null);
+		session('ypt_user_name', null);
+		session('ypt_user_email', null);
+		cookie('ypt_user_name',null);
+		cookie('ypt_user_autologin', null);
 	}
 }
