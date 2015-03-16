@@ -30,3 +30,8 @@ function isEmail($test){
 	return 	preg_match($zhengze,$test);
 
 }
+//核对验证码
+function check_verify($code, $id = ''){ 
+		$verify = new \Think\Verify();  
+		return $verify->check($code, $id);
+}

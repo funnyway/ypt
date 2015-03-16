@@ -98,4 +98,13 @@ class PublicController extends BaseController {
     	$data['is_login'] = 0;
     	$this->ajaxReturn($data);
     }
+    //验证码
+    Public function verify(){
+    	$Verify = new \Think\Verify(array(
+    		'length'=>4,
+    	//	'fontSize'  =>  25,
+    		'useCurve'=>false		
+    	));
+    	$Verify->entry();
+    }
 }

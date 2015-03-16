@@ -45,4 +45,5 @@ class IndexController extends BaseController {
     	$this->assign('resumes',$rs);
     	$this->display();
     }
+
 }

@@ -125,7 +125,7 @@ function logout() {
  </div>
  <div class="zhaopinBox">
    <div class="zhaopindh">　　　　　　　　　　　<a href="#">就业</a>　　　　　        <a href="#">实习</a> 　　　　　        <a href="#">家教</a>　　　　　        <a href="#">兼职</a> 　　　　　        <a href="#">派单</a> 　　　　　        <a href="#">钟点工</a> 　　　　　        <a href="#">志愿者</a></div>
-   <div class="zhaopingg"><a href="#"><img src="/ypt/Public/images/index_r26_c3.jpg" width="168" height="100" border="0" /></a><a href="#"><img src="/ypt/Public/images/index_r26_c9.jpg" width="168" height="100" border="0" /></a><a href="#"><img src="/ypt/Public/images/zp_r1_c1.jpg" width="108" height="34" border="0" /></a><a href="#"><img src="/ypt/Public/images/zp_r1_c5.jpg" width="108" height="34" border="0" /></a><a href="#"><img src="/ypt/Public/images/zp_r1_c11.jpg" width="108" height="34" border="0" /></a></div>
+   <div class="zhaopingg"><a href="#"><img src="/ypt/Public/images/index_r26_c3.jpg" width="168" height="100" border="0" /></a><a href="<?php echo U('Person/Resume/base');?>"><img src="/ypt/Public/images/index_r26_c9.jpg" width="168" height="100" border="0" /></a><a href="#"><img src="/ypt/Public/images/zp_r1_c1.jpg" width="108" height="34" border="0" /></a><a href="#"><img src="/ypt/Public/images/zp_r1_c5.jpg" width="108" height="34" border="0" /></a><a href="#"><img src="/ypt/Public/images/zp_r1_c11.jpg" width="108" height="34" border="0" /></a></div>
    <div class="xinwenLeft">
      <div>
 	  <ul>

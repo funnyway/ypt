@@ -1,0 +1,778 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>发布页</title>
+<link href="__PUBLIC__/css/jianli-post_v0.css" rel="stylesheet" />
+<script src="__PUBLIC__/js/jquery-1.8.3.js " type="text/javascript"></script>
+<style type="text/css">
+<!--
+.top {
+	height: 122px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(__PUBLIC__/images/jl01.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+.top a:link {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+}
+.top a:visited {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+}
+.top a:hover {
+	font-size: 12px;
+	color: #0000FF;
+	text-decoration: blink;
+}
+.toptxt {
+	text-align: justify;
+	font-size: 12px;
+	color: #333333;
+}
+
+.topbg {
+	background-image: url(__PUBLIC__/images/index_r1_c4.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 122px;
+	width: 100%;
+	font-size: 12px;
+}
+.topewm {
+	float: right;
+	height: 80px;
+	width: 60px;
+	padding-top: 30px;
+	text-align: center;
+}
+.bottom {
+	background-color: #f5f5f5;
+	padding-left: 50px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #464646;
+	font-size: 14px;
+	line-height: 32px;
+	margin-top: 15px;
+}
+.topimg {
+	position: absolute;
+	top: 56px;
+	left: 1010px;
+}
+
+-->
+</style>
+
+</head>
+<body class="postFirPage">
+<div class="logHeader">
+    <div class="topbg">
+  <div class="top">
+    <div class="toptxt">济南[<a href="#">切换城市</a>] 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<a href="#">注册</a> | <a href="#">登录</a> | <a href="#">返回首页</a></div>
+  </div>
+</div>
+	</div>
+<div class="infoContent">
+	<input type="hidden" name="jscode" id="jscode" value=""/>
+	<input type="hidden" id="hidcategorystat" value="1"/>
+	<form method="post" enctype="multipart/form-data" id="aspnetform" name="aspnetform">
+	<div class="perIcon perIcon5" style="display:none"></div>
+	<dl class="">
+		<dt>
+			标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题
+			<b>*</b>
+		</dt>
+		<dd>
+			<input type="text" id="InpUserJob" name="InpUserJob" class="w236 f-c7" value="例：求职销售 2年经验"> 
+			<span id="InpUserJobInfo"></span>
+			<span class="inputConTips necTips" id="titleTips">
+				<i class="necIcon tipsIcon"></i>
+				<span class="plr8">
+					好的标题更容易被企业搜索到，更多机会面试！
+					<a class="tdul" href="javascript:void(0);">看看别人怎么写~</a>
+					<span class="othersInfo">
+                        <i class="topArrow"></i>
+						<span>1. 求销售经理工作 4年经验</span>
+						<span>2. 求商务司机工作 C1驾照</span>
+						<span>3. 普工和快递员 肯吃苦</span>
+                    </span>
+				</span>
+			</span>
+		</dd>
+	</dl>
+	<dl class="jobType ">
+		<dt>
+			职位类别
+			<b>*</b>
+		</dt>
+		<dd class="" style=""><!--class="zIndex999"-->
+			<ul class="selType" id="selectedJob" style="display:none" k="">
+				
+			</ul>
+			<div class="selTypeDiv" id="txtJobCate">
+				<i class="keyIcon"></i>
+				<input type="text" class="w236 f-c7" id="inpJobCate" value="您可以选择或输入">
+				<div id="divJobCate" class="setBox" style="display:none">
+					<h3>
+                        <p>
+                            <span>请优先选择最想做的职位（最多选<span class="red">5</span>个）</span>
+                        </p>
+						<a href="javascript:void(0);" class="close"></a>
+					</h3>
+					<table class="jobcatebox">
+					</table>
+				</div>
+				<div style="display:none;" class="setBox matchRes" id="divJobCatein"><!-- 热词 -->
+					<ul class="hotJobList">
+					</ul>
+				</div>
+			</div>
+			<span id="txtJobCateInfo"></span>
+		</dd>
+	</dl>
+	<dl class="expSalary ">
+		<dt>
+			期望薪资
+			<b>*</b>
+		</dt>
+		<dd class="">
+			<i class="selIcon"></i>
+			<input type="text" class="w131 f-c7 hasSetBox" value="请选择" k="-1" id="selUserPosSala" readonly="readonly"> 
+			<div style="display:none;" class="setBox jsBox" id="divUserPosSala">
+				<ul class="salarySel">
+					<li k="1">1000元以下</li>
+					<li k="2">1000-2000元</li>
+					<li k="3">2000-3000元</li>
+					<li k="4">3000-5000元</li>
+					<li k="5">5000-8000元</li>
+					<li k="6">8000-12000元</li>
+					<li k="7">12000-20000元</li>
+					<li k="8">20000-25000元</li>
+					<li k="9">25000元以上</li>
+					<li k="0">面议</li>
+				</ul>
+			</div>
+			<span id="selUserPosSalaInfo"></span>
+		</dd>
+	</dl>
+	<dl class="nameSex ">
+		<dt>
+			姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名
+			<b>*</b>
+		</dt>
+		<dd class="">
+			<input type="text" class="w115" size="10" maxlength="4" id="txtUserName" name="txtUserName" value=""> 
+							<span class="selSex">
+					<i class="radioIconSel" name="sexType" value="0"></i>
+					<span class="plr8">男</span>
+				</span>
+				<span class="selSex">
+					<i class="radioIcon" name="sexType" value="1"></i>
+					<span class="plr8">女</span>
+				</span>
+						<span id="txtUserNameInfo"></span>
+		</dd>
+	</dl>
+	<dl class="birTime">
+		<dt>
+			出生日期
+			<b>*</b>
+		</dt>
+		<dd class="timeSel " id="inpBirth">
+			<div class="yearSel linkage" id="spInfoYear">
+				<input type="text" class="w76 hasSetBox linkage txtyear" id="inpBirthYear" value="" readonly="readonly"> 
+				<span class="plr5">年</span>
+				<div style="display:none ;" class="setBox" id="">
+					<i class="prevIcon prevHover"></i>
+					<i class="nextIcon nextHover"></i>
+					<ul class="bYear" index="1">
+						
+					</ul>
+				</div>
+			</div>
+			<div class="monthSel" id="spInfoMonth">
+				<input type="text" class="w43 hasSetBox txtmonth" id="inpBirthMonth" value="" readonly="readonly"> 
+				<span class="plr5">月</span>
+				<div style="display: none;" class="setBox" id="">
+					<ul class="">
+						<li>
+							<a href="javascript:void(0);">1</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">2</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">3</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">4</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">5</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">6</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">7</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">8</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">9</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">10</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">11</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">12</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<span id="inpBirthInfo"></span>
+		</dd>
+	</dl>
+	<dl class="address resAdd">
+		<dt>
+			现居住地
+			<b>*</b>
+		</dt>
+		<dd class="" id="ddnowcity"  k="265" >
+			<div class="addCitySel linkage"  fs="true"  kc="265" >
+				<i class="keyIcon"></i>
+				<input type="text"  class="w121 hasSetBox" value="济南"  readonly="readonly"> 
+				<div id="" class="setBox" style="display:none ;">
+				</div>
+			</div>
+			<div class="addAreaSel linkage"  id="nowAreaCon">
+				<i class="selIcon"></i>
+				<input type="text"  class="w121 f-c7 hasSetBox" value="请选择区域"  readonly="readonly"> 
+				<div id="" class="setBox" style="display: none;">
+				</div>
+			</div>
+			<div class="addBuneSel linkage">
+				<i class="selIcon"></i>
+				<input type="text"  class="w121 f-c7 hasSetBox" value="请选择商圈"  readonly="readonly"> 
+				<div id="" class="setBox"  style="display: none;">
+				</div>
+			</div>
+			<span id="nowAreaConInfo"></span>
+		</dd>
+	</dl>
+	<dl class="address ">
+		<dt>
+			想在哪工作
+			<b>*</b>
+		</dt>
+		<dd id="ddtargetcity"  k="265" >
+			<div class="addCitySel linkage"  kc="265" >
+				<i class="keyIcon"></i>
+				<input type="text"  class="w121 hasSetBox" value="济南"  readonly="readonly"> 
+				<div id="" class="setBox" style="display:none ;">
+				</div>
+			</div>
+			<div class="addAreaSel linkage" >
+				<i class="selIcon"></i>
+				<input type="text"  class="w121 f-c7 hasSetBox" value="请选择区域"  readonly="readonly">
+				<div id="" class="setBox" style="display: none;">
+				</div>
+			</div>
+			<div class="addBuneSel">
+				<i class="selIcon"></i>
+				<input type="text"  class="w121 f-c7 hasSetBox" value="请选择商圈"  readonly="readonly"> 
+				<div id="" class="setBox" style="display: none;">
+				</div>
+			</div>
+			<span id="ddtargetcityInfo"></span>
+		</dd>
+	</dl>
+           <dl id="authEmptyTr">
+ 	       <dt>
+           手机号码<b>*</b>
+       </dt>
+       <dd id="authmobileTd">
+           <div class="phoneType" style="display:">
+            <span class="choose clickwindow" style="z-index: 40">
+                <input type="text" class="w165" id="txtMobile" value="" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="11">
+            </span>
+            <a class="confirmPhone postBtn" href="javascript:void(0);" onClick="showAhth()" style="display:none">认证手机</a>
+                        	 <span id="txtMobileInfo" style="z-index: 12"></span>
+                            <p class="codeInfo" style="display:none">验证码已下发到您的手机，请查收！</p>
+				<p class="codeInfo pad8" style="display:none">
+					如果您180秒内未收到验证码
+					<span class="getMessBtn">
+						<a href="javascript:void(0)" id="resendMsg">(180秒后)重新获取短信</a>
+					</span>
+				</p>
+		 </div>
+       </dd>
+    </dl>
+        <dl id="ahthInputEmptyTr" style="display:none">
+            <dt class="noNec">
+            验证码
+            <b style="display:none" id="phoneAuthMust">*</b>
+        </dt>
+        <dd id="authCodeTd">
+            <input type="text" value="" id="txtMobileCode" class="w76" maxlength="6">
+			<a id="mobileAuthBtn" class="tdul pl8" href="javascript:void(0)" onClick="BaseInfo.getMobileAuth()">免费获取</a>
+			<span id="txtMobileCodeInfo"></span>
+			<div id="nullTip"  style="display:none;clear: both; color: #999999; font-size: 12px; line-height: 26px; padding-top: 8px;">如接收不到短信验证码，请拨打4007585858.</div>
+		</dd>
+	</dl>
+	<a id="authMobilet"></a>
+	<dl class="">
+		<dt class="noNec">
+			自我介绍
+		</dt>
+		<dd class="intrDD">
+			<div class="textDiv">
+				<textarea class="textCon f-c7" index="0" id="txtOtherBright">简单说说您的优势，可提高15%的下载几率！例如：职业特长、性格特点、岗位证书....</textarea>
+				<p class="inputTips">
+					已输入<span class="f-orange totalNum">0</span>字
+				</p>
+			</div>
+			<div class="textTips">
+				<div class="exampl">
+					<div class="pr">
+						<a class="tdul" href="javascript:void(0);">范例一</a>
+						<div class="othersInfo">
+							<i class="topArrow"></i>
+							<div class="exList">
+								<span class="exTitle">
+									社会简历
+									<span class="fn">（例：销售）</span>
+								</span>
+								<p>
+									1.本人性格开朗，为人正直。有6年的销售经验，年销售额过百万，曾获“销售之星”荣誉。<br>2.普工话标准，谈判能力强。适应出差。<br>3.对市场、渠道和经销商管理有丰富的经验。
+								</p>
+								<span class="exTitle">
+									技术岗位
+									<span class="fn">（例：司机）</span>
+								</span>
+								<p class="ti2e">
+									本人A2本，有5年金杯驾驶经验、2年出租经验。熟悉本地路况，自带小面。诚信为本，爱护车辆，希望求得一份商务司机或货车司机的职位。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="pr">
+						<a class="tdul" href="javascript:void(0);">范例二</a>
+						<div class="othersInfo">
+							<i class="topArrow"></i>
+							<div class="exList">
+								<span class="exTitle">
+									学生简历
+								</span>
+								<p class="ti2e">
+									曾担任外联部部长一职，负责学校12个大小型活动的赞助商招揽，并成功筹集活动资金10万元。具备较强的组织领导能力和沟通能力。并于假期参加过销售岗位实习，积累了一定经验。希望找到一份市场策划的工作，实现自己的职位理想！
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</dd>
+	</dl>
+	<dl class="selArea ">
+		<dt class="noNec">
+			籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯
+		</dt>
+		<dd class="">
+			<div class="proSel linkage">
+				<i class="selIcon"></i>
+				                    <input type="text" id="txtnativeprovince" class="w121 f-c7 hasSetBox" value="请选择省" readonly="readonly"> 
+                				<div class="setBox jsBox proBox" style="display:none;" id="divnativeprovince">
+				</div>
+			</div>
+			<div class="citySel">
+				<i class="selIcon"></i>
+				                    <input type="text" id="txtnativecity" class="w121 f-c7 hasSetBox" value="请选择市" readonly="readonly"> 
+                				<div id="divnativecity" class="setBox jsBox cityBox" style="display: none;">
+				</div>
+			</div>
+		</dd>
+	</dl>
+		<dl class="education cidCon" id="dlEdu">
+		<dt>最高学历<b>*</b></dt>
+		<dd class="">
+			<i class="selIcon"></i>
+			<input type="text" class="w131 hasSetBox f-c7" value="请选择" readonly="readonly" id="selEducation">
+				<div style="display: none;" class="setBox jsBox" id="">
+				<ul class="eduList">
+					<li k="1">高中以下</li>
+					<li k="2">高中</li>
+					<li k="3">中专/技校</li>
+					<li k="4">大专</li>
+					<li k="5">本科</li>
+					<li k="6">硕士</li>
+					<li k="7">博士</li>
+					<li k="8">MBA/EMBA</li>
+				</ul>
+			</div>
+			<span id="selEducationInfo"></span>
+		</dd>
+	</dl>
+		<dl class="experience cidCon" id="dlExp">
+		<dt>工作年限<b>*</b></dt>
+		<dd class="">
+			<i class="selIcon"></i>
+			<input type="text" class="w131 hasSetBox f-c7" value="请选择" readonly="readonly" id="selWorked">
+				<div style="display: none;" class="setBox jsBox" id="">
+				<ul class="eduList">
+					<li k="0">无经验</li>
+					<li k="5">应届生</li>
+					<li k="6">1年以下</li>
+					<li k="1">1-2年</li>
+					<li k="2">3-5年</li>
+					<li k="3">6-10年</li>
+					<li k="4">10年以上</li>
+				</ul>
+			</div>
+			<span id="selWorkedInfo"></span>
+		</dd>
+	</dl>
+	<dl class="email cidCon" style="display:none" id="dlEmail">
+		<dt class="noNec">
+			邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱
+		</dt>
+		<dd class="">
+						<input type="text" class="w222 f-c7" id="txtEmail" value="企业可以通过邮箱联系您"> 
+						<span id="txtEmailInfo" class=""></span>
+		</dd>
+	</dl>
+	<dl class="pHeiht cidCon" style="display:none" id="dlHeight">
+		<dt class="">
+			身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高
+			<b>*</b>
+		</dt>
+		<dd class="">
+			<input type="text" class="w76 tc" value="" id="txtHeight"> 
+			<span class="pl8">cm</span>
+			<span id="txtHeightInfo"></span>
+		</dd>
+	</dl>
+	<dl class="drLic cidCon" style="display:none" id="dlLic">
+		<dt class="">
+			驾&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;照
+			<b>*</b>
+		</dt>
+		<dd class="">
+			<div class="drLicCon">
+				<i class="keyIcon"></i>
+				<input type="text" class="w185 hasSetBox" value="" readonly="readonly"> 
+				<span class="pl8"><a href="javascript:void(0);" class="addOperBtn">添加</a></span>
+				<div style="display: none;" class="setBox jsBox">
+					<ul class="drLicList">
+						<li>
+							<a href="javascript:void(0);">A1驾照</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">A2驾照</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">A3驾照</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">B1驾照</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">B2驾照</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">C1驾照</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">C2驾照</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">C3驾照</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">客运资格证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">货运资格证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">机动车驾驶员资格证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">危险物品运输证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">特种车操作证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">吊车操作证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">叉车操作证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">铲车操作证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">挖掘机操作证</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<span id="dlLicInfo"></span>
+		</dd>
+	</dl>
+	<dl class="cerLic cidCon" style="display:none" id="dlCer">
+		<dt class="noNec">
+			证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;书
+		</dt>
+		<dd class="">
+			<div class="cerLicCon">
+				<i class="keyIcon"></i>
+				<input type="text" class="w185 hasSetBox" value="" readonly="readonly"> 
+				<span class="pl8"><a href="javascript:void(0);" class="addOperBtn">添加</a></span>
+				<div style="display: none;" class="setBox jsBox">
+					<ul class="cerLicList">
+						<li>
+							<a href="javascript:void(0);">制冷工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">水暖工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">防水工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">管道工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">锅炉工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">司炉工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">直燃机操作员上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">电工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">水电工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">空调工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">焊工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">装配钳工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">机修钳工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">木工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">绿化工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">车工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">铣工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">磨工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">镗工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">冷作钣金工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">涂装工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">涂装工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">砌筑工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">电梯工上岗证</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">家电维修工上岗证</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</dd>
+	</dl>
+	<dl class="fimLang selArea cidCon" style="display:none" id="dlLang">
+		<dt class="">
+			熟悉语言
+			<b>*</b>
+		</dt>
+		<dd class="">
+			<div class="fLCon">
+				<i class="check"></i>
+				<span class="pl5">普通话</span>
+			</div>
+			<div class="fLSel">
+				<span class="pr5">或</span>
+				<div class="lProSel">
+					<i class="selIcon"></i>
+					<input type="text" class="w121 f-c7 hasSetBox" value="省/直辖市" readonly="readonly" id="txtGxLangP"> 
+					<div class="setBox jsBox proBox" style="display:none;">
+					</div>
+				</div>
+				<div class="lCitySel">
+					<i class="selIcon"></i>
+					<input type="text" class="w121 f-c7 hasSetBox" value="城市" readonly="readonly" id="txtGxLang">
+					<div class="setBox jsBox cityBox" style="display:none;">
+					</div>
+				</div>
+				<span>话</span>
+			</div>
+			<span id="dlLangInfo"></span>
+		</dd>
+	</dl>
+	<dl class="captcha" style="display:none" id="trValidate">
+		<dt>
+			验证码：
+			<b>*</b>
+		</dt>
+		<dd class="">
+			<span class="choose clickwindow">
+				<input type="text" maxlength="5" name="validatecode" onFocus="BaseInfo.switchvalCode(false)" id="validatecode" size="7" class="code textstyle" /> 
+				<img align="middle" onClick="document.getElementById('vcodeImg').src=document.getElementById('vcodeImg').src; return false"
+						name="vcodeImg" id="vcodeImg" src="{:U('home/Public/verify')}" height="40px" width="120px" /> 
+				<a class="" onClick="document.getElementById('vcodeImg').src='/ajax/validatecode/?temp=123'+ (new Date().getTime().toString(36)); return false" href="javascript:void(0)">看不清，换一个</a>
+			</span>
+			<span id="txtValidateInfo" class="promptpop wrong2" style="z-index: 9;display:none"><span class="promptpos"><span class="prompttxt" id="txtValidateInfoTxt"></span><span class="arrbg"></span></span></span>
+		</dd>
+	</dl>
+	</form>
+	<!-- <div id="page_content" style="display:none">
+		<p class="loginTitle">填写帐户信息（已有账户登录或注册新账户）</p>
+		<div class="login_reg ml110 mt10">
+			<span class="" k="loginButton"><a href="javascript:void(0);" view="pptLoginForm" value="0">帐户登录</a></span>
+			<span class="" k="mobileLoginButton"><a href="javascript:void(0);" view="pptMobileLoginForm" value="0">手机登录</a></span>
+			<span class="" k="regButton"><a href="javascript:void(0);" view="pptRegForm" value="1">帐户注册</a></span>
+			<span class="" k="mobileRegButton"><a href="javascript:void(0);" view="pptMobileRegForm" value="1">手机注册</a></span>
+		</div>
+		<div class="formUl">
+			<script src="http://passport.58.com/uiscript?sysIndex=1&successFunction=successFunction" type="text/javascript"></script>
+		</div>
+		<div class="formUl">
+			<script src="http://passport.58.com/uimobileloginscript?successFunction=mobileLoginSuccess" type="text/javascript"></script>
+		</div>
+		<div class="formUl">
+			<script src="http://passport.58.com/uiregscript?regSuccessFunction=regSuccessFunction" type="text/javascript"></script>
+			<p class="ml110 mt10">注册或发布即代表您已阅读并同意<a target="_blank" href="http://about.58.com/246.html">58同城使用协议</a>。</p>
+		</div>
+		<div class="formUl">
+			<script src="http://passport.58.com/uimobileregscript?regSuccessFunction=regSuccess" type="text/javascript"></script>
+			<p class="ml110 mt10">注册或发布即代表您已阅读并同意<a target="_blank" href="http://about.58.com/246.html">58同城使用协议</a>。</p>
+		</div>
+	</div>
+	 -->
+	 <dl id="page_content" style="display:none;">
+	 	<dt>&nbsp;</dt>
+	 	<!-- 
+	 	<dd><iframe id="frmPassport" src="http://jianli.58.com/passport.html" frameborder="0" width="100%" height="187px" scrolling="no"></iframe></dd> -->
+	 </dl>
+	<script type="text/javascript">
+	$(function TabBox(){
+		var allLi=".login_reg  ";
+		var allDiv=".formUl";
+		$(allLi).eq(3).addClass("active");
+		$(allDiv).hide();
+		$(allDiv).eq(3).show();
+		$(allLi).mousedown(function(){
+			var curLi=$(this);
+			var curDiv=$(allDiv).eq($(allLi).index(curLi));
+			$(allLi).removeClass("active");
+			curLi.addClass("active");
+			$(allDiv).hide();
+			curDiv.show();
+		});
+	});
+//	$("#txtMobile").keyup(function(){
+//	var curNode = $(this);
+//	this.value=this.value.replace(/\D/g,'');
+//	var len = this.value.length, tag = $(this).attr("send");
+//	if(11 == len){
+//		$("#page_content").show();
+//		if(!tag){
+//			var url = "http://jianli.58.com/ajax/getmobilestat";
+//			$.ajax({
+//				type:"post",
+//				url:url,
+//				data:{m:""+this.value+""},
+//				dataType:"json",
+//				success:function(obj){
+//					var doc = $('#frmPassport')[0].contentWindow.document;
+//					if(obj != null && obj.returnMessage == "success"){
+//						// $("div.login_reg span").removeClass("active");
+//						// $("div.login_reg span").eq(1).addClass("active");
+//						// $("div.formUl").hide();
+//						// $("div.formUl").eq(1).show();
+//						// curNode.attr("send",true);
+//						// $("#pptmobile").val(curNode.val());
+//						$('a[view=pptLogin]', doc).click();
+//						$('#loginSwitch', doc).click();
+//						curNode.attr("send",true);
+//						$('#pptmobile', doc).val(curNode.val());
+//					} else {
+//						// $("#pptmobileregmobile").val(curNode.val());
+//						$('a[view=pptReg]', doc).click();
+//						$('#pptmobileregmobile', doc).val(curNode.val());
+//					}
+//				}
+//			});
+//		}
+//	}else{
+//		if(tag){
+//			curNode.attr("send",false);
+//		};
+//	};
+//});
+	</script>
+	<div class="subBtnCon ">
+		<input class="saveResume postBtn" onClick="BaseInfo.subRegLogin();" id="btninfo" value="保存简历" type="submit" />
+			
+	</div>
+</div>
+<div id="limitWarn" class="limitWarn" style="left: auto; top: auto; display: none;"><p id="limitWarnTitle">最多可创建6份简历，</p><p id="limitWarnContent">您已达到上限！</p></div>
+
+<script src="__PUBLIC__/js/secondJobCates_v0.js"></script>
+<script src="__PUBLIC__/js/jl_post_v0.js"></script>
+<script src="__PUBLIC__/js/3_v0.js"></script>
+ <script src="__PUBLIC__/js/baseV2_v0.js"></script>
+<script src="__PUBLIC__/js/addresumeV2_v0.js"></script>
+<script src="__PUBLIC__/js/jobPosttj_v0.js"></script>
+<script src="__PUBLIC__/js/fa8cc0bfc7.js"></script>
+<!-- 接入前端行为收集js end-->
+<!-- flag=iResearch-zp-jl -->
+<div class="bottom">校企网 大学生综合服务平台版权所有<br />
+    	  Copyright © 1998 - 2014 Tencent. All Rights Reserved</div>
+</body>
+</html>
