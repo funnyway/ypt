@@ -62,6 +62,7 @@ function logout() {
 				var url2 = "{:U('Public/login')}";
 				var content = '<a href="'+url1+'">注册</a> | <a href="'+url2+'">登录</a>';
 				$('#login').html(content);
+				window.location.href = window.location.href;
 		}
 	})
 }
